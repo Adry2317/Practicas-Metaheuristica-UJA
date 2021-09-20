@@ -22,7 +22,7 @@ public class Practica1 {
         ArchivoDatos archivo = new ArchivoDatos(config.getArchivos().get(0));
         System.out.println(archivo.getNombreArchivo());
         
-        //Matriz de flujo
+        //Matriz de Flujo
         for (int i = 0; i < archivo.getMatrizFlujo().length; i++) {
             System.out.println(Arrays.toString(archivo.getMatrizDistancias()[i]));
         }
