@@ -63,4 +63,18 @@ public class Greedy {
         
         return vectSolucion;
     }
+    
+    public static long calculaCoste(int[] vectorSolucion, int[][] matrizFlujo, int[][] matrizDistancia){
+        long coste = 0;
+        
+        for(int i = 0; i < vectorSolucion.length; i++){
+            for(int j = 0; j < vectorSolucion.length; j++){
+                if(i != j){
+                    coste = coste + (matrizFlujo[i][j] * matrizDistancia[vectorSolucion[i]][vectorSolucion[j]]);
+                }
+            }
+        }
+        
+        return coste;
+    }
 }

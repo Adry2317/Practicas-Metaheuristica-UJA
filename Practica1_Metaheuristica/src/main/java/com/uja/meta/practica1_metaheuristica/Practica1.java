@@ -37,11 +37,15 @@ public class Practica1 {
         int[] prueba;
         prueba = Greedy.calculoGreedy(archivo.getMatrizFlujo(), archivo.getMatrizDistancias());
         
+        long coste = Greedy.calculaCoste(prueba, archivo.getMatrizFlujo(), archivo.getMatrizDistancias());
+        
         
         System.out.println("");
         for (int i : prueba) {
             System.out.print(i+" ");
         }
+        
+        System.out.println("Coste: " + coste);
 
     }
 
