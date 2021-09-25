@@ -1,4 +1,4 @@
-Archivos=archivo1.dat
+Archivos=ford04.dat 
 Semillas=12345
 Algoritmos=Greedy
 OtrosParametros=1

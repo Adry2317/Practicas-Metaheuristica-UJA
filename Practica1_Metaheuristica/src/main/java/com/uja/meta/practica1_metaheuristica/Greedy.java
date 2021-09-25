@@ -36,9 +36,10 @@ public class Greedy {
             sumDistancia.add(parDistancia);
 
         }
-        
         sumFlujo.sort((Pair<Integer, Integer> o1, Pair<Integer, Integer> o2) -> o1.getValue().compareTo(o2.getValue()));
         sumDistancia.sort((Pair<Integer, Integer> o1, Pair<Integer, Integer> o2) -> o1.getValue().compareTo(o2.getValue()));
+        
+
         
         System.out.println("Vista de vectores prueba");
         for (Pair<Integer, Integer> pair : sumFlujo) {

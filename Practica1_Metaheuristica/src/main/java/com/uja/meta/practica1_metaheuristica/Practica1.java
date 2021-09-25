@@ -5,11 +5,7 @@
  */
 package com.uja.meta.practica1_metaheuristica;
 
-import com.sun.org.apache.xerces.internal.xs.XSConstants;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Comparator;
-import javafx.util.Pair;
 
 /**
  *
