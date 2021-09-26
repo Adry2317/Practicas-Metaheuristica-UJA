@@ -5,6 +5,9 @@
  */
 package com.uja.meta.practica1_metaheuristica;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Arrays;
 
 /**
@@ -19,34 +22,47 @@ public class Practica1 {
     public static void main(String[] args) {
         Configurador config = new Configurador(args[0]);
         System.out.println(config.getArchivos());
-        ArchivoDatos archivo = new ArchivoDatos(config.getArchivos().get(0));
+        ArchivoDatos archivo = new ArchivoDatos(config.getArchivos().get(1));
         System.out.println(archivo.getNombreArchivo());
 
-        //Matriz de flujo
-        for (int i = 0; i < archivo.getMatrizFlujo().length; i++) {
-            System.out.println(Arrays.toString(archivo.getMatrizFlujo()[i]));
-        }
+
+        Greedy greedy  = new Greedy(archivo.getMatrizFlujo(), archivo.getMatrizDistancias(), archivo.getNombreArchivo());
+        
+        int[] vectorPermutaciones;
+        vectorPermutaciones = greedy.calculoGreedy();
+
+        
+        long coste = greedy.calculaCoste(vectorPermutaciones);
 
         System.out.println("");
-
-        //Matriz de distancia.
-        for (int i = 0; i < archivo.getMatrizDistancias().length; i++) {
-            System.out.println(Arrays.toString(archivo.getMatrizDistancias()[i]));
+        for (int i : vectorPermutaciones) {
+            System.out.print(i + " ");
         }
 
-        int[] prueba;
-        prueba = Greedy.calculoGreedy(archivo.getMatrizFlujo(), archivo.getMatrizDistancias());
-        
-        long coste = Greedy.calculaCoste(prueba, archivo.getMatrizFlujo(), archivo.getMatrizDistancias());
-        
-        
-        System.out.println("");
-        for (int i : prueba) {
-            System.out.print(i+" ");
-        }
-        
         System.out.println("Coste: " + coste);
+        
+        guardarArchivo("log/"+config.getAlgoritmos().get(0)+"_"+archivo.getNombreArchivo()+".txt", greedy.getLog());
+    }
 
+    public static void guardarArchivo(String ruta, String texto) {
+        FileWriter fichero = null;
+        PrintWriter pw = null; 
+        
+        try {
+            fichero = new FileWriter(ruta);
+            pw = new PrintWriter(fichero);
+            
+            pw.print(texto);
+        } catch (IOException ex) {
+        } finally {
+             try {
+                if(null != fichero) {
+                    fichero.close();
+                }
+            } catch (IOException e2) {
+            }
+        }
+        
     }
 
 }
