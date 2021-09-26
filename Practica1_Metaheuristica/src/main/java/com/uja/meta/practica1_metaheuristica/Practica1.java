@@ -21,48 +21,61 @@ public class Practica1 {
      */
     public static void main(String[] args) {
         Configurador config = new Configurador(args[0]);
-        System.out.println(config.getArchivos());
-        ArchivoDatos archivo = new ArchivoDatos(config.getArchivos().get(1));
-        System.out.println(archivo.getNombreArchivo());
+        //System.out.println(config.getArchivos());
+        //ArchivoDatos archivo = new ArchivoDatos(config.getArchivos().get(1));
+        //System.out.println(archivo.getNombreArchivo());
 
+        for (int i = 0; i < config.getAlgoritmos().size(); i++) {
+            for (int j = 0; j < config.getArchivos().size(); j++) {
+                ArchivoDatos archivo = new ArchivoDatos(config.getArchivos().get(j));
+                switch (config.getAlgoritmos().get(i)) {
+                    case "Greedy":
 
-        Greedy greedy  = new Greedy(archivo.getMatrizFlujo(), archivo.getMatrizDistancias(), archivo.getNombreArchivo());
-        
-        int[] vectorPermutaciones;
-        vectorPermutaciones = greedy.calculoGreedy();
+                        Greedy greedy = new Greedy(archivo.getMatrizFlujo(), archivo.getMatrizDistancias(), archivo.getNombreArchivo());
 
-        
-        long coste = greedy.calculaCoste(vectorPermutaciones);
+                        int[] vectorPermutaciones;
+                        vectorPermutaciones = greedy.calculoGreedy();
 
-        System.out.println("");
-        for (int i : vectorPermutaciones) {
-            System.out.print(i + " ");
+                        long coste = greedy.calculaCoste(vectorPermutaciones);
+
+                        System.out.println("");
+                        for (int k : vectorPermutaciones) {
+                            System.out.print(k + " ");
+                        }
+
+                        System.out.println("Coste: " + coste);
+
+                        guardarArchivo("log/" + config.getAlgoritmos().get(i) + "_" + archivo.getNombreArchivo() + ".txt", greedy.getLog());
+
+                        break;
+                    case "PrimeroMejor":
+                        break;
+
+                }
+            }
         }
 
-        System.out.println("Coste: " + coste);
-        
-        guardarArchivo("log/"+config.getAlgoritmos().get(0)+"_"+archivo.getNombreArchivo()+".txt", greedy.getLog());
     }
 
     public static void guardarArchivo(String ruta, String texto) {
         FileWriter fichero = null;
-        PrintWriter pw = null; 
-        
+        PrintWriter pw = null;
+
         try {
             fichero = new FileWriter(ruta);
             pw = new PrintWriter(fichero);
-            
+
             pw.print(texto);
         } catch (IOException ex) {
         } finally {
-             try {
-                if(null != fichero) {
+            try {
+                if (null != fichero) {
                     fichero.close();
                 }
             } catch (IOException e2) {
             }
         }
-        
+
     }
 
 }
