@@ -16,7 +16,6 @@ import javafx.util.Pair;
 public class Greedy {
 
     private StringBuilder log;
-
     private final ArrayList<Pair<Integer, Integer>> sumFlujo;
     private final ArrayList<Pair<Integer, Integer>> sumDistancia;
     private final int [][] matrizFlujo;
