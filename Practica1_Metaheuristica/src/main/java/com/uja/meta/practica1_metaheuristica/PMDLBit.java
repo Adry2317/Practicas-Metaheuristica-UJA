@@ -25,26 +25,30 @@ public class PMDLBit {
 
     public int[] dlbIterativa( int[] solucionActual){
         int iteraciones = 0;
-        int[] resultado = null;
+        int[] resultado = solucionActual;
 
-        while(iteraciones < limIteraciones || compruebaDLB()){
+        while(iteraciones < limIteraciones && !compruebaDLB()){
+           // System.out.println(iteraciones);
             boolean mejora_solucion = false;
             for(int i = 0; i < matrizFlujo.length || mejora_solucion; i++){
                 if(dlb[i] == 0){
                     for(int j = 0; j < matrizFlujo.length || mejora_solucion; j++){
                         if(checkMove(i,j)){
-                            resultado = aplicarMovimiento(i,j,solucionActual);
+                            resultado = aplicarMovimiento(i,j,resultado);
                             dlb[i] = dlb[j] = 0;
                             mejora_solucion = true;
                             iteraciones++;
                         }
                     }
                     if(!mejora_solucion){
+
                         dlb[i] = 1;
                     }
                 }
             }
+
         }
+
         if(resultado == null)
             return resultado;
 
@@ -103,7 +107,7 @@ public class PMDLBit {
             cont += dlb[i];
         }
 
-        if(cont == 20)
+        if(cont == dlb.length)
             return true;
 
         return false;
