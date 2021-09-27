@@ -24,7 +24,7 @@ public class Practica1 {
         //System.out.println(config.getArchivos());
         //ArchivoDatos archivo = new ArchivoDatos(config.getArchivos().get(1));
         //System.out.println(archivo.getNombreArchivo());
-
+        int[] vectorPermutaciones = null;
         for (int i = 0; i < config.getAlgoritmos().size(); i++) {
             for (int j = 0; j < config.getArchivos().size(); j++) {
                 ArchivoDatos archivo = new ArchivoDatos(config.getArchivos().get(j));
@@ -33,7 +33,7 @@ public class Practica1 {
 
                         Greedy greedy = new Greedy(archivo.getMatrizFlujo(), archivo.getMatrizDistancias(), archivo.getNombreArchivo());
 
-                        int[] vectorPermutaciones;
+
                         vectorPermutaciones = greedy.calculoGreedy();
 
                         long coste = greedy.calculaCoste(vectorPermutaciones);
@@ -54,6 +54,14 @@ public class Practica1 {
                 }
             }
         }
+        ArchivoDatos archivo = new ArchivoDatos(config.getArchivos().get(3));
+        PMDLBit prueba = new PMDLBit(archivo.getMatrizFlujo(),archivo.getMatrizDistancias());
+        int p[] = prueba.dlbIterativa(vectorPermutaciones);
+
+        for (int i = 0; i<p.length; i++){
+            System.out.println(p[i]+" ");
+        }
+
 
     }
 

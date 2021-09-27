@@ -34,7 +34,10 @@ public class PrimeroMejor {
         this.vectorPermutaciones = _vectorPermutaciones;
         this.log = new StringBuilder();
     }
-    
+
+
+
+
 //    public int[] calculaBusquedaLocal(){
 //        int[] copiaPermutaciones = vectorPermutaciones;
 //
