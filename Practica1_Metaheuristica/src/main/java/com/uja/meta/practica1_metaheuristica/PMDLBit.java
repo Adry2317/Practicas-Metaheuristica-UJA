@@ -30,10 +30,11 @@ public class PMDLBit {
         while(iteraciones < limIteraciones && !compruebaDLB()){
            // System.out.println(iteraciones);
             boolean mejora_solucion = false;
-            for(int i = 0; i < matrizFlujo.length || mejora_solucion; i++){
+            for(int i = 0; i < matrizFlujo.length && !mejora_solucion; i++){
                 if(dlb[i] == 0){
-                    for(int j = 0; j < matrizFlujo.length || mejora_solucion; j++){
-                        if(checkMove(i,j)){
+                    for(int j = 0; j < matrizFlujo.length && !mejora_solucion; j++){
+
+                        if(checkMove(resultado[i],resultado[j],resultado)){
                             resultado = aplicarMovimiento(i,j,resultado);
                             dlb[i] = dlb[j] = 0;
                             mejora_solucion = true;
@@ -49,10 +50,10 @@ public class PMDLBit {
 
         }
 
-        if(resultado == null)
-            return resultado;
+ //       if(resultado == null)
+   //         return resultado;
 
-        return solucionActual;
+        return resultado;
     }
 
 
@@ -69,23 +70,25 @@ public class PMDLBit {
 
     /**
      * Función que comprueba si una solución es mejor que la actual
-     * @param pos1: posición 1 a intercambiar con la 2
-     * @param pos2: posición 2 a intercambiar con la 1
+     * @param r: posición 1 a intercambiar con la 2
+     * @param s: posición 2 a intercambiar con la 1
      * @return: true si la solución es mejor, false en caso contrario.
      */
-    public boolean checkMove(int pos1, int pos2){
+    public boolean checkMove(int r, int s,int[] vectorPerm){
 
-        int sumatorio = 0;
-        for(int i = 0; i < matrizFlujo.length; i++){
-           int parteA = (matrizFlujo[pos1][i] * (matrizDistancia[pos2][i] - matrizDistancia[pos1][i])) +
-                    (matrizFlujo[pos2][i] * (matrizDistancia[pos1][i] - matrizDistancia[pos2][i]));
+        long sumatorio = 0;
+        for(int k = 0; k < matrizFlujo.length; k++){
+            if(k != r && k != s) {
+                sumatorio += (matrizFlujo[r][k] * (matrizDistancia[vectorPerm[s]][vectorPerm[k]] - matrizDistancia[vectorPerm[r]][vectorPerm[k]])) +
+                        (matrizFlujo[s][k] * (matrizDistancia[vectorPerm[r]][vectorPerm[k]] - matrizDistancia[vectorPerm[s]][vectorPerm[k]])) +
+                        (matrizFlujo[k][r] * (matrizDistancia[vectorPerm[k]][s] - matrizDistancia[vectorPerm[k]][r])) +
+                        (matrizFlujo[k][s] * (matrizDistancia[vectorPerm[k]][r] - matrizDistancia[vectorPerm[k]][s]));
 
-            int parteB = (matrizFlujo[i][pos1] * (matrizDistancia[i][pos2] - matrizDistancia[i][pos1])) +
-                    (matrizFlujo[i][pos2] * (matrizDistancia[i][pos1] - matrizDistancia[i][pos2]));
 
-
-            sumatorio +=(parteA + parteB);
+            }
         }
+
+        System.out.println("i: " + r + " j: " + s + " Diferencia: " + sumatorio);
 
         if(sumatorio < 0){
             return true;

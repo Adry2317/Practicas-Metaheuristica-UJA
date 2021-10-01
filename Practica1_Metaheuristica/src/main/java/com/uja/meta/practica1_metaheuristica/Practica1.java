@@ -56,7 +56,8 @@ public class Practica1 {
         }
         ArchivoDatos archivo = new ArchivoDatos(config.getArchivos().get(3));
         PMDLBit prueba = new PMDLBit(archivo.getMatrizFlujo(),archivo.getMatrizDistancias());
-        int p[] = prueba.dlbIterativa(vectorPermutaciones);
+        int[] pru = {19, 15, 13, 28, 1, 21, 18, 10, 16, 2, 23, 25, 8, 11, 24, 4, 9, 29, 6, 22, 17, 7, 20, 14, 12, 5, 0, 26, 27, 3};
+        int p[] = prueba.dlbIterativa(pru);
 
         for (int i = 0; i<p.length; i++){
             System.out.print(p[i]+" ");
