@@ -28,21 +28,24 @@ public class PMDLBit {
         int[] resultado = solucionActual;
 
         while(iteraciones < limIteraciones && !compruebaDLB()){
-           // System.out.println(iteraciones);
+
             boolean mejora_solucion = false;
             for(int i = 0; i < matrizFlujo.length && !mejora_solucion; i++){
                 if(dlb[i] == 0){
+                    mejora_solucion = false;
                     for(int j = 0; j < matrizFlujo.length && !mejora_solucion; j++){
-
-                        if(checkMove(resultado[i],resultado[j],resultado)){
+                        
+                        if(checkMove(i,j,resultado)){
                             resultado = aplicarMovimiento(i,j,resultado);
-                            dlb[i] = dlb[j] = 0;
+                            dlb[i] = 0;
+                            dlb[j] = 0;
                             mejora_solucion = true;
                             iteraciones++;
                         }
                     }
+                   // System.out.println("Acceso al delb externo: "+mejora_solucion);
                     if(!mejora_solucion){
-
+                        //System.out.println("aacede al dlb");
                         dlb[i] = 1;
                     }
                 }
@@ -79,17 +82,16 @@ public class PMDLBit {
         long sumatorio = 0;
         for(int k = 0; k < matrizFlujo.length; k++){
             if(k != r && k != s) {
-                sumatorio += (matrizFlujo[r][k] * (matrizDistancia[vectorPerm[s]][vectorPerm[k]] - matrizDistancia[vectorPerm[r]][vectorPerm[k]])) +
-                        (matrizFlujo[s][k] * (matrizDistancia[vectorPerm[r]][vectorPerm[k]] - matrizDistancia[vectorPerm[s]][vectorPerm[k]])) +
-                        (matrizFlujo[k][r] * (matrizDistancia[vectorPerm[k]][s] - matrizDistancia[vectorPerm[k]][r])) +
-                        (matrizFlujo[k][s] * (matrizDistancia[vectorPerm[k]][r] - matrizDistancia[vectorPerm[k]][s]));
+                sumatorio += ((matrizFlujo[r][k] * (matrizDistancia[vectorPerm[s]][vectorPerm[k]] - matrizDistancia[vectorPerm[r]][vectorPerm[k]])) +
+                        (matrizFlujo[s][k] * (matrizDistancia[vectorPerm[r]][vectorPerm[k]] - matrizDistancia[vectorPerm[s]][vectorPerm[k]]))) +
+                        ((matrizFlujo[k][r] * (matrizDistancia[vectorPerm[k]][s] - matrizDistancia[vectorPerm[k]][r])) +
+                        (matrizFlujo[k][s] * (matrizDistancia[vectorPerm[k]][r] - matrizDistancia[vectorPerm[k]][s])));
 
 
             }
         }
 
-        System.out.println("i: " + r + " j: " + s + " Diferencia: " + sumatorio);
-
+       // System.out.println("i: " + r + " j: " + s + " Diferencia: " + sumatorio);
         if(sumatorio < 0){
             return true;
         }
@@ -109,6 +111,8 @@ public class PMDLBit {
         for (int i = 0; i<dlb.length; i++){
             cont += dlb[i];
         }
+
+        //System.out.println("conteo: "+cont);
 
         if(cont == dlb.length)
             return true;

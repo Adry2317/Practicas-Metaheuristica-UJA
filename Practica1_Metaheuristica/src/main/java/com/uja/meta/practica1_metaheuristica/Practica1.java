@@ -25,12 +25,13 @@ public class Practica1 {
         //ArchivoDatos archivo = new ArchivoDatos(config.getArchivos().get(1));
         //System.out.println(archivo.getNombreArchivo());
         int[] vectorPermutaciones = null;
-        for (int i = 0; i < config.getAlgoritmos().size(); i++) {
-            for (int j = 0; j < config.getArchivos().size(); j++) {
-                ArchivoDatos archivo = new ArchivoDatos(config.getArchivos().get(j));
-                switch (config.getAlgoritmos().get(i)) {
+        for (int i = 0; i < config.getArchivos().size(); i++) {
+            for (int j = 0; j < config.getAlgoritmos().size(); j++) {
+                ArchivoDatos archivo = new ArchivoDatos(config.getArchivos().get(i));
+                switch (config.getAlgoritmos().get(j)) {
                     case "Greedy":
-
+                        System.out.println("");
+                        System.out.println("Greedy");
                         Greedy greedy = new Greedy(archivo.getMatrizFlujo(), archivo.getMatrizDistancias(), archivo.getNombreArchivo());
 
 
@@ -38,32 +39,59 @@ public class Practica1 {
 
                         long coste = greedy.calculaCoste(vectorPermutaciones);
 
-                        System.out.println("");
+
                         for (int k : vectorPermutaciones) {
                             System.out.print(k + " ");
                         }
 
                         System.out.println("Coste: " + coste);
 
-                        guardarArchivo("log/" + config.getAlgoritmos().get(i) + "_" + archivo.getNombreArchivo() + ".txt", greedy.getLog());
+                        guardarArchivo("log/" + config.getAlgoritmos().get(j) + "_" + archivo.getNombreArchivo() + ".txt", greedy.getLog());
 
                         break;
                     case "PrimeroMejor":
+                        System.out.println("");
+                        System.out.println("Algortimos primero el mejor.");
+
+                        PMDLBit iterativo = new PMDLBit(archivo.getMatrizFlujo(), archivo.getMatrizDistancias());
+
+                        int nuevaSol[] = iterativo.dlbIterativa(vectorPermutaciones);
+
+                        long costeNuevaSol = calculaCostePrueba(vectorPermutaciones, archivo.getMatrizFlujo(), archivo.getMatrizDistancias());
+
+                        for (int k : nuevaSol) {
+                            System.out.print(k + " ");
+                        }
+
+                        System.out.println("Coste: " + costeNuevaSol);
                         break;
 
                 }
             }
         }
-        ArchivoDatos archivo = new ArchivoDatos(config.getArchivos().get(3));
-        PMDLBit prueba = new PMDLBit(archivo.getMatrizFlujo(),archivo.getMatrizDistancias());
-        int[] pru = {19, 15, 13, 28, 1, 21, 18, 10, 16, 2, 23, 25, 8, 11, 24, 4, 9, 29, 6, 22, 17, 7, 20, 14, 12, 5, 0, 26, 27, 3};
-        int p[] = prueba.dlbIterativa(pru);
 
-        for (int i = 0; i<p.length; i++){
-            System.out.print(p[i]+" ");
+
+
+
+    }
+
+
+
+    public static long calculaCostePrueba(int[] vectorSolucion, int [][] matrizFlujo, int [][] matrizDistancia) {
+
+        long coste = 0;
+
+
+        for (int i = 0; i < vectorSolucion.length; i++) {
+            for (int j = 0; j < vectorSolucion.length; j++) {
+                if (i != j) {
+                    coste = coste + (matrizFlujo[i][j] * matrizDistancia[vectorSolucion[i]][vectorSolucion[j]]);
+                }
+            }
         }
 
 
+        return coste;
     }
 
     public static void guardarArchivo(String ruta, String texto) {
