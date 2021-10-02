@@ -8,7 +8,7 @@ package com.uja.meta.practica1_metaheuristica;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Arrays;
+import java.util.Random;
 
 /**
  *
@@ -31,8 +31,8 @@ public class Practica1 {
                 switch (config.getAlgoritmos().get(j)) {
                     case "Greedy":
                         System.out.println("");
-                        System.out.println("Greedy");
-                        Greedy greedy = new Greedy(archivo.getMatrizFlujo(), archivo.getMatrizDistancias(), archivo.getNombreArchivo());
+                        System.out.println("GREEDY");
+                        AlgGRE_Clase2_Grupo1 greedy = new AlgGRE_Clase2_Grupo1(archivo.getMatrizFlujo(), archivo.getMatrizDistancias(), archivo.getNombreArchivo());
 
 
                         vectorPermutaciones = greedy.calculoGreedy();
@@ -44,30 +44,57 @@ public class Practica1 {
                             System.out.print(k + " ");
                         }
 
-                        System.out.println("Coste: " + coste);
+                        System.out.println("COSTE: " + coste);
 
-                        guardarArchivo("log/" + config.getAlgoritmos().get(j) + "_" + archivo.getNombreArchivo() + ".txt", greedy.getLog());
+                        guardarArchivo("log/Greedy/" + config.getAlgoritmos().get(j) + "_" + archivo.getNombreArchivo() + ".txt", greedy.getLog());
 
                         break;
-                    case "PrimeroMejor":
+                    case "PrimeroMejorIterativo":
                         System.out.println("");
-                        System.out.println("Algortimos primero el mejor.");
+                        System.out.println("ALGORTIMO PRIMERO EL MEJOR ITERATIVO.");
 
-                        PMDLBit iterativo = new PMDLBit(archivo.getMatrizFlujo(), archivo.getMatrizDistancias());
+                        AlgPMDLBit_Clase2_Grupo1 iterativo = new AlgPMDLBit_Clase2_Grupo1(archivo.getMatrizFlujo(), archivo.getMatrizDistancias(),archivo.getNombreArchivo());
 
                         int nuevaSol[] = iterativo.dlbIterativa(vectorPermutaciones);
 
-                        long costeNuevaSol = calculaCostePrueba(vectorPermutaciones, archivo.getMatrizFlujo(), archivo.getMatrizDistancias());
+                        long costeNuevaSol = calculaCostePrueba(nuevaSol, archivo.getMatrizFlujo(), archivo.getMatrizDistancias());
 
                         for (int k : nuevaSol) {
                             System.out.print(k + " ");
                         }
 
-                        System.out.println("Coste: " + costeNuevaSol);
+                        System.out.println("COSTE: " + costeNuevaSol);
+                        guardarArchivo("log/dlbIterativo/" + config.getAlgoritmos().get(j) + "_" + archivo.getNombreArchivo() + ".txt", iterativo.getLog());
+                        break;
+
+                    case "PrimeroMejorRandom":
+                        System.out.println("");
+                        System.out.println("Algortimos primero el mejor Aleatorio.");
+                        System.out.println("\n//////////////////////////////////////////////////////");
+                        for (int k = 0; k < config.getSemillas().size(); k++) {
+                            Random aleaRandom = new Random(config.getSemillas().get(k));
+                            AlgPMDLBrandom_Clase2_Grupo1 dlbRandom = new AlgPMDLBrandom_Clase2_Grupo1(archivo.getMatrizFlujo(), archivo.getMatrizDistancias(), aleaRandom, archivo.getNombreArchivo());
+
+                            int nuevaSolRandom[] = dlbRandom.dlbRandom(vectorPermutaciones);
+
+                            long costeNuevaSolRandom = calculaCostePrueba(nuevaSolRandom, archivo.getMatrizFlujo(), archivo.getMatrizDistancias());
+
+                            System.out.println("Semilla utilizada: "+config.getSemillas().get(k));
+                            for (int y: nuevaSolRandom) {
+                                System.out.print(y + " ");
+                            }
+                            System.out.println("Coste: " + costeNuevaSolRandom +"\n");
+
+                            guardarArchivo("log/DLBrandom/" + config.getAlgoritmos().get(j) + "_" + archivo.getNombreArchivo() +"_"+config.getSemillas().get(k)+ ".txt", dlbRandom.getLog());
+                        }
+
                         break;
 
                 }
+
             }
+            System.out.println("//////////////////////////////////////////////////////\n");
+            System.out.println("*************************************************************************");
         }
 
 

@@ -1,19 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.uja.meta.practica1_metaheuristica;
 
-import java.util.ArrayList;
-import java.util.Comparator;
 import javafx.util.Pair;
 
-/**
- *
- * @author Adrian Arboledas
- */
-public class Greedy {
+import java.util.ArrayList;
+
+public class AlgGRE_Clase2_Grupo1 {
 
     private StringBuilder log;
     private final ArrayList<Pair<Integer, Integer>> sumFlujo;
@@ -22,7 +13,7 @@ public class Greedy {
     private final int [][] matrizDistancia;
     private final String nombreArchivo;
 
-    public Greedy(int [][] _matrizFlujo, int [][] _matrizDistancia, String _nombreArchivo) {
+    public AlgGRE_Clase2_Grupo1(int [][] _matrizFlujo, int [][] _matrizDistancia, String _nombreArchivo) {
         this.log = new StringBuilder();
         this.sumFlujo = new ArrayList<>();
         this.sumDistancia = new ArrayList<>();
@@ -31,15 +22,15 @@ public class Greedy {
         this.nombreArchivo = _nombreArchivo;
     }
 
-    
-    
+
+
     public int[] calculoGreedy() {
 
         int[] vectSolucion = new int[matrizFlujo.length];
-        
+
         log.append("Ejecuión algoritmo Greedy, para el fichero de datos "+nombreArchivo+".\n");
         long tiempoInicial = System.currentTimeMillis();
-        
+
         for (int i = 0; i < matrizFlujo.length; i++) {
             int sumFilaFlujo = 0;
             int sumFilaDist = 0;
@@ -62,18 +53,18 @@ public class Greedy {
         for (int i = 0; i < sumDistancia.size(); i++) {
             vectSolucion[sumFlujo.get(sumFlujo.size() - 1 - i).getKey()] = sumDistancia.get(i).getKey();
         }
-        
+
         log.append("El tiempo total de ejecución algoritmo greedy:  ").append(System.currentTimeMillis() - tiempoInicial).append(" milisegundos.\n");
-        
+
         return vectSolucion;
     }
 
-    
+
     public long calculaCoste(int[] vectorSolucion) {
         log.append("Calculo del coste de la solución para el archivo de datos "+nombreArchivo+".\n");
         long coste = 0;
         long timeIni = System.currentTimeMillis();
-        
+
         for (int i = 0; i < vectorSolucion.length; i++) {
             for (int j = 0; j < vectorSolucion.length; j++) {
                 if (i != j) {
@@ -81,10 +72,10 @@ public class Greedy {
                 }
             }
         }
-        
+
         log.append("El coste de la solución: "+coste+"\n");
-        
-        
+
+
         log.append("El tiempo necesario para calcular el coste ha sidos: "+(System.currentTimeMillis()-timeIni)+" milisegundos.\n");
         return coste;
     }
@@ -92,7 +83,6 @@ public class Greedy {
     public String getLog() {
         return log.toString();
     }
-    
-    
-    
+
+
 }

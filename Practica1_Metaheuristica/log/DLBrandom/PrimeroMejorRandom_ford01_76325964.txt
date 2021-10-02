@@ -1,0 +1,286 @@
+Ejecución Algortimo primero el mejor aleatorio, para el fichero de datos ford01.
+
+Iteración: 1
+Vector permutaciones: 2 16 14 5 18 4 19 8 17 13 3 0 15 12 11 10 6 9 7 1 
+DLBRandom: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+Iteración: 2
+Vector permutaciones: 0 16 14 5 18 4 19 8 17 13 3 2 15 12 11 10 6 9 7 1 
+DLBRandom: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+Iteración: 3
+Vector permutaciones: 0 16 14 5 18 4 19 8 17 13 3 2 15 12 1 10 6 9 7 11 
+DLBRandom: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+Iteración: 4
+Vector permutaciones: 0 16 14 5 18 9 19 8 17 13 3 2 15 12 1 10 6 4 7 11 
+DLBRandom: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+Iteración: 5
+Vector permutaciones: 0 16 14 5 18 9 19 3 17 13 8 2 15 12 1 10 6 4 7 11 
+DLBRandom: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+Iteración: 6
+Vector permutaciones: 0 16 14 5 18 9 19 3 17 1 8 2 15 12 13 10 6 4 7 11 
+DLBRandom: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+Iteración: 7
+Vector permutaciones: 0 16 14 5 18 9 19 2 17 1 8 3 15 12 13 10 6 4 7 11 
+DLBRandom: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+Iteración: 8
+Vector permutaciones: 0 1 14 5 18 9 19 2 17 16 8 3 15 12 13 10 6 4 7 11 
+DLBRandom: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+Iteración: 9
+Vector permutaciones: 0 1 14 5 18 9 19 2 17 12 8 3 15 16 13 10 6 4 7 11 
+DLBRandom: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+Iteración: 10
+Vector permutaciones: 3 1 14 5 18 9 19 2 17 12 8 0 15 16 13 10 6 4 7 11 
+DLBRandom: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+Iteración: 11
+Vector permutaciones: 3 1 14 5 18 9 19 7 17 12 8 0 15 16 13 10 6 4 2 11 
+DLBRandom: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 
+
+Iteración: 12
+Vector permutaciones: 3 7 14 5 18 9 19 1 17 12 8 0 15 16 13 10 6 4 2 11 
+DLBRandom: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 
+
+Iteración: 13
+Vector permutaciones: 3 7 14 15 18 9 19 1 17 12 8 0 5 16 13 10 6 4 2 11 
+DLBRandom: 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 
+
+Iteración: 14
+Vector permutaciones: 3 7 14 6 18 9 19 1 17 12 8 0 5 16 13 10 15 4 2 11 
+DLBRandom: 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 
+
+Iteración: 15
+Vector permutaciones: 3 7 14 6 18 9 19 1 17 12 8 0 5 11 13 10 15 4 2 16 
+DLBRandom: 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 1 0 
+
+Iteración: 16
+Vector permutaciones: 3 15 14 6 18 9 19 1 17 12 8 0 5 11 13 10 7 4 2 16 
+DLBRandom: 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 1 0 1 1 0 
+
+Iteración: 17
+Vector permutaciones: 3 15 14 6 18 9 19 1 17 11 8 0 5 12 13 10 7 4 2 16 
+DLBRandom: 0 0 1 0 0 0 0 0 0 0 0 1 1 0 0 1 0 1 1 0 
+
+Iteración: 17
+Vector permutaciones: 3 15 14 6 18 9 19 1 17 11 8 0 5 12 13 10 7 4 2 16 
+DLBRandom: 0 0 1 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 
+
+Iteración: 17
+Vector permutaciones: 3 15 14 6 18 9 19 1 17 11 8 0 5 12 13 10 7 4 2 16 
+DLBRandom: 0 0 1 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 
+
+Iteración: 17
+Vector permutaciones: 3 15 14 6 18 9 19 1 17 11 8 0 5 12 13 10 7 4 2 16 
+DLBRandom: 0 0 1 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 
+
+Iteración: 17
+Vector permutaciones: 3 15 14 6 18 9 19 1 17 11 8 0 5 12 13 10 7 4 2 16 
+DLBRandom: 0 0 1 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 18
+Vector permutaciones: 3 15 14 17 18 9 19 1 6 11 8 0 5 12 13 10 7 4 2 16 
+DLBRandom: 0 0 1 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 18
+Vector permutaciones: 3 15 14 17 18 9 19 1 6 11 8 0 5 12 13 10 7 4 2 16 
+DLBRandom: 0 0 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 18
+Vector permutaciones: 3 15 14 17 18 9 19 1 6 11 8 0 5 12 13 10 7 4 2 16 
+DLBRandom: 0 0 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 18
+Vector permutaciones: 3 15 14 17 18 9 19 1 6 11 8 0 5 12 13 10 7 4 2 16 
+DLBRandom: 0 0 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 18
+Vector permutaciones: 3 15 14 17 18 9 19 1 6 11 8 0 5 12 13 10 7 4 2 16 
+DLBRandom: 0 0 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 18
+Vector permutaciones: 3 15 14 17 18 9 19 1 6 11 8 0 5 12 13 10 7 4 2 16 
+DLBRandom: 0 0 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 18
+Vector permutaciones: 3 15 14 17 18 9 19 1 6 11 8 0 5 12 13 10 7 4 2 16 
+DLBRandom: 0 0 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 18
+Vector permutaciones: 3 15 14 17 18 9 19 1 6 11 8 0 5 12 13 10 7 4 2 16 
+DLBRandom: 0 0 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 18
+Vector permutaciones: 3 15 14 17 18 9 19 1 6 11 8 0 5 12 13 10 7 4 2 16 
+DLBRandom: 0 0 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 18
+Vector permutaciones: 3 15 14 17 18 9 19 1 6 11 8 0 5 12 13 10 7 4 2 16 
+DLBRandom: 0 0 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 18
+Vector permutaciones: 3 15 14 17 18 9 19 1 6 11 8 0 5 12 13 10 7 4 2 16 
+DLBRandom: 0 0 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 18
+Vector permutaciones: 3 15 14 17 18 9 19 1 6 11 8 0 5 12 13 10 7 4 2 16 
+DLBRandom: 0 0 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 19
+Vector permutaciones: 3 17 14 15 18 9 19 1 6 11 8 0 5 12 13 10 7 4 2 16 
+DLBRandom: 0 0 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 19
+Vector permutaciones: 3 17 14 15 18 9 19 1 6 11 8 0 5 12 13 10 7 4 2 16 
+DLBRandom: 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 19
+Vector permutaciones: 3 17 14 15 18 9 19 1 6 11 8 0 5 12 13 10 7 4 2 16 
+DLBRandom: 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 19
+Vector permutaciones: 3 17 14 15 18 9 19 1 6 11 8 0 5 12 13 10 7 4 2 16 
+DLBRandom: 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 19
+Vector permutaciones: 3 17 14 15 18 9 19 1 6 11 8 0 5 12 13 10 7 4 2 16 
+DLBRandom: 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 19
+Vector permutaciones: 3 17 14 15 18 9 19 1 6 11 8 0 5 12 13 10 7 4 2 16 
+DLBRandom: 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 20
+Vector permutaciones: 3 7 14 15 18 9 19 1 6 11 8 0 5 12 13 10 17 4 2 16 
+DLBRandom: 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 
+
+Iteración: 20
+Vector permutaciones: 3 7 14 15 18 9 19 1 6 11 8 0 5 12 13 10 17 4 2 16 
+DLBRandom: 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 
+
+Iteración: 20
+Vector permutaciones: 3 7 14 15 18 9 19 1 6 11 8 0 5 12 13 10 17 4 2 16 
+DLBRandom: 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 20
+Vector permutaciones: 3 7 14 15 18 9 19 1 6 11 8 0 5 12 13 10 17 4 2 16 
+DLBRandom: 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 20
+Vector permutaciones: 3 7 14 15 18 9 19 1 6 11 8 0 5 12 13 10 17 4 2 16 
+DLBRandom: 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 20
+Vector permutaciones: 3 7 14 15 18 9 19 1 6 11 8 0 5 12 13 10 17 4 2 16 
+DLBRandom: 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 20
+Vector permutaciones: 3 7 14 15 18 9 19 1 6 11 8 0 5 12 13 10 17 4 2 16 
+DLBRandom: 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 20
+Vector permutaciones: 3 7 14 15 18 9 19 1 6 11 8 0 5 12 13 10 17 4 2 16 
+DLBRandom: 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 20
+Vector permutaciones: 3 7 14 15 18 9 19 1 6 11 8 0 5 12 13 10 17 4 2 16 
+DLBRandom: 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 20
+Vector permutaciones: 3 7 14 15 18 9 19 1 6 11 8 0 5 12 13 10 17 4 2 16 
+DLBRandom: 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 20
+Vector permutaciones: 3 7 14 15 18 9 19 1 6 11 8 0 5 12 13 10 17 4 2 16 
+DLBRandom: 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 20
+Vector permutaciones: 3 7 14 15 18 9 19 1 6 11 8 0 5 12 13 10 17 4 2 16 
+DLBRandom: 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 20
+Vector permutaciones: 3 7 14 15 18 9 19 1 6 11 8 0 5 12 13 10 17 4 2 16 
+DLBRandom: 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 20
+Vector permutaciones: 3 7 14 15 18 9 19 1 6 11 8 0 5 12 13 10 17 4 2 16 
+DLBRandom: 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 20
+Vector permutaciones: 3 7 14 15 18 9 19 1 6 11 8 0 5 12 13 10 17 4 2 16 
+DLBRandom: 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 20
+Vector permutaciones: 3 7 14 15 18 9 19 1 6 11 8 0 5 12 13 10 17 4 2 16 
+DLBRandom: 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 20
+Vector permutaciones: 3 7 14 15 18 9 19 1 6 11 8 0 5 12 13 10 17 4 2 16 
+DLBRandom: 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 20
+Vector permutaciones: 3 7 14 15 18 9 19 1 6 11 8 0 5 12 13 10 17 4 2 16 
+DLBRandom: 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 20
+Vector permutaciones: 3 7 14 15 18 9 19 1 6 11 8 0 5 12 13 10 17 4 2 16 
+DLBRandom: 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 20
+Vector permutaciones: 3 7 14 15 18 9 19 1 6 11 8 0 5 12 13 10 17 4 2 16 
+DLBRandom: 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 20
+Vector permutaciones: 3 7 14 15 18 9 19 1 6 11 8 0 5 12 13 10 17 4 2 16 
+DLBRandom: 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 20
+Vector permutaciones: 3 7 14 15 18 9 19 1 6 11 8 0 5 12 13 10 17 4 2 16 
+DLBRandom: 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 20
+Vector permutaciones: 3 7 14 15 18 9 19 1 6 11 8 0 5 12 13 10 17 4 2 16 
+DLBRandom: 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 20
+Vector permutaciones: 3 7 14 15 18 9 19 1 6 11 8 0 5 12 13 10 17 4 2 16 
+DLBRandom: 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 20
+Vector permutaciones: 3 7 14 15 18 9 19 1 6 11 8 0 5 12 13 10 17 4 2 16 
+DLBRandom: 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 20
+Vector permutaciones: 3 7 14 15 18 9 19 1 6 11 8 0 5 12 13 10 17 4 2 16 
+DLBRandom: 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 20
+Vector permutaciones: 3 7 14 15 18 9 19 1 6 11 8 0 5 12 13 10 17 4 2 16 
+DLBRandom: 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 20
+Vector permutaciones: 3 7 14 15 18 9 19 1 6 11 8 0 5 12 13 10 17 4 2 16 
+DLBRandom: 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 20
+Vector permutaciones: 3 7 14 15 18 9 19 1 6 11 8 0 5 12 13 10 17 4 2 16 
+DLBRandom: 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 20
+Vector permutaciones: 3 7 14 15 18 9 19 1 6 11 8 0 5 12 13 10 17 4 2 16 
+DLBRandom: 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 20
+Vector permutaciones: 3 7 14 15 18 9 19 1 6 11 8 0 5 12 13 10 17 4 2 16 
+DLBRandom: 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 20
+Vector permutaciones: 3 7 14 15 18 9 19 1 6 11 8 0 5 12 13 10 17 4 2 16 
+DLBRandom: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Tiempo total de ejecucion algoritmo Busqueda Local aleatoria: 0 milisegundos
