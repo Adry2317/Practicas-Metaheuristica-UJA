@@ -36,30 +36,44 @@ public class AlgPMDLBrandom_Clase2_Grupo1 {
         }
 
         boolean mejora_solucion = false;
+        int posI = aleatorio.nextInt(matrizFlujo.length);
         while(iteraciones < limIteraciones && !compruebaDLB() ){
             mejora_solucion = false;
 
-            int pos1 = aleatorio.nextInt(matrizFlujo.length);
-            for (int i = pos1; i < matrizFlujo.length && !mejora_solucion; i++){
+            int conti = 0;
+            int contj = 0;
+
+            for (int i = posI; (conti != matrizFlujo.length) && !mejora_solucion; i++){
+                if(i == matrizFlujo.length){
+                    i = i%matrizFlujo.length;
+                }
                 if (dlb[i] == 0){ //movimientos considerados para que puedan ser considerados para explorar entornos nuevos.
                     mejora_solucion = false;
                     int pos2 = aleatorio.nextInt(matrizFlujo.length);
-                    for (int j = pos2; j < matrizFlujo.length && !mejora_solucion; j++) {
+                    for (int j = i+1; (contj != matrizFlujo.length) && !mejora_solucion; j++) {
+                        if(j == matrizFlujo.length){
+                            j = j%matrizFlujo.length;
+                        }
                         //comprobamos el moviemiento y si es mejor nos lo quedamos
                         if (checkMove(i,j,resultado)){
                             aplicarMovimiento(i,j,resultado); //aplicamos el movimiento
                             dlb[i] = dlb[j] = 0; //se pone a 0 porque está implicado en un movimiento de mejora.
+                            posI = i;
                             mejora_solucion = true;
                             iteraciones++;
                         }
+                        contj++;
                     }
+                    contj = 0;
 
                     //si no se ha encontrado solucion mejor partiendo de esa posición actualizamos dlb
                     if(!mejora_solucion){
                         dlb[i] = 1;
                     }
                 }
+                conti ++;
             }
+            conti = 0;
             timeIni = System.currentTimeMillis() - timeIni;
             log.append("\nIteración: "+iteraciones+"\n");
 
