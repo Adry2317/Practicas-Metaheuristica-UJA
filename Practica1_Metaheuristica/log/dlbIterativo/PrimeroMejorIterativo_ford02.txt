@@ -57,63 +57,71 @@ Vector permutaciones: 14 1 2 0 5 17 7 3 8 10 11 12 9 13 6 18 16 4 15 19
 DLBIterativo: 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 
 Iteración: 15
-Vector permutaciones: 5 1 2 0 14 17 7 3 8 10 11 12 9 13 6 18 16 4 15 19 
-DLBIterativo: 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Vector permutaciones: 14 1 2 0 5 4 7 3 8 10 11 12 9 13 6 18 16 17 15 19 
+DLBIterativo: 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 
 Iteración: 16
-Vector permutaciones: 4 1 2 0 14 17 7 3 8 10 11 12 9 13 6 18 16 5 15 19 
+Vector permutaciones: 4 1 2 0 5 14 7 3 8 10 11 12 9 13 6 18 16 17 15 19 
 DLBIterativo: 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 
 Iteración: 17
-Vector permutaciones: 11 1 2 0 14 17 7 3 8 10 4 12 9 13 6 18 16 5 15 19 
+Vector permutaciones: 4 1 2 0 5 18 7 3 8 10 11 12 9 13 6 14 16 17 15 19 
 DLBIterativo: 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 
 Iteración: 18
-Vector permutaciones: 3 1 2 0 14 17 7 11 8 10 4 12 9 13 6 18 16 5 15 19 
-DLBIterativo: 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Vector permutaciones: 4 1 2 0 5 18 7 3 8 9 11 12 10 13 6 14 16 17 15 19 
+DLBIterativo: 0 1 1 1 0 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 
 
 Iteración: 19
-Vector permutaciones: 4 1 2 0 14 17 7 11 8 10 3 12 9 13 6 18 16 5 15 19 
-DLBIterativo: 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Vector permutaciones: 4 1 2 0 5 18 7 3 8 9 10 12 11 13 6 14 16 17 15 19 
+DLBIterativo: 0 1 1 1 0 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 
 
 Iteración: 20
-Vector permutaciones: 4 1 2 0 13 17 7 11 8 10 3 12 9 14 6 18 16 5 15 19 
-DLBIterativo: 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Vector permutaciones: 4 1 2 0 5 18 12 3 8 9 10 7 11 13 6 14 16 17 15 19 
+DLBIterativo: 0 1 1 1 0 1 0 1 1 1 1 0 0 0 0 0 0 0 0 0 
 
 Iteración: 21
-Vector permutaciones: 4 1 2 0 12 17 7 11 8 10 3 13 9 14 6 18 16 5 15 19 
-DLBIterativo: 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Vector permutaciones: 4 1 2 0 5 18 12 3 8 9 10 7 11 13 14 6 16 17 15 19 
+DLBIterativo: 0 1 1 1 0 1 0 1 1 1 1 1 1 1 0 0 0 0 0 0 
 
 Iteración: 22
-Vector permutaciones: 4 1 2 0 12 17 7 11 8 13 3 10 9 14 6 18 16 5 15 19 
-DLBIterativo: 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 
+Vector permutaciones: 4 1 2 0 5 14 12 3 8 9 10 7 11 13 18 6 16 17 15 19 
+DLBIterativo: 0 1 1 1 0 0 0 1 1 1 1 1 1 1 0 0 0 0 0 0 
 
 Iteración: 23
-Vector permutaciones: 4 1 2 0 12 17 7 11 8 13 6 10 9 14 3 18 16 5 15 19 
-DLBIterativo: 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 
+Vector permutaciones: 4 1 2 0 5 14 12 3 8 9 10 7 11 13 15 6 16 17 18 19 
+DLBIterativo: 0 1 1 1 0 0 0 1 1 1 1 1 1 1 0 0 0 0 0 0 
 
 Iteración: 24
-Vector permutaciones: 4 1 2 0 12 17 7 11 8 13 6 10 14 9 3 18 16 5 15 19 
-DLBIterativo: 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 
+Vector permutaciones: 4 1 2 0 5 15 12 3 8 9 10 7 11 13 14 6 16 17 18 19 
+DLBIterativo: 0 1 1 1 0 0 0 1 1 1 1 1 1 1 0 0 0 0 0 0 
 
 Iteración: 25
-Vector permutaciones: 14 1 2 0 12 17 7 11 8 13 6 10 4 9 3 18 16 5 15 19 
-DLBIterativo: 0 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 
+Vector permutaciones: 4 1 2 0 5 6 12 3 8 9 10 7 11 13 14 15 16 17 18 19 
+DLBIterativo: 0 1 1 1 0 0 0 1 1 1 1 1 1 1 1 0 0 0 0 0 
 
 Iteración: 26
-Vector permutaciones: 0 1 2 14 12 17 7 11 8 13 6 10 4 9 3 18 16 5 15 19 
-DLBIterativo: 0 1 1 0 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 
+Vector permutaciones: 4 1 2 0 5 18 12 3 8 9 10 7 11 13 14 15 16 17 6 19 
+DLBIterativo: 0 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 0 0 
 
 Iteración: 27
-Vector permutaciones: 0 1 2 13 12 17 7 11 8 14 6 10 4 9 3 18 16 5 15 19 
-DLBIterativo: 1 1 1 0 1 1 1 1 1 0 1 1 0 0 0 0 0 0 0 0 
+Vector permutaciones: 5 1 2 0 4 18 12 3 8 9 10 7 11 13 14 15 16 17 6 19 
+DLBIterativo: 0 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 
 
 Iteración: 28
-Vector permutaciones: 0 1 2 13 12 17 7 11 8 14 6 10 4 9 3 15 16 5 18 19 
-DLBIterativo: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 
+Vector permutaciones: 18 1 2 0 4 5 12 3 8 9 10 7 11 13 14 15 16 17 6 19 
+DLBIterativo: 0 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 
 
-Iteración: 28
-Vector permutaciones: 0 1 2 13 12 17 7 11 8 14 6 10 4 9 3 15 16 5 18 19 
+Iteración: 29
+Vector permutaciones: 0 1 2 18 4 5 12 3 8 9 10 7 11 13 14 15 16 17 6 19 
+DLBIterativo: 0 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+Iteración: 30
+Vector permutaciones: 0 1 2 11 4 5 12 3 8 9 10 7 18 13 14 15 16 17 6 19 
+DLBIterativo: 1 1 1 0 0 0 0 1 1 1 1 1 0 1 1 1 1 1 1 1 
+
+Iteración: 30
+Vector permutaciones: 0 1 2 11 4 5 12 3 8 9 10 7 18 13 14 15 16 17 6 19 
 DLBIterativo: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 
-Tiempo total de ejecucion algoritmo Busqueda Local iterativa: 0 milisegundos
+Tiempo total de ejecucion algoritmo Busqueda Local iterativa: 1 milisegundos

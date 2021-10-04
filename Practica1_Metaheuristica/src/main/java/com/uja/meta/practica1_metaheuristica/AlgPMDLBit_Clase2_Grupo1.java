@@ -39,30 +39,43 @@ public class AlgPMDLBit_Clase2_Grupo1 {
         }
 
         boolean mejora_solucion = false;
-
+        int iPos = 0;
+        int conti = 0;
+        int contj = 0;
         while(iteraciones < limIteraciones && !compruebaDLB()){
 
              mejora_solucion = false;
-            for (int i = 0; i < matrizFlujo.length && !mejora_solucion; i++){
+            for (int i = iPos; conti != matrizFlujo.length && !mejora_solucion; i++){
+                if(i == matrizFlujo.length){
+                    i = i%matrizFlujo.length;
+                }
                 if (dlb[i] == 0){ //movimientos considerados para que puedan ser considerados para explorar entornos nuevos.
                     mejora_solucion = false;
 
-                    for (int j = 0; j < matrizFlujo.length&& !mejora_solucion; j++) {
+                    for (int j = i+1; contj != matrizFlujo.length && !mejora_solucion; j++) {
+                        if(j == matrizFlujo.length){
+                            j = j%matrizFlujo.length;
+                        }
                         //comprobamos el moviemiento y si es mejor nos lo quedamos
                         if (checkMove(i,j,resultado)){
-                             aplicarMovimiento(i,j,resultado); //aplicamos el movimiento
+                            aplicarMovimiento(i,j,resultado); //aplicamos el movimiento
                             dlb[i] = dlb[j] = 0; //se pone a 0 porque está implicado en un movimiento de mejora.
+                            iPos = i;
                             mejora_solucion = true;
                             iteraciones++;
                         }
+                        contj++;
                     }
+                    contj = 0;
 
                     //si no se ha encontrado solucion mejor partiendo de esa posición actualizamos dlb
                     if(!mejora_solucion){
                         dlb[i] = 1;
                     }
                 }
+                conti++;
             }
+            conti = 0;
             timeIni = System.currentTimeMillis() - timeIni;
             log.append("\nIteración: "+iteraciones+"\n");
 
