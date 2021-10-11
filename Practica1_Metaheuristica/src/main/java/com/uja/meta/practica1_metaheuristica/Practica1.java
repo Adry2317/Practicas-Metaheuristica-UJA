@@ -28,9 +28,9 @@ public class Practica1 {
         //ArchivoDatos archivo = new ArchivoDatos(config.getArchivos().get(1));
         //System.out.println(archivo.getNombreArchivo());
         int[] vectorPermutaciones = null;
-        int[] solucionGreedy = null;
+
         ArrayList<Pair<Integer,Integer>> LRC = new ArrayList<>();
-        ArchivoDatos archivoPru = new ArchivoDatos(config.getArchivos().get(3));
+
         for (int i = 0; i < config.getArchivos().size(); i++) {
             for (int j = 0; j < config.getAlgoritmos().size(); j++) {
                 ArchivoDatos archivo = new ArchivoDatos(config.getArchivos().get(i));
@@ -42,12 +42,9 @@ public class Practica1 {
 
 
                         vectorPermutaciones = greedy.calculoGreedy();
-                        solucionGreedy = vectorPermutaciones;
+
                         ArrayList<Pair<Integer,Integer>> prueba = greedy.GreedyAleatorio();
-                        System.out.println("Empieza la comprobación");
-                        for (Pair k : prueba) {
-                            System.out.println(k.getKey() + " "+k.getValue());
-                        }
+
                         LRC = prueba;
                         long coste = greedy.calculaCoste(vectorPermutaciones);
 
@@ -102,15 +99,36 @@ public class Practica1 {
 
                         break;
 
+                    case "MultiArranque":
+                        System.out.println("");
+                        System.out.println("Algortimo Multiarranque.");
+                        System.out.println("\n//////////////////////////////////////////////////////");
+                        for (int k = 0; k < config.getSemillas().size(); k++) {
+                            Random aleaRandom = new Random(config.getSemillas().get(k));
+                            AlgMA_Clase2_Grupo1 multiArranque = new AlgMA_Clase2_Grupo1(vectorPermutaciones.length, vectorPermutaciones.length,aleaRandom, archivo.getMatrizDistancias(),archivo.getMatrizFlujo(),LRC,archivo.getNombreArchivo());
+
+                            int nuevaSolRandom[] = multiArranque.algoritmoMultiArranque(vectorPermutaciones);
+
+                            long costeNuevaSolRandom = calculaCostePrueba(nuevaSolRandom, archivo.getMatrizFlujo(), archivo.getMatrizDistancias());
+
+                            System.out.println("Semilla utilizada: "+config.getSemillas().get(k));
+                            for (int y: nuevaSolRandom) {
+                                System.out.print(y + " ");
+                            }
+                            System.out.println("Coste: " + costeNuevaSolRandom +"\n");
+
+                            guardarArchivo("log/Multiarranque/" + config.getAlgoritmos().get(j) + "_" + archivo.getNombreArchivo() +"_"+config.getSemillas().get(k)+ ".txt", multiArranque.getLog());
+                        }
+
+                        break;
+
                 }
 
             }
             System.out.println("//////////////////////////////////////////////////////\n");
             System.out.println("*************************************************************************");
         }
-        Random aleatorio = new Random(System.currentTimeMillis());
-        AlgMA_Clase2_Grupo1 prueba = new AlgMA_Clase2_Grupo1(vectorPermutaciones.length, vectorPermutaciones.length,aleatorio, archivoPru.getMatrizDistancias(),archivoPru.getMatrizFlujo(),LRC);
-       int [] mejorSol = prueba.algoritmoMultiArranque(solucionGreedy);
+
 
     }
 

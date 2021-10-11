@@ -26,16 +26,20 @@ public class AlgMA_Clase2_Grupo1 {
     private int[] dlb;
     private int [][] matrizFlujo;
     private int[][] matrizDistancia;
+    private final String nombreArchivo;
+    private StringBuilder log;
 
-    public AlgMA_Clase2_Grupo1(int tamMemoriaLArgoPlazo, int _tamVectorSoluciones, Random _aleatorio,int[][] _matrizDistancia, int [][] _matrizFlujo, ArrayList<Pair<Integer,Integer>> _LRC){
+    public AlgMA_Clase2_Grupo1(int tamMemoriaLArgoPlazo, int _tamVectorSoluciones, Random _aleatorio,int[][] _matrizDistancia, int [][] _matrizFlujo, ArrayList<Pair<Integer,Integer>> _LRC, String _nombreArchivo){
         this.listaCircularIntercambios = new LinkedList<>();
         this.listaRestringidaCandidatos = _LRC;
+        this.log = new StringBuilder();
         this.memoriaLargoPlazo = new int[tamMemoriaLArgoPlazo][tamMemoriaLArgoPlazo];
         this.mejorSolGlobal = new int[tamVectorSoluciones];
         this.solucionAnterior = new int[tamVectorSoluciones];
         this.mejorSolActual = new int[tamVectorSoluciones];
         this.solucionActual = new int[tamVectorSoluciones];
         this.tamVectorSoluciones = _tamVectorSoluciones;
+        this.nombreArchivo = _nombreArchivo;
         this.aleatorio = _aleatorio;
         this.dlb = new int[_tamVectorSoluciones];
         for (int i = 0; i < _tamVectorSoluciones; i++){
@@ -57,8 +61,10 @@ public class AlgMA_Clase2_Grupo1 {
         int posI = aleatorio.nextInt(tamVectorSoluciones);
         int contLRC = 0;
 
-
-
+        log.append("Ejecución Algortimo multiarranque, para el fichero de datos "+nombreArchivo+".\n");
+        long tiempoIni = System.currentTimeMillis();
+        log.append("Mejores soluciones");
+        log.append("\n");
         do {
             solucionActual = solucionGreedy.clone();
             aplicarMovimiento(listaRestringidaCandidatos.get(contLRC).getKey(),listaRestringidaCandidatos.get(contLRC).getValue(), solucionActual);
@@ -148,15 +154,17 @@ public class AlgMA_Clase2_Grupo1 {
                 mejorSolGlobal = mejorSolActual.clone();
             }
 
-            System.out.println("Mejores soluciones");
-            costeMejorSolGlobal = calculaCoste(mejorSolGlobal);
-            System.out.println("Coste: "+costeMejorSolGlobal);
-            for (int i = 0; i < mejorSolGlobal.length; i++) {
-                System.out.print(mejorSolGlobal[i]+" ");
-            }
 
+            costeMejorSolGlobal = calculaCoste(mejorSolGlobal);
+            log.append("Coste: "+costeMejorSolGlobal + " Solucion: ");
+            for (int i = 0; i < mejorSolGlobal.length; i++) {
+                log.append(mejorSolGlobal[i]+" ");
+            }
+            log.append("\n");
             contLRC++;
         }while(contLRC < candidatosLRC);
+
+        log.append("Tiempo de ejecucion: " + (System.currentTimeMillis() - tiempoIni));
 
         return mejorSolGlobal;
     }
@@ -245,5 +253,9 @@ public class AlgMA_Clase2_Grupo1 {
 
         //log.append("El tiempo necesario para calcular el coste ha sidos: "+(System.currentTimeMillis()-timeIni)+" milisegundos.\n");
         return coste;
+    }
+
+    public String getLog() {
+        return log.toString();
     }
 }

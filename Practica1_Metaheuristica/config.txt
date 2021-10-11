@@ -1,4 +1,4 @@
 Archivos=ford01.dat ford02.dat ford03.dat ford04.dat
 Semillas=76593264 75932664 93267654 76325964 76326594
-Algoritmos=Greedy PrimeroMejorIterativo PrimeroMejorRandom
+Algoritmos=Greedy PrimeroMejorIterativo PrimeroMejorRandom MultiArranque
 OtrosParametros=1
