@@ -5,9 +5,12 @@
  */
 package com.uja.meta.practica1_metaheuristica;
 
+import javafx.util.Pair;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.Random;
 
 /**
@@ -25,6 +28,9 @@ public class Practica1 {
         //ArchivoDatos archivo = new ArchivoDatos(config.getArchivos().get(1));
         //System.out.println(archivo.getNombreArchivo());
         int[] vectorPermutaciones = null;
+        int[] solucionGreedy = null;
+        ArrayList<Pair<Integer,Integer>> LRC = new ArrayList<>();
+        ArchivoDatos archivoPru = new ArchivoDatos(config.getArchivos().get(3));
         for (int i = 0; i < config.getArchivos().size(); i++) {
             for (int j = 0; j < config.getAlgoritmos().size(); j++) {
                 ArchivoDatos archivo = new ArchivoDatos(config.getArchivos().get(i));
@@ -36,7 +42,13 @@ public class Practica1 {
 
 
                         vectorPermutaciones = greedy.calculoGreedy();
-
+                        solucionGreedy = vectorPermutaciones;
+                        ArrayList<Pair<Integer,Integer>> prueba = greedy.GreedyAleatorio();
+                        System.out.println("Empieza la comprobación");
+                        for (Pair k : prueba) {
+                            System.out.println(k.getKey() + " "+k.getValue());
+                        }
+                        LRC = prueba;
                         long coste = greedy.calculaCoste(vectorPermutaciones);
 
 
@@ -96,9 +108,9 @@ public class Practica1 {
             System.out.println("//////////////////////////////////////////////////////\n");
             System.out.println("*************************************************************************");
         }
-
-
-
+        Random aleatorio = new Random(System.currentTimeMillis());
+        AlgMA_Clase2_Grupo1 prueba = new AlgMA_Clase2_Grupo1(vectorPermutaciones.length, vectorPermutaciones.length,aleatorio, archivoPru.getMatrizDistancias(),archivoPru.getMatrizFlujo(),LRC);
+       int [] mejorSol = prueba.algoritmoMultiArranque(solucionGreedy);
 
     }
 

@@ -49,7 +49,7 @@ public class AlgPMDLBrandom_Clase2_Grupo1 {
                 }
                 if (dlb[i] == 0){ //movimientos considerados para que puedan ser considerados para explorar entornos nuevos.
                     mejora_solucion = false;
-                    int pos2 = aleatorio.nextInt(matrizFlujo.length);
+
                     for (int j = i+1; (contj != matrizFlujo.length) && !mejora_solucion; j++) {
                         if(j == matrizFlujo.length){
                             j = j%matrizFlujo.length;
@@ -73,7 +73,7 @@ public class AlgPMDLBrandom_Clase2_Grupo1 {
                 }
                 conti ++;
             }
-            conti = 0;
+
             timeIni = System.currentTimeMillis() - timeIni;
             log.append("\nIteración: "+iteraciones+"\n");
 
