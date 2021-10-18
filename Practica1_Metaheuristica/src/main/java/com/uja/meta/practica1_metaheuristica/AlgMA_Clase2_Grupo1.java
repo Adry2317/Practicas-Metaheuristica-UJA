@@ -18,10 +18,10 @@ public class AlgMA_Clase2_Grupo1 {
     private int [] solucionAnterior;
     private int[] mejorPeores;
     private int [] solucionActual;
-    private static double porcentajeIniOscilacion = 0.05;
+    private static double porcentajeIniOscilacion;
     private int tamVectorSoluciones;
-    private static int limIteraciones = 1000;
-    private static int candidatosLRC = 10;
+    private static int limIteraciones;
+    private static int candidatosLRC;
     private Random aleatorio;
     private int[] dlb;
     private int [][] matrizFlujo;
@@ -29,7 +29,7 @@ public class AlgMA_Clase2_Grupo1 {
     private final String nombreArchivo;
     private StringBuilder log;
 
-    public AlgMA_Clase2_Grupo1(int tamMemoriaLArgoPlazo, int _tamVectorSoluciones, Random _aleatorio,int[][] _matrizDistancia, int [][] _matrizFlujo, ArrayList<Pair<Integer,Integer>> _LRC, String _nombreArchivo){
+    public AlgMA_Clase2_Grupo1(int tamMemoriaLArgoPlazo, int _tamVectorSoluciones, Random _aleatorio,int[][] _matrizDistancia, int [][] _matrizFlujo, ArrayList<Pair<Integer,Integer>> _LRC, String _nombreArchivo, int iteracionesDLB, int tamLRC,double porcentajeOscilacion){
         this.listaCircularIntercambios = new LinkedList<>();
         this.listaRestringidaCandidatos = _LRC;
         this.log = new StringBuilder();
@@ -41,20 +41,27 @@ public class AlgMA_Clase2_Grupo1 {
         this.tamVectorSoluciones = _tamVectorSoluciones;
         this.nombreArchivo = _nombreArchivo;
         this.aleatorio = _aleatorio;
+        this.limIteraciones = iteracionesDLB;
+        this.candidatosLRC = tamLRC;
+        this.porcentajeIniOscilacion = porcentajeOscilacion;
         this.dlb = new int[_tamVectorSoluciones];
+
         for (int i = 0; i < _tamVectorSoluciones; i++){
             dlb[i] = 0;
             for (int j = 0; j<_tamVectorSoluciones; j++){
                 memoriaLargoPlazo[i][j] = 0;
             }
         }
-
-
         this.matrizFlujo = _matrizFlujo;
         this.matrizDistancia = _matrizDistancia;
     }
 
 
+    /**
+     * Algoritmo multiarranque
+     * @param solucionGreedy Solucion del greedy
+     * @return Valor de la solucion calculada
+     * */
     public int [] algoritmoMultiArranque(int[] solucionGreedy){
         int iteraciones = 0;
         boolean mejora_solucion = false;
@@ -66,14 +73,18 @@ public class AlgMA_Clase2_Grupo1 {
         log.append("Mejores soluciones");
         log.append("\n");
         do {
-            solucionActual = solucionGreedy.clone();
+            solucionActual = solucionGreedy.clone(); //Guardamos la solucion greedy  como solucion actual (sol partida)
+
+            //Aplicamos el movimiento con la listaRestringida de candidatos obtenida del greedy aleatorizado
             aplicarMovimiento(listaRestringidaCandidatos.get(contLRC).getKey(),listaRestringidaCandidatos.get(contLRC).getValue(), solucionActual);
 
+            //Inicializamos el resto a la solución actual, ya que al principio todas son iguales.
             solucionAnterior = solucionActual.clone();
             mejorSolGlobal = solucionActual.clone();
             mejorSolActual = solucionActual.clone();
             mejorPeores = solucionActual.clone();
 
+            //Por cada candidato de la LRC debemos de resetear el dlb
             for(int i = 0; i < dlb.length; i++){
                 dlb[i] = 0;
             }
@@ -88,15 +99,18 @@ public class AlgMA_Clase2_Grupo1 {
 
                 int conti = 0;
                 int contj = 0;
-                if(iteraciones == limIteraciones*porcentajeIniOscilacion ) { //oscilación estratégica
+
+                //si no ha habido mejora en un limite de iteracciones delimitado por el porcentaje de oscilación,
+                //se cambia la solución actual por la mejor de las peores.
+                if(iteraciones == limIteraciones*porcentajeIniOscilacion ) {
                     solucionActual = mejorPeores.clone();
-                    for(int i = 0; i < dlb.length; i++){
+                    for(int i = 0; i < dlb.length; i++){ //al aplicar la oscilacion es necesario restear el dlb
                         dlb[i] = 0;
                     }
                 }
                 for (int i = posI; (conti != tamVectorSoluciones) && !mejora_solucion; i++) {
                     mejora_solucion = false;
-                    if (i == tamVectorSoluciones) {
+                    if (i == tamVectorSoluciones) { //si hemos llegado al final realizamos el modulo, para asi recorrer  el vector de permutaciones.
                         i = i % tamVectorSoluciones;
                     }
                     if (dlb[i] == 0) { //movimientos considerados para que puedan ser considerados para explorar entornos nuevos.
@@ -108,13 +122,14 @@ public class AlgMA_Clase2_Grupo1 {
                                 j = j % tamVectorSoluciones;
                             }
                             for (int k = 0; k < listaCircularIntercambios.size() && !EstalistaTabu; k++){
+                                //Comprobamos que el movimiento (i,j) no se encuentra dentro de la lista tabu.
                                 if(listaCircularIntercambios.get(k).getKey() == i && listaCircularIntercambios.get(k).getValue() == j){
                                     EstalistaTabu = true;
                                 }
                             }
-                            //comprobamos el moviemiento y si es mejor nos lo quedamos
+                            //comprobamos el moviemiento y si es mejor y no se encuentra en la lista tabu, lo aplicamos.
                             if (checkMove(i, j, solucionActual) && !EstalistaTabu) {
-                                solucionAnterior = solucionActual.clone();
+                                solucionAnterior = solucionActual.clone(); //guardamos la solución anterior.
                                 aplicarMovimiento(i, j, solucionActual); //aplicamos el movimiento
                                 dlb[i] = dlb[j] = 0; //se pone a 0 porque está implicado en un movimiento de mejora.
                                 posI = i;
@@ -122,12 +137,14 @@ public class AlgMA_Clase2_Grupo1 {
                                 costeMEjorSol = calculaCoste(mejorSolActual);
                                 costeSOlActual = calculaCoste(solucionActual);
 
+                                //comprobamos si la solución obtenida es mejor que la "mejorSolActual".
                                 if(costeMEjorSol > costeSOlActual){
                                     mejorSolActual = solucionActual.clone();
-                                }else if(costeSOlActual < calculaCoste(mejorPeores)){
+                                }
+                                //si no lo es guardamos la mejor de las peores.
+                                else if(costeSOlActual < calculaCoste(mejorPeores)){
                                     mejorPeores = solucionActual.clone();
                                 }
-
 
                                 iteraciones++;
                             }
@@ -150,6 +167,7 @@ public class AlgMA_Clase2_Grupo1 {
 
             costeMejorSolGlobal = calculaCoste(mejorSolGlobal);
 
+            //actualizamos la mejor solucion global en caso de ser posible.
             if(calculaCoste(solucionActual) < costeMejorSolGlobal){
                 mejorSolGlobal = mejorSolActual.clone();
             }
@@ -169,12 +187,19 @@ public class AlgMA_Clase2_Grupo1 {
         return mejorSolGlobal;
     }
 
+
+    /***
+     * Función encargada de aplicar los movimientos
+     * @param i posicion 1.
+     * @param j posicion 2
+     * @param vectorPermutacion vector de permutaciones al que se le apolicaran los movimietos.
+     */
     public void aplicarMovimiento(int i, int j, int[] vectorPermutacion){
         int aux = vectorPermutacion[i];
         vectorPermutacion[i] = vectorPermutacion[j];
         vectorPermutacion[j] = aux;
         memoriaLargoPlazo[i][j]++; //aumentamos en 1 la frecuencia de aparición
-        if(listaCircularIntercambios.size() == 3){
+        if(listaCircularIntercambios.size() == candidatosLRC){
 
             Pair<Integer,Integer> cambio = new Pair<>(i,j);
             listaCircularIntercambios.remove(0);//borramos el primer elemento.
@@ -218,7 +243,10 @@ public class AlgMA_Clase2_Grupo1 {
     }
 
 
-
+    /**
+     * Funcion comprueba si el DLB esta lleno a 1
+     * @return Bool de si el dlb esta entero a 1 o no
+     * */
     public boolean compruebaDLB(){
         int cont = 0;
 
@@ -235,8 +263,13 @@ public class AlgMA_Clase2_Grupo1 {
 
     }
 
+    /**
+     * Calcula el coste
+     * @param vectorSolucion: Vector solucion
+     * @return Valor del coste
+     * */
     public long calculaCoste(int[] vectorSolucion) {
-        //log.append("Calculo del coste de la solución para el archivo de datos "+nombreArchivo+".\n");
+        
         long coste = 0;
         long timeIni = System.currentTimeMillis();
 
@@ -248,13 +281,13 @@ public class AlgMA_Clase2_Grupo1 {
             }
         }
 
-        //log.append("El coste de la solución: "+coste+"\n");
-
-
-        //log.append("El tiempo necesario para calcular el coste ha sidos: "+(System.currentTimeMillis()-timeIni)+" milisegundos.\n");
+       
         return coste;
     }
 
+    /**
+     * Getter del Log
+     * */
     public String getLog() {
         return log.toString();
     }

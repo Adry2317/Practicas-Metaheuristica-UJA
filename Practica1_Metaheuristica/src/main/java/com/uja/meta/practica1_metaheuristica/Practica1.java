@@ -24,9 +24,7 @@ public class Practica1 {
      */
     public static void main(String[] args) {
         Configurador config = new Configurador(args[0]);
-        //System.out.println(config.getArchivos());
-        //ArchivoDatos archivo = new ArchivoDatos(config.getArchivos().get(1));
-        //System.out.println(archivo.getNombreArchivo());
+        
         int[] vectorPermutaciones = null;
 
         ArrayList<Pair<Integer,Integer>> LRC = new ArrayList<>();
@@ -38,7 +36,7 @@ public class Practica1 {
                     case "Greedy":
                         System.out.println("");
                         System.out.println("GREEDY");
-                        AlgGRE_Clase2_Grupo1 greedy = new AlgGRE_Clase2_Grupo1(archivo.getMatrizFlujo(), archivo.getMatrizDistancias(), archivo.getNombreArchivo());
+                        AlgGRE_Clase2_Grupo1 greedy = new AlgGRE_Clase2_Grupo1(archivo.getMatrizFlujo(), archivo.getMatrizDistancias(), archivo.getNombreArchivo(), config.getTamLRC(), config.getMejoresLRC());
 
 
                         vectorPermutaciones = greedy.calculoGreedy();
@@ -62,7 +60,7 @@ public class Practica1 {
                         System.out.println("");
                         System.out.println("ALGORTIMO PRIMERO EL MEJOR ITERATIVO.");
 
-                        AlgPMDLBit_Clase2_Grupo1 iterativo = new AlgPMDLBit_Clase2_Grupo1(archivo.getMatrizFlujo(), archivo.getMatrizDistancias(),archivo.getNombreArchivo());
+                        AlgPMDLBit_Clase2_Grupo1 iterativo = new AlgPMDLBit_Clase2_Grupo1(archivo.getMatrizFlujo(), archivo.getMatrizDistancias(),archivo.getNombreArchivo(),config.getIteracionesDLB());
 
                         int nuevaSol[] = iterativo.dlbIterativa(vectorPermutaciones);
 
@@ -82,7 +80,7 @@ public class Practica1 {
                         System.out.println("\n//////////////////////////////////////////////////////");
                         for (int k = 0; k < config.getSemillas().size(); k++) {
                             Random aleaRandom = new Random(config.getSemillas().get(k));
-                            AlgPMDLBrandom_Clase2_Grupo1 dlbRandom = new AlgPMDLBrandom_Clase2_Grupo1(archivo.getMatrizFlujo(), archivo.getMatrizDistancias(), aleaRandom, archivo.getNombreArchivo());
+                            AlgPMDLBrandom_Clase2_Grupo1 dlbRandom = new AlgPMDLBrandom_Clase2_Grupo1(archivo.getMatrizFlujo(), archivo.getMatrizDistancias(), aleaRandom, archivo.getNombreArchivo(),config.getIteracionesDLB());
 
                             int nuevaSolRandom[] = dlbRandom.dlbRandom(vectorPermutaciones);
 
@@ -105,7 +103,7 @@ public class Practica1 {
                         System.out.println("\n//////////////////////////////////////////////////////");
                         for (int k = 0; k < config.getSemillas().size(); k++) {
                             Random aleaRandom = new Random(config.getSemillas().get(k));
-                            AlgMA_Clase2_Grupo1 multiArranque = new AlgMA_Clase2_Grupo1(vectorPermutaciones.length, vectorPermutaciones.length,aleaRandom, archivo.getMatrizDistancias(),archivo.getMatrizFlujo(),LRC,archivo.getNombreArchivo());
+                            AlgMA_Clase2_Grupo1 multiArranque = new AlgMA_Clase2_Grupo1(vectorPermutaciones.length, vectorPermutaciones.length,aleaRandom, archivo.getMatrizDistancias(),archivo.getMatrizFlujo(),LRC,archivo.getNombreArchivo(), config.getIteracionesDLB(), config.getTamLRC(), config.getPorcentajeOscilacion());
 
                             int nuevaSolRandom[] = multiArranque.algoritmoMultiArranque(vectorPermutaciones);
 

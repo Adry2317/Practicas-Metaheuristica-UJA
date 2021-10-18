@@ -17,7 +17,11 @@ public class Configurador {
     private ArrayList<String> archivos;
     private ArrayList<String> algoritmos;
     private ArrayList<Long> semillas;
-    private int parametroExtra;
+    private int tamLRC;
+    private int iteracionesDLB;
+    private int mejoresLRC;
+    private double porcentajeOscilacion;
+    private int tamListaTabu;
     
     public Configurador(String ruta){
         archivos = new ArrayList<>();
@@ -54,8 +58,24 @@ public class Configurador {
                             
                         }
                         break;
-                    case "OtrosParametros":
-                        parametroExtra = Integer.parseInt(split[1]);
+                    case "TamLRC":
+                        tamLRC = Integer.parseInt(split[1]);
+                        break;
+                    case "IteracionesDLB":
+                        iteracionesDLB = Integer.parseInt(split[1]);
+                        break;
+
+                    case "MejoresLRC":
+                        mejoresLRC = Integer.parseInt(split[1]);
+                        break;
+
+                    case "PorcentajeOscilacion":
+                        porcentajeOscilacion = Double.parseDouble(split[1]);
+                        break;
+
+
+                    case "TamListaTabu":
+                        tamListaTabu = Integer.parseInt(split[1]);
                         break;
                 }
                 
@@ -77,9 +97,23 @@ public class Configurador {
         return semillas;
     }
 
-    public int getParametroExtra() {
-        return parametroExtra;
+    public int getTamLRC() {
+        return tamLRC;
     }
-    
-    
+
+    public int getIteracionesDLB() {
+        return iteracionesDLB;
+    }
+
+    public int getMejoresLRC() {
+        return mejoresLRC;
+    }
+
+    public double getPorcentajeOscilacion() {
+        return porcentajeOscilacion;
+    }
+
+    public int getTamListaTabu() {
+        return tamListaTabu;
+    }
 }

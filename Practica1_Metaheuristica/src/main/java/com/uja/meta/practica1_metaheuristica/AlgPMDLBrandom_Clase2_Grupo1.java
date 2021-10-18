@@ -11,11 +11,11 @@ public class AlgPMDLBrandom_Clase2_Grupo1 {
     private final String nombreArchivo;
     private final Random aleatorio;
 
-    public AlgPMDLBrandom_Clase2_Grupo1(int [][] _matrizFlujo, int [][] _matrizDistancia, Random _aleatorio, String _nombreArchivo){
+    public AlgPMDLBrandom_Clase2_Grupo1(int [][] _matrizFlujo, int [][] _matrizDistancia, Random _aleatorio, String _nombreArchivo, int _limIteraciones){
         this.matrizFlujo = _matrizFlujo;
         this.matrizDistancia = _matrizDistancia;
         this.log = new StringBuilder();
-        this.limIteraciones = 1000;
+        this.limIteraciones = _limIteraciones;
         this.aleatorio = _aleatorio;
         this.nombreArchivo = _nombreArchivo;
         this.dlb = new int[matrizFlujo.length];
@@ -26,17 +26,15 @@ public class AlgPMDLBrandom_Clase2_Grupo1 {
 
     public int[] dlbRandom( int[] solucionActual){
         int iteraciones = 0;
-        int[] resultado = new int[solucionActual.length];
+        int[] resultado;
 
         log.append("Ejecución Algortimo primero el mejor aleatorio, para el fichero de datos "+nombreArchivo+".\n");
         long timeIni = System.currentTimeMillis();
 
-        for (int i = 0; i < solucionActual.length; i++) {
-            resultado[i] = solucionActual[i];
-        }
+        resultado = solucionActual.clone();
 
-        boolean mejora_solucion = false;
-        int posI = aleatorio.nextInt(matrizFlujo.length);
+        boolean mejora_solucion = false; //boleano que controla si la solucion ha mejorado o no.
+        int posI = aleatorio.nextInt(matrizFlujo.length); //inicializamos la posición del bucle "i" a una posición aleatoria del vector de permutacines.
         while(iteraciones < limIteraciones && !compruebaDLB() ){
             mejora_solucion = false;
 
@@ -44,10 +42,10 @@ public class AlgPMDLBrandom_Clase2_Grupo1 {
             int contj = 0;
 
             for (int i = posI; (conti != matrizFlujo.length) && !mejora_solucion; i++){
-                if(i == matrizFlujo.length){
+                if(i == matrizFlujo.length){ //si hemos llegado al final realizamos el modulo, para asi recorrer  el vector de permutaciones.
                     i = i%matrizFlujo.length;
                 }
-                if (dlb[i] == 0){ //movimientos considerados para que puedan ser considerados para explorar entornos nuevos.
+                if (dlb[i] == 0){ //movimientos que puedan ser considerados para explorar entornos nuevos.
                     mejora_solucion = false;
 
                     for (int j = i+1; (contj != matrizFlujo.length) && !mejora_solucion; j++) {
@@ -98,9 +96,12 @@ public class AlgPMDLBrandom_Clase2_Grupo1 {
     }
 
 
-
-
-
+    /**
+     * Función encargada de aplicar un movimiento en el vector de permutaciones.
+     * @param i posicion 1
+     * @param j posicion 2
+     * @param vectorPermutacion vector de permutaciones al cual se le va a aplicar el movimiento.
+     */
     public void aplicarMovimiento(int i, int j, int[] vectorPermutacion){
         int aux = vectorPermutacion[i];
         vectorPermutacion[i] = vectorPermutacion[j];
@@ -127,9 +128,6 @@ public class AlgPMDLBrandom_Clase2_Grupo1 {
 
                         ((matrizFlujo[k][r]*(matrizDistancia[vectorPerm[k]][vectorPerm[s]] - matrizDistancia[vectorPerm[k]][vectorPerm[r]])) +
                                 (matrizFlujo[k][s]* (matrizDistancia[vectorPerm[k]][vectorPerm[r]] - matrizDistancia[vectorPerm[k]][vectorPerm[s]])));
-
-
-
 
             }
         }
@@ -164,6 +162,9 @@ public class AlgPMDLBrandom_Clase2_Grupo1 {
 
     }
 
+    /**
+     * Getter de log
+     * */
     public String getLog() {
         return log.toString();
     }

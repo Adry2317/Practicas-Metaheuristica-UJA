@@ -8,40 +8,52 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class AlgPMDLBit_Clase2_Grupo1 {
-    private StringBuilder log;
-    private final int [][] matrizFlujo;
-    private final int [][] matrizDistancia;
-    private static int limIteraciones;
-    private int[] dlb;
-    private final String nombreArchivo;
 
-    public AlgPMDLBit_Clase2_Grupo1(int [][] _matrizFlujo, int [][] _matrizDistancia,String _nombreArchivo){
+    private StringBuilder log; //Instancia para el log
+    private final int [][] matrizFlujo;//Matriz de flujo
+    private final int [][] matrizDistancia;//Matriz de distancias
+    private static int limIteraciones;//Limite de iteraciones
+    private int[] dlb;//Vector del dlb para intercambios
+    private final String nombreArchivo;//Nombre del archivo que esta ejecutando para el log
+
+    public AlgPMDLBit_Clase2_Grupo1(int [][] _matrizFlujo, int [][] _matrizDistancia,String _nombreArchivo,int _limIteraciones){
         this.matrizFlujo = _matrizFlujo;
         this.matrizDistancia = _matrizDistancia;
         this.log = new StringBuilder();
-        this.limIteraciones = 1000;
+        this.limIteraciones = _limIteraciones;
         this.nombreArchivo = _nombreArchivo;
+
+        //Se inicia el dlb a 0
         this.dlb = new int[matrizFlujo.length];
         for(int i = 0; i < matrizFlujo.length; i++){
             dlb[i] = 0;
         }
     }
 
+    /**
+     * Funcion de DLB iterativa
+     * @param solucionActual: Solucion actual del Greedy
+     * @return Vector con la solucion calculada
+     * */
     public int[] dlbIterativa( int[] solucionActual){
 
         log.append("Ejecución Algortimo primero el mejor iterativo, para el fichero de datos "+nombreArchivo+".\n");
         long timeIni = System.currentTimeMillis();
+
+        //Se inician las iteraciones a 0
         int iteraciones = 0;
-        int[] resultado = new int[solucionActual.length];
+        //Se copia la solucion actual
+        int[] resultado;
 
-        for (int i = 0; i < solucionActual.length; i++) {
-            resultado[i] = solucionActual[i];
-        }
+        resultado = solucionActual.clone();
 
+        //Se inicializan los indices para recorrer la solucion
         boolean mejora_solucion = false;
         int iPos = 0;
         int conti = 0;
         int contj = 0;
+
+        //Bucle del numero de iteraciones limite
         while(iteraciones < limIteraciones && !compruebaDLB()){
 
              mejora_solucion = false;
@@ -49,7 +61,7 @@ public class AlgPMDLBit_Clase2_Grupo1 {
                 if(i == matrizFlujo.length){
                     i = i%matrizFlujo.length;
                 }
-                if (dlb[i] == 0){ //movimientos considerados para que puedan ser considerados para explorar entornos nuevos.
+                if (dlb[i] == 0){ //movimientos que puedan ser considerados para explorar entornos nuevos.
                     mejora_solucion = false;
 
                     for (int j = i+1; contj != matrizFlujo.length && !mejora_solucion; j++) {
@@ -101,7 +113,12 @@ public class AlgPMDLBit_Clase2_Grupo1 {
 
 
 
-
+    /**
+     * Aplica un movimiento intercambiando en el vector
+     * @param i: Posicion 1 a intercambiar
+     * @param j: Posicion 2 a intercambiar
+     * @param vectorPermutacion: Vector con la solucion actual a intercambiar
+     * */
     public void aplicarMovimiento(int i, int j, int[] vectorPermutacion){
         int aux = vectorPermutacion[i];
         vectorPermutacion[i] = vectorPermutacion[j];
@@ -165,6 +182,9 @@ public class AlgPMDLBit_Clase2_Grupo1 {
 
     }
 
+    /**
+     * Getter de log
+     * */
     public String getLog() {
         return log.toString();
     }

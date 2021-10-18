@@ -8,16 +8,18 @@ import java.util.Random;
 
 public class AlgGRE_Clase2_Grupo1 {
 
-    private StringBuilder log;
+    private StringBuilder log;//Log
     private final ArrayList<Pair<Integer, Integer>> sumFlujo;
     private final ArrayList<Pair<Integer, Integer>> sumDistancia;
-    ArrayList<Pair<Integer,Integer>>sumaFlujoAleatorio;
+    private final int tamListaRestringidaCandidatos;//Tamaño de la lista restringida de candidatos
+    private final int mejoresLRC;//Numero de elememntos mejores de flujo y distancias a coger en greedy aleatorio
+    ArrayList<Pair<Integer,Integer>>sumaFlujoAleatorio;//Lista de pares con posicion y valor de la sumatoria
     ArrayList<Pair<Integer,Integer>> sumaDistanciaAleatorio;
     private final int [][] matrizFlujo;
     private final int [][] matrizDistancia;
-    private final String nombreArchivo;
+    private final String nombreArchivo;//Nombre de archivos
 
-    public AlgGRE_Clase2_Grupo1(int [][] _matrizFlujo, int [][] _matrizDistancia, String _nombreArchivo) {
+    public AlgGRE_Clase2_Grupo1(int [][] _matrizFlujo, int [][] _matrizDistancia, String _nombreArchivo, int tamLRC, int _MejoresLRC) {
         this.log = new StringBuilder();
         this.sumFlujo = new ArrayList<>();
         this.sumDistancia = new ArrayList<>();
@@ -26,10 +28,15 @@ public class AlgGRE_Clase2_Grupo1 {
         this.matrizFlujo = _matrizFlujo;
         this.matrizDistancia = _matrizDistancia;
         this.nombreArchivo = _nombreArchivo;
+        this.tamListaRestringidaCandidatos = tamLRC;
+        this.mejoresLRC = _MejoresLRC;
     }
 
 
-
+    /**
+     * Funcion calculo del greedy
+     * @return Vector solucion con indices los flujos y valor las distancias
+     * */
     public int[] calculoGreedy() {
 
         int[] vectSolucion = new int[matrizFlujo.length];
@@ -37,6 +44,7 @@ public class AlgGRE_Clase2_Grupo1 {
         log.append("Ejecuión algoritmo Greedy, para el fichero de datos "+nombreArchivo+".\n");
         long tiempoInicial = System.currentTimeMillis();
 
+        //Sumatorio de las filas
         for (int i = 0; i < matrizFlujo.length; i++) {
             int sumFilaFlujo = 0;
             int sumFilaDist = 0;
@@ -52,10 +60,12 @@ public class AlgGRE_Clase2_Grupo1 {
             sumDistancia.add(parDistancia);
 
         }
+
+        //ordenacion de menor a mayor de las filas
         sumFlujo.sort((Pair<Integer, Integer> o1, Pair<Integer, Integer> o2) -> o1.getValue().compareTo(o2.getValue()));
         sumDistancia.sort((Pair<Integer, Integer> o1, Pair<Integer, Integer> o2) -> o1.getValue().compareTo(o2.getValue()));
 
-
+        //Creacion de la solucion con la menor distancia a mayor flujo
         for (int i = 0; i < sumDistancia.size(); i++) {
             vectSolucion[sumFlujo.get(sumFlujo.size() - 1 - i).getKey()] = sumDistancia.get(i).getKey();
         }
@@ -66,7 +76,10 @@ public class AlgGRE_Clase2_Grupo1 {
     }
 
 
-
+    /**
+     * Funcion de Greedy aleatorio, devuelve una lista de candidatos a permutar
+     * @return Lista de pares del tamaño de la lista de candidatos con los elementos a intercambiar
+     * */
     public ArrayList<Pair<Integer,Integer>> GreedyAleatorio(){
         ArrayList<Pair<Integer,Integer>>listaCandidatos = new ArrayList<>(); //PAsar a parametros una vez temrinado
 
@@ -92,16 +105,18 @@ public class AlgGRE_Clase2_Grupo1 {
         ArrayList<Integer> cincoMejoresFlujos = new ArrayList<>();
         ArrayList<Integer> cincoMEjoresDist = new ArrayList<>();
 
+        //Genera una solucion
         for (int i = 0; i < 5; i++){
             cincoMEjoresDist.add(sumaDistanciaAleatorio.get(i).getKey());
             cincoMejoresFlujos.add(sumaFlujoAleatorio.get(sumaFlujoAleatorio.size() - 1 - i).getKey());
         }
         Random aleatorio = new Random(System.currentTimeMillis()); //semilla aleatoria.
 
-        while(listaCandidatos.size() < 10){
+        //Mientras no se generen todos los candidatos se repite en bucle escogiendo dos pares aleatorios
+        while(listaCandidatos.size() < tamListaRestringidaCandidatos){
 
-            int n1 = aleatorio.nextInt(5);
-            int n2 = aleatorio.nextInt(5);
+            int n1 = aleatorio.nextInt(mejoresLRC);
+            int n2 = aleatorio.nextInt(mejoresLRC);
             Pair<Integer,Integer> nuevo = new Pair<>(cincoMejoresFlujos.get(n1),cincoMEjoresDist.get(n2));
             boolean repetido = false;
 
@@ -124,7 +139,11 @@ public class AlgGRE_Clase2_Grupo1 {
     }
 
 
-
+    /**
+     * Funcion que calcula el coste de la solucion pasada
+     * @param vectorSolucion: Vector con solucion para calculo del coste
+     * @return coste calculado
+     * */
     public long calculaCoste(int[] vectorSolucion) {
         log.append("Calculo del coste de la solución para el archivo de datos "+nombreArchivo+".\n");
         long coste = 0;
@@ -145,6 +164,9 @@ public class AlgGRE_Clase2_Grupo1 {
         return coste;
     }
 
+    /**
+     * Getter del Log
+     * */
     public String getLog() {
         return log.toString();
     }
