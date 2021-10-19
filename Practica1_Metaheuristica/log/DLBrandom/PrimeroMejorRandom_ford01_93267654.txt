@@ -119,4 +119,4 @@ DLBRandom: 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 0 1
 Iteración: 29
 Vector permutaciones: 17 5 16 15 10 4 7 8 9 14 3 13 12 18 6 2 19 0 11 1 
 DLBRandom: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-Tiempo total de ejecucion algoritmo Busqueda Local aleatoria: 1633975267617 milisegundos
+Tiempo total de ejecucion algoritmo Busqueda Local aleatoria: 1634669431571 milisegundos

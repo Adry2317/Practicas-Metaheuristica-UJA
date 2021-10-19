@@ -1,13 +1,13 @@
 Ejecución Algortimo multiarranque, para el fichero de datos ford01.
 Mejores soluciones
-Coste: 3812 Solucion: 11 13 4 3 18 16 6 9 17 12 15 0 5 8 7 14 19 1 10 2 
-Coste: 3775 Solucion: 17 19 18 2 8 4 16 15 3 11 6 13 5 7 10 14 12 9 0 1 
-Coste: 3800 Solucion: 1 6 2 14 18 11 12 13 17 10 15 0 4 8 16 9 7 19 3 5 
-Coste: 3792 Solucion: 11 5 1 19 16 4 6 18 3 15 8 14 17 7 0 10 12 9 2 13 
-Coste: 3799 Solucion: 2 0 18 8 15 4 17 1 3 11 19 14 5 12 10 13 16 9 7 6 
-Coste: 3792 Solucion: 1 0 18 17 14 4 7 8 2 5 15 10 9 6 11 12 16 19 3 13 
-Coste: 3789 Solucion: 7 5 0 12 15 4 14 6 17 13 2 10 19 3 11 16 8 9 18 1 
-Coste: 3786 Solucion: 5 16 15 2 17 4 11 19 3 10 1 14 0 8 7 13 12 9 18 6 
-Coste: 3779 Solucion: 10 0 19 13 16 4 15 1 3 11 8 14 5 12 2 6 17 9 7 18 
-Coste: 3796 Solucion: 18 0 3 16 15 4 2 14 17 6 19 1 5 7 12 13 8 9 11 10 
-Tiempo de ejecucion: 4
+Coste: 3761 Solucion: 5 8 9 4 0 16 12 10 3 15 6 14 17 13 19 18 7 1 11 2 
+Coste: 3683 Solucion: 18 16 6 0 4 8 9 11 3 15 19 5 2 13 10 14 12 7 1 17 
+Coste: 3683 Solucion: 18 16 6 0 4 8 9 11 3 15 19 5 2 13 10 14 12 7 1 17 
+Coste: 3683 Solucion: 18 16 6 0 4 8 9 11 3 15 19 5 2 13 10 14 12 7 1 17 
+Coste: 3683 Solucion: 18 16 6 0 4 8 9 11 3 15 19 5 2 13 10 14 12 7 1 17 
+Coste: 3683 Solucion: 18 16 6 0 4 8 9 11 3 15 19 5 2 13 10 14 12 7 1 17 
+Coste: 3683 Solucion: 18 16 6 0 4 8 9 11 3 15 19 5 2 13 10 14 12 7 1 17 
+Coste: 3683 Solucion: 18 16 6 0 4 8 9 11 3 15 19 5 2 13 10 14 12 7 1 17 
+Coste: 3683 Solucion: 18 16 6 0 4 8 9 11 3 15 19 5 2 13 10 14 12 7 1 17 
+Coste: 3683 Solucion: 18 16 6 0 4 8 9 11 3 15 19 5 2 13 10 14 12 7 1 17 
+Tiempo de ejecucion: 485

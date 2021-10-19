@@ -10,7 +10,6 @@ import java.io.FileReader;
 import java.util.ArrayList;
 
 /**
- *
  * @author joseantonio
  */
 public class Configurador {
@@ -22,40 +21,40 @@ public class Configurador {
     private int mejoresLRC;
     private double porcentajeOscilacion;
     private int tamListaTabu;
-    
-    public Configurador(String ruta){
+
+    public Configurador(String ruta) {
         archivos = new ArrayList<>();
         algoritmos = new ArrayList<>();
         semillas = new ArrayList<>();
-        
+
         String linea;
         FileReader f = null;
-        
+
         try {
             f = new FileReader(ruta);
             BufferedReader buff = new BufferedReader(f);
             while ((linea = buff.readLine()) != null) {
                 String[] split = linea.split("=");
-                switch(split[0]){
+                switch (split[0]) {
                     case "Archivos":
                         String[] v = split[1].split(" ");
                         for (int i = 0; i < v.length; i++) {
                             archivos.add(v[i]);
-                            
+
                         }
                         break;
                     case "Semillas":
                         String[] vSemillas = split[1].split(" ");
                         for (int i = 0; i < vSemillas.length; i++) {
                             semillas.add(Long.parseLong(vSemillas[i]));
-                            
+
                         }
                         break;
                     case "Algoritmos":
                         String[] vAlgoritmos = split[1].split(" ");
                         for (int i = 0; i < vAlgoritmos.length; i++) {
                             algoritmos.add(vAlgoritmos[i]);
-                            
+
                         }
                         break;
                     case "TamLRC":
@@ -78,7 +77,7 @@ public class Configurador {
                         tamListaTabu = Integer.parseInt(split[1]);
                         break;
                 }
-                
+
             }
         } catch (Exception e) {
             System.out.println(e);
