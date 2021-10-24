@@ -1,131 +1,97 @@
 Ejecución Algortimo primero el mejor iterativo, para el fichero de datos ford01.
 
-Iteración: 1
-Vector permutaciones: 16 2 14 15 18 4 19 8 17 13 3 0 5 12 11 10 6 9 7 1 
-DLBIterativo: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Mejora en iteracion: 0
+Vector permutaciones: 16 2 14 15 18 4 19 8 17 13 3 0 5 12 11 10 6 9 7 1 Coste: 3973
 
-Iteración: 2
-Vector permutaciones: 14 2 16 15 18 4 19 8 17 13 3 0 5 12 11 10 6 9 7 1 
-DLBIterativo: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Mejora en iteracion: 1
+Vector permutaciones: 14 2 16 15 18 4 19 8 17 13 3 0 5 12 11 10 6 9 7 1 Coste: 3958
 
-Iteración: 3
-Vector permutaciones: 19 2 16 15 18 4 14 8 17 13 3 0 5 12 11 10 6 9 7 1 
-DLBIterativo: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Mejora en iteracion: 2
+Vector permutaciones: 19 2 16 15 18 4 14 8 17 13 3 0 5 12 11 10 6 9 7 1 Coste: 3956
 
-Iteración: 4
-Vector permutaciones: 2 19 16 15 18 4 14 8 17 13 3 0 5 12 11 10 6 9 7 1 
-DLBIterativo: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Mejora en iteracion: 3
+Vector permutaciones: 2 19 16 15 18 4 14 8 17 13 3 0 5 12 11 10 6 9 7 1 Coste: 3955
 
-Iteración: 5
-Vector permutaciones: 15 19 16 2 18 4 14 8 17 13 3 0 5 12 11 10 6 9 7 1 
-DLBIterativo: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Mejora en iteracion: 4
+Vector permutaciones: 15 19 16 2 18 4 14 8 17 13 3 0 5 12 11 10 6 9 7 1 Coste: 3950
 
-Iteración: 6
-Vector permutaciones: 18 19 16 2 15 4 14 8 17 13 3 0 5 12 11 10 6 9 7 1 
-DLBIterativo: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Mejora en iteracion: 5
+Vector permutaciones: 18 19 16 2 15 4 14 8 17 13 3 0 5 12 11 10 6 9 7 1 Coste: 3946
 
-Iteración: 7
-Vector permutaciones: 16 19 18 2 15 4 14 8 17 13 3 0 5 12 11 10 6 9 7 1 
-DLBIterativo: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Mejora en iteracion: 6
+Vector permutaciones: 16 19 18 2 15 4 14 8 17 13 3 0 5 12 11 10 6 9 7 1 Coste: 3942
 
-Iteración: 8
-Vector permutaciones: 2 19 18 16 15 4 14 8 17 13 3 0 5 12 11 10 6 9 7 1 
-DLBIterativo: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Mejora en iteracion: 7
+Vector permutaciones: 2 19 18 16 15 4 14 8 17 13 3 0 5 12 11 10 6 9 7 1 Coste: 3940
 
-Iteración: 9
-Vector permutaciones: 19 2 18 16 15 4 14 8 17 13 3 0 5 12 11 10 6 9 7 1 
-DLBIterativo: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Mejora en iteracion: 8
+Vector permutaciones: 19 2 18 16 15 4 14 8 17 13 3 0 5 12 11 10 6 9 7 1 Coste: 3927
 
-Iteración: 10
-Vector permutaciones: 8 2 18 16 15 4 14 19 17 13 3 0 5 12 11 10 6 9 7 1 
-DLBIterativo: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Mejora en iteracion: 9
+Vector permutaciones: 8 2 18 16 15 4 14 19 17 13 3 0 5 12 11 10 6 9 7 1 Coste: 3905
 
-Iteración: 11
-Vector permutaciones: 17 2 18 16 15 4 14 19 8 13 3 0 5 12 11 10 6 9 7 1 
-DLBIterativo: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Mejora en iteracion: 10
+Vector permutaciones: 17 2 18 16 15 4 14 19 8 13 3 0 5 12 11 10 6 9 7 1 Coste: 3904
 
-Iteración: 12
-Vector permutaciones: 12 2 18 16 15 4 14 19 8 13 3 0 5 17 11 10 6 9 7 1 
-DLBIterativo: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Mejora en iteracion: 11
+Vector permutaciones: 12 2 18 16 15 4 14 19 8 13 3 0 5 17 11 10 6 9 7 1 Coste: 3891
 
-Iteración: 13
-Vector permutaciones: 18 2 12 16 15 4 14 19 8 13 3 0 5 17 11 10 6 9 7 1 
-DLBIterativo: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Mejora en iteracion: 12
+Vector permutaciones: 18 2 12 16 15 4 14 19 8 13 3 0 5 17 11 10 6 9 7 1 Coste: 3890
 
-Iteración: 14
-Vector permutaciones: 5 2 12 16 15 4 14 19 8 13 3 0 18 17 11 10 6 9 7 1 
-DLBIterativo: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Mejora en iteracion: 13
+Vector permutaciones: 5 2 12 16 15 4 14 19 8 13 3 0 18 17 11 10 6 9 7 1 Coste: 3882
 
-Iteración: 15
-Vector permutaciones: 4 2 12 16 15 5 14 19 8 13 3 0 18 17 11 10 6 9 7 1 
-DLBIterativo: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Mejora en iteracion: 14
+Vector permutaciones: 4 2 12 16 15 5 14 19 8 13 3 0 18 17 11 10 6 9 7 1 Coste: 3881
 
-Iteración: 16
-Vector permutaciones: 13 2 12 16 15 5 14 19 8 4 3 0 18 17 11 10 6 9 7 1 
-DLBIterativo: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Mejora en iteracion: 15
+Vector permutaciones: 13 2 12 16 15 5 14 19 8 4 3 0 18 17 11 10 6 9 7 1 Coste: 3875
 
-Iteración: 17
-Vector permutaciones: 3 2 12 16 15 5 14 19 8 4 13 0 18 17 11 10 6 9 7 1 
-DLBIterativo: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Mejora en iteracion: 16
+Vector permutaciones: 3 2 12 16 15 5 14 19 8 4 13 0 18 17 11 10 6 9 7 1 Coste: 3874
 
-Iteración: 18
-Vector permutaciones: 14 2 12 16 15 5 3 19 8 4 13 0 18 17 11 10 6 9 7 1 
-DLBIterativo: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Mejora en iteracion: 17
+Vector permutaciones: 14 2 12 16 15 5 3 19 8 4 13 0 18 17 11 10 6 9 7 1 Coste: 3869
 
-Iteración: 19
-Vector permutaciones: 13 2 12 16 15 5 3 19 8 4 14 0 18 17 11 10 6 9 7 1 
-DLBIterativo: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Mejora en iteracion: 18
+Vector permutaciones: 13 2 12 16 15 5 3 19 8 4 14 0 18 17 11 10 6 9 7 1 Coste: 3856
 
-Iteración: 20
-Vector permutaciones: 6 2 12 16 15 5 3 19 8 4 14 0 18 17 11 10 13 9 7 1 
-DLBIterativo: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Mejora en iteracion: 19
+Vector permutaciones: 6 2 12 16 15 5 3 19 8 4 14 0 18 17 11 10 13 9 7 1 Coste: 3853
 
-Iteración: 21
-Vector permutaciones: 10 2 12 16 15 5 3 19 8 4 14 0 18 17 11 6 13 9 7 1 
-DLBIterativo: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Mejora en iteracion: 20
+Vector permutaciones: 10 2 12 16 15 5 3 19 8 4 14 0 18 17 11 6 13 9 7 1 Coste: 3851
 
-Iteración: 22
-Vector permutaciones: 10 2 7 16 15 5 3 19 8 4 14 0 18 17 11 6 13 9 12 1 
-DLBIterativo: 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Mejora en iteracion: 21
+Vector permutaciones: 10 2 7 16 15 5 3 19 8 4 14 0 18 17 11 6 13 9 12 1 Coste: 3849
 
-Iteración: 23
-Vector permutaciones: 10 2 4 16 15 5 3 19 8 7 14 0 18 17 11 6 13 9 12 1 
-DLBIterativo: 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Mejora en iteracion: 22
+Vector permutaciones: 10 2 4 16 15 5 3 19 8 7 14 0 18 17 11 6 13 9 12 1 Coste: 3846
 
-Iteración: 24
-Vector permutaciones: 10 2 18 16 15 5 3 19 8 7 14 0 4 17 11 6 13 9 12 1 
-DLBIterativo: 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Mejora en iteracion: 23
+Vector permutaciones: 10 2 18 16 15 5 3 19 8 7 14 0 4 17 11 6 13 9 12 1 Coste: 3833
 
-Iteración: 25
-Vector permutaciones: 10 2 1 16 15 5 3 19 8 7 14 0 4 17 11 6 13 9 12 18 
-DLBIterativo: 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Mejora en iteracion: 24
+Vector permutaciones: 10 2 1 16 15 5 3 19 8 7 14 0 4 17 11 6 13 9 12 18 Coste: 3821
 
-Iteración: 26
-Vector permutaciones: 10 2 1 16 15 9 3 19 8 7 14 0 4 17 11 6 13 5 12 18 
-DLBIterativo: 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Mejora en iteracion: 25
+Vector permutaciones: 10 2 1 16 15 9 3 19 8 7 14 0 4 17 11 6 13 5 12 18 Coste: 3812
 
-Iteración: 27
-Vector permutaciones: 10 2 1 16 15 9 12 19 8 7 14 0 4 17 11 6 13 5 3 18 
-DLBIterativo: 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Mejora en iteracion: 26
+Vector permutaciones: 10 2 1 16 15 9 12 19 8 7 14 0 4 17 11 6 13 5 3 18 Coste: 3809
 
-Iteración: 28
-Vector permutaciones: 10 2 1 16 15 9 12 18 8 7 14 0 4 17 11 6 13 5 3 19 
-DLBIterativo: 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Mejora en iteracion: 27
+Vector permutaciones: 10 2 1 16 15 9 12 18 8 7 14 0 4 17 11 6 13 5 3 19 Coste: 3808
 
-Iteración: 29
-Vector permutaciones: 10 2 1 16 15 9 12 18 8 7 14 19 4 17 11 6 13 5 3 0 
-DLBIterativo: 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 
+Mejora en iteracion: 28
+Vector permutaciones: 10 2 1 16 15 9 12 18 8 7 14 19 4 17 11 6 13 5 3 0 Coste: 3796
 
-Iteración: 30
-Vector permutaciones: 10 2 1 16 15 9 12 18 8 7 14 19 4 17 13 6 11 5 3 0 
-DLBIterativo: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 
+Mejora en iteracion: 29
+Vector permutaciones: 10 2 1 16 15 9 12 18 8 7 14 19 4 17 13 6 11 5 3 0 Coste: 3793
 
-Iteración: 31
-Vector permutaciones: 10 2 1 16 15 9 12 18 8 7 14 19 4 17 13 6 5 11 3 0 
-DLBIterativo: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 
+Mejora en iteracion: 30
+Vector permutaciones: 10 2 1 16 15 9 12 18 8 7 14 19 4 17 13 6 5 11 3 0 Coste: 3786
 
-Iteración: 31
-Vector permutaciones: 10 2 1 16 15 9 12 18 8 7 14 19 4 17 13 6 5 11 3 0 
-DLBIterativo: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 
-Tiempo total de ejecucion algoritmo Busqueda Local iterativa: 1634669431555 milisegundos
+Tiempo total de ejecucion algoritmo Busqueda Local iterativa: 2 milisegundos

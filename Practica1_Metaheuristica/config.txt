@@ -6,3 +6,4 @@ MejoresLRC=5
 IteracionesDLB=1000
 PorcentajeOscilacion=0.05
 TamListaTabu=3
+CoeficienteOscilacion=0.5

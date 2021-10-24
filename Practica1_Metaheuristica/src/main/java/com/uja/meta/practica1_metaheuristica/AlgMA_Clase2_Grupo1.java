@@ -19,6 +19,7 @@ public class AlgMA_Clase2_Grupo1 {
     private int[] mejorPeores;
     private int[] solucionActual;
     private static double porcentajeIniOscilacion;
+    private static float coeficienteOcilacion;
     private int tamVectorSoluciones;
     private static int limIteraciones;
     private static int candidatosLRC;
@@ -29,7 +30,7 @@ public class AlgMA_Clase2_Grupo1 {
     private final String nombreArchivo;
     private StringBuilder log;
 
-    public AlgMA_Clase2_Grupo1(int tamMemoriaLArgoPlazo, int _tamVectorSoluciones, Random _aleatorio, int[][] _matrizDistancia, int[][] _matrizFlujo, ArrayList<Pair<Integer, Integer>> _LRC, String _nombreArchivo, int iteracionesDLB, int tamLRC, double porcentajeOscilacion) {
+    public AlgMA_Clase2_Grupo1(int tamMemoriaLArgoPlazo, int _tamVectorSoluciones, Random _aleatorio, int[][] _matrizDistancia, int[][] _matrizFlujo, ArrayList<Pair<Integer, Integer>> _LRC, String _nombreArchivo, int iteracionesDLB, int tamLRC, double porcentajeOscilacion,float _coeficienteOscilacion) {
         this.listaCircularIntercambios = new LinkedList<>();
         this.listaRestringidaCandidatos = _LRC;
         this.log = new StringBuilder();
@@ -44,6 +45,7 @@ public class AlgMA_Clase2_Grupo1 {
         this.limIteraciones = iteracionesDLB;
         this.candidatosLRC = tamLRC;
         this.porcentajeIniOscilacion = porcentajeOscilacion;
+        this.coeficienteOcilacion = _coeficienteOscilacion;
         this.dlb = new int[_tamVectorSoluciones];
 
         for (int i = 0; i < _tamVectorSoluciones; i++) {
@@ -74,7 +76,7 @@ public class AlgMA_Clase2_Grupo1 {
         log.append("Ejecución Algortimo multiarranque, para el fichero de datos " + nombreArchivo + ".\n");
         long tiempoIni = System.currentTimeMillis();
         log.append("Mejores soluciones");
-        log.append("\n");
+        log.append("\n\n");
         mejorSolGlobal = null;
         mejorPeores = null;
         do {
@@ -82,6 +84,13 @@ public class AlgMA_Clase2_Grupo1 {
 
             //Aplicamos el movimiento con la listaRestringida de candidatos obtenida del greedy aleatorizado
             aplicarMovimiento(listaRestringidaCandidatos.get(contLRC).getKey(), listaRestringidaCandidatos.get(contLRC).getValue(), solucionActual);
+            log.append("*******************************************************************\n");
+            log.append("Candidato LRC nº " + (contLRC + 1) + ", Coste: " + calculaCoste(solucionActual) + "\n Vector Permutacion [");
+            for (int i = 0; i < solucionActual.length; i++) {
+                log.append(solucionActual[i] + " ");
+            }
+            log.append("]\n\n");
+            log.append("*******************************************************************");
 
             //Inicializamos el resto a la solución actual, ya que al principio todas son iguales.
             solucionAnterior = solucionActual.clone();
@@ -93,7 +102,7 @@ public class AlgMA_Clase2_Grupo1 {
                 dlb[i] = 0;
             }
 
-            long costeMejorSolGlobal = 0;
+
             long costeMEjorSol = 0;
             long costeSOlActual = 0;
 
@@ -151,15 +160,21 @@ public class AlgMA_Clase2_Grupo1 {
                                 if (costeMEjorSol > costeSOlActual) {
                                     contOscilacion = 0;
                                     mejorSolActual = solucionActual.clone();
+                                    log.append("\nActualizacion mejor solucion actual, Candidato LRC: " + (contLRC + 1) + ", en la Iteración: "+(iteraciones+1)+"\n");
+                                    log.append("Vector permutacion [");
+                                    for (int k = 0; k < mejorSolActual.length; k++) {
+                                        log.append(mejorSolActual[k]+" ");
+                                    }
+                                    log.append("], Coste: "+ calculaCoste(mejorSolActual)+ "\n\n");
                                 }
 
 
                                 iteraciones++;
-                            } else {
+                            } else if (!EstalistaTabu) {
                                 contOscilacion++;
                                 //si no lo es guardamos la mejor de las peores.
                                 int[] vectPrueba = solucionActual.clone();
-                                aplicarMovimiento(i, j, vectPrueba);
+                                aplicarMovimiento2(i, j, vectPrueba);
 
                                 if (mejorPeores == null) {
                                     mejorPeores = vectPrueba.clone();
@@ -167,14 +182,13 @@ public class AlgMA_Clase2_Grupo1 {
                                 } else if (calculaCoste(vectPrueba) < calculaCoste(mejorPeores)) {
                                     mejorPeores = vectPrueba.clone();
                                 }
-                                if (contOscilacion >= 50) {
+                                if (contOscilacion >= limIteraciones*porcentajeIniOscilacion) {
+                                    log.append("*******************************************************************\n");
+                                    log.append("Realizamos Oscilacion estratégica, Candidato LRC: " + (contLRC+1) + " Iteración: " + iteraciones + "\n");
                                     oscilacionEstrategica();
                                     contOscilacion = 0;
-
-
                                 }
                             }
-
                             contj++;
                         }
                         contj = 0;
@@ -186,33 +200,40 @@ public class AlgMA_Clase2_Grupo1 {
                     }
                     conti++;
                 }
-
             }
 
             iteraciones = 0;
 
             if (mejorSolGlobal == null) {
+                log.append("*******************************************************************\n");
+
+
                 mejorSolGlobal = mejorSolActual.clone();
+                log.append("Nueva solucion global: [");
+                for (int i = 0; i < mejorSolGlobal.length; i++) {
+                    log.append(mejorSolGlobal[i] + " ");
+                }
+                log.append("], Coste: " + calculaCoste(mejorSolGlobal) + "\n\n");
             } else {
-                costeMejorSolGlobal = calculaCoste(mejorSolGlobal);
+
 
                 //actualizamos la mejor solucion global en caso de ser posible.
-                if (calculaCoste(solucionActual) < costeMejorSolGlobal) {
+                if (calculaCoste(mejorSolActual) < calculaCoste(mejorSolGlobal)) {
                     mejorSolGlobal = mejorSolActual.clone();
+                    log.append("*******************************************************************\n");
+                    log.append("Nueva solucion global: [");
+                    for (int i = 0; i < mejorSolGlobal.length; i++) {
+                        log.append(mejorSolGlobal[i] + " ");
+                    }
+                    log.append("], Coste: " + calculaCoste(mejorSolGlobal) + "\n\n");
                 }
             }
 
 
-            costeMejorSolGlobal = calculaCoste(mejorSolGlobal);
-            log.append("Coste: " + costeMejorSolGlobal + " Solucion: ");
-            for (int i = 0; i < mejorSolGlobal.length; i++) {
-                log.append(mejorSolGlobal[i] + " ");
-            }
-            log.append("\n");
             contLRC++;
         } while (contLRC < candidatosLRC);
 
-        log.append("Tiempo de ejecucion: " + (System.currentTimeMillis() - tiempoIni));
+        log.append("Tiempo de ejecucion: " + (System.currentTimeMillis() - tiempoIni) + " milisegundos");
 
         return mejorSolGlobal;
     }
@@ -223,8 +244,11 @@ public class AlgMA_Clase2_Grupo1 {
      */
     public void oscilacionEstrategica() {
         double valor = Math.random() * 1;
+        //Diversificacion
+        if (valor < coeficienteOcilacion) {
+            log.append("Realizacion de Diversificacion\n");
+            log.append("*******************************************************************\n");
 
-        if (valor < 0.5) {
             int pos1 = 0;
             int pos2 = 0;
             int menor = memoriaLargoPlazo[0][0];
@@ -245,6 +269,10 @@ public class AlgMA_Clase2_Grupo1 {
             memoriaLargoPlazo[pos1][pos2]++;
 
         } else {
+            //Intensificacion
+            log.append("Realizacion de Intensificacion\n");
+            log.append("*******************************************************************\n");
+
             int mayor = memoriaLargoPlazo[0][0];
             int pos1 = 0;
             int pos2 = 0;
@@ -288,6 +316,21 @@ public class AlgMA_Clase2_Grupo1 {
             Pair<Integer, Integer> cambio = new Pair<>(i, j);
             listaCircularIntercambios.add(cambio);
         }
+
+
+    }
+
+
+    /***
+     * Función encargada de aplicar los movimientos
+     * @param i posicion 1.
+     * @param j posicion 2
+     * @param vectorPermutacion vector de permutaciones al que se le apolicaran los movimietos.
+     */
+    public void aplicarMovimiento2(int i, int j, int[] vectorPermutacion) {
+        int aux = vectorPermutacion[i];
+        vectorPermutacion[i] = vectorPermutacion[j];
+        vectorPermutacion[j] = aux;
 
 
     }

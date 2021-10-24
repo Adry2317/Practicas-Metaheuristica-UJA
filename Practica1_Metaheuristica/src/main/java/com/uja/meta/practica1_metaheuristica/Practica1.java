@@ -102,7 +102,7 @@ public class Practica1 {
                         System.out.println("\n//////////////////////////////////////////////////////");
                         for (int k = 0; k < config.getSemillas().size(); k++) {
                             Random aleaRandom = new Random(config.getSemillas().get(k));
-                            AlgMA_Clase2_Grupo1 multiArranque = new AlgMA_Clase2_Grupo1(vectorPermutaciones.length, vectorPermutaciones.length, aleaRandom, archivo.getMatrizDistancias(), archivo.getMatrizFlujo(), LRC, archivo.getNombreArchivo(), config.getIteracionesDLB(), config.getTamLRC(), config.getPorcentajeOscilacion());
+                            AlgMA_Clase2_Grupo1 multiArranque = new AlgMA_Clase2_Grupo1(vectorPermutaciones.length, vectorPermutaciones.length, aleaRandom, archivo.getMatrizDistancias(), archivo.getMatrizFlujo(), LRC, archivo.getNombreArchivo(), config.getIteracionesDLB(), config.getTamLRC(), config.getPorcentajeOscilacion(), config.getCoeficienteOscilacion());
 
                             int nuevaSolRandom[] = multiArranque.algoritmoMultiArranque(vectorPermutaciones);
 

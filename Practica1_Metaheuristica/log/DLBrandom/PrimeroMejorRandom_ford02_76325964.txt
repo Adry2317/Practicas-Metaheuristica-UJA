@@ -1,78 +1,57 @@
 Ejecución Algortimo primero el mejor aleatorio, para el fichero de datos ford02.
 
-Iteración: 1
-Vector permutaciones: 5 1 2 19 3 10 9 7 17 6 11 12 4 13 0 18 16 8 15 14 
-DLBRandom: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Mejora en iteracion: 0
+Vector permutaciones: 5 1 2 19 3 10 9 7 17 6 11 12 4 13 0 18 16 8 15 14 Coste: 34053
 
-Iteración: 2
-Vector permutaciones: 5 1 2 19 3 10 9 7 17 6 11 12 18 13 0 4 16 8 15 14 
-DLBRandom: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Mejora en iteracion: 1
+Vector permutaciones: 5 1 2 19 3 10 9 7 17 6 11 12 18 13 0 4 16 8 15 14 Coste: 33712
 
-Iteración: 3
-Vector permutaciones: 5 1 2 19 3 10 9 7 17 6 11 12 14 13 0 4 16 8 15 18 
-DLBRandom: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Mejora en iteracion: 2
+Vector permutaciones: 5 1 2 19 3 10 9 7 17 6 11 12 14 13 0 4 16 8 15 18 Coste: 33638
 
-Iteración: 4
-Vector permutaciones: 5 1 2 19 3 10 14 7 17 6 11 12 9 13 0 4 16 8 15 18 
-DLBRandom: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Mejora en iteracion: 3
+Vector permutaciones: 5 1 2 19 3 10 14 7 17 6 11 12 9 13 0 4 16 8 15 18 Coste: 33529
 
-Iteración: 5
-Vector permutaciones: 5 1 2 19 3 10 14 13 17 6 11 12 9 7 0 4 16 8 15 18 
-DLBRandom: 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 
+Mejora en iteracion: 4
+Vector permutaciones: 5 1 2 19 3 10 14 13 17 6 11 12 9 7 0 4 16 8 15 18 Coste: 33366
 
-Iteración: 6
-Vector permutaciones: 5 1 2 19 3 10 14 13 17 6 11 12 9 8 0 4 16 7 15 18 
-DLBRandom: 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 
+Mejora en iteracion: 5
+Vector permutaciones: 5 1 2 19 3 10 14 13 17 6 11 12 9 8 0 4 16 7 15 18 Coste: 32920
 
-Iteración: 7
-Vector permutaciones: 5 1 2 19 3 10 14 13 17 6 11 0 9 8 12 4 16 7 15 18 
-DLBRandom: 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 
+Mejora en iteracion: 6
+Vector permutaciones: 5 1 2 19 3 10 14 13 17 6 11 0 9 8 12 4 16 7 15 18 Coste: 32599
 
-Iteración: 8
-Vector permutaciones: 5 1 2 19 3 18 14 13 17 6 11 0 9 8 12 4 16 7 15 10 
-DLBRandom: 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 0 
+Mejora en iteracion: 7
+Vector permutaciones: 5 1 2 19 3 18 14 13 17 6 11 0 9 8 12 4 16 7 15 10 Coste: 32382
 
-Iteración: 9
-Vector permutaciones: 5 1 2 19 3 18 14 13 17 10 11 0 9 8 12 4 16 7 15 6 
-DLBRandom: 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 0 
+Mejora en iteracion: 8
+Vector permutaciones: 5 1 2 19 3 18 14 13 17 10 11 0 9 8 12 4 16 7 15 6 Coste: 32316
 
-Iteración: 10
-Vector permutaciones: 5 1 2 6 3 18 14 13 17 10 11 0 9 8 12 4 16 7 15 19 
-DLBRandom: 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 0 
+Mejora en iteracion: 9
+Vector permutaciones: 5 1 2 6 3 18 14 13 17 10 11 0 9 8 12 4 16 7 15 19 Coste: 32099
 
-Iteración: 11
-Vector permutaciones: 5 1 2 6 3 18 14 11 17 10 13 0 9 8 12 4 16 7 15 19 
-DLBRandom: 1 1 1 1 1 1 1 0 0 0 0 0 1 1 1 1 1 1 1 1 
+Mejora en iteracion: 10
+Vector permutaciones: 5 1 2 6 3 18 14 11 17 10 13 0 9 8 12 4 16 7 15 19 Coste: 32067
 
-Iteración: 12
-Vector permutaciones: 5 1 2 6 3 18 14 16 17 10 13 0 9 8 12 4 11 7 15 19 
-DLBRandom: 1 1 1 1 1 1 1 0 0 0 0 0 1 1 1 1 0 1 1 1 
+Mejora en iteracion: 11
+Vector permutaciones: 5 1 2 6 3 18 14 16 17 10 13 0 9 8 12 4 11 7 15 19 Coste: 31987
 
-Iteración: 13
-Vector permutaciones: 5 1 2 17 3 18 14 16 6 10 13 0 9 8 12 4 11 7 15 19 
-DLBRandom: 1 1 1 0 1 1 1 1 0 0 0 0 1 1 1 1 0 1 1 1 
+Mejora en iteracion: 12
+Vector permutaciones: 5 1 2 17 3 18 14 16 6 10 13 0 9 8 12 4 11 7 15 19 Coste: 31985
 
-Iteración: 14
-Vector permutaciones: 5 1 2 17 3 10 14 16 6 18 13 0 9 8 12 4 11 7 15 19 
-DLBRandom: 1 1 1 0 1 0 1 1 1 0 0 0 1 1 1 1 0 1 1 1 
+Mejora en iteracion: 13
+Vector permutaciones: 5 1 2 17 3 10 14 16 6 18 13 0 9 8 12 4 11 7 15 19 Coste: 31842
 
-Iteración: 15
-Vector permutaciones: 5 1 2 17 3 10 14 16 6 18 13 0 9 8 12 4 19 7 15 11 
-DLBRandom: 1 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 0 1 1 0 
+Mejora en iteracion: 14
+Vector permutaciones: 5 1 2 17 3 10 14 16 6 18 13 0 9 8 12 4 19 7 15 11 Coste: 31663
 
-Iteración: 16
-Vector permutaciones: 5 1 2 17 3 10 14 16 6 11 13 0 9 8 12 4 19 7 15 18 
-DLBRandom: 1 1 1 0 1 0 1 1 1 0 1 1 1 1 1 1 1 1 1 0 
+Mejora en iteracion: 15
+Vector permutaciones: 5 1 2 17 3 10 14 16 6 11 13 0 9 8 12 4 19 7 15 18 Coste: 31539
 
-Iteración: 17
-Vector permutaciones: 5 1 2 17 3 10 14 16 6 15 13 0 9 8 12 4 19 7 11 18 
-DLBRandom: 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 0 1 
+Mejora en iteracion: 16
+Vector permutaciones: 5 1 2 17 3 10 14 16 6 15 13 0 9 8 12 4 19 7 11 18 Coste: 31529
 
-Iteración: 18
-Vector permutaciones: 5 1 2 17 3 15 14 16 6 10 13 0 9 8 12 4 19 7 11 18 
-DLBRandom: 1 1 1 1 1 0 1 1 1 0 1 1 1 1 1 1 1 1 0 1 
+Mejora en iteracion: 17
+Vector permutaciones: 5 1 2 17 3 15 14 16 6 10 13 0 9 8 12 4 19 7 11 18 Coste: 31327
 
-Iteración: 18
-Vector permutaciones: 5 1 2 17 3 15 14 16 6 10 13 0 9 8 12 4 19 7 11 18 
-DLBRandom: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-Tiempo total de ejecucion algoritmo Busqueda Local aleatoria: 0 milisegundos
+Tiempo total de ejecucion algoritmo Busqueda Local aleatoria: 1 milisegundos

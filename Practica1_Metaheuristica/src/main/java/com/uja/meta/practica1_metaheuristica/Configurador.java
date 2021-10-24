@@ -21,8 +21,9 @@ public class Configurador {
     private int mejoresLRC;
     private double porcentajeOscilacion;
     private int tamListaTabu;
+    private float coeficienteOscilacion;
 
-    public Configurador(String ruta) {
+    public Configurador(String ruta){
         archivos = new ArrayList<>();
         algoritmos = new ArrayList<>();
         semillas = new ArrayList<>();
@@ -35,7 +36,7 @@ public class Configurador {
             BufferedReader buff = new BufferedReader(f);
             while ((linea = buff.readLine()) != null) {
                 String[] split = linea.split("=");
-                switch (split[0]) {
+                switch(split[0]){
                     case "Archivos":
                         String[] v = split[1].split(" ");
                         for (int i = 0; i < v.length; i++) {
@@ -76,6 +77,11 @@ public class Configurador {
                     case "TamListaTabu":
                         tamListaTabu = Integer.parseInt(split[1]);
                         break;
+
+                    case "CoeficienteOscilacion":
+                        coeficienteOscilacion = Float.parseFloat(split[1]);
+                        break;
+
                 }
 
             }
@@ -114,5 +120,9 @@ public class Configurador {
 
     public int getTamListaTabu() {
         return tamListaTabu;
+    }
+
+    public float getCoeficienteOscilacion() {
+        return coeficienteOscilacion;
     }
 }

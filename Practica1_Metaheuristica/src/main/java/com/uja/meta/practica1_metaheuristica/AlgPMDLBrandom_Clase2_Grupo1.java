@@ -58,6 +58,14 @@ public class AlgPMDLBrandom_Clase2_Grupo1 {
                             dlb[i] = dlb[j] = 0; //se pone a 0 porque está implicado en un movimiento de mejora.
                             posI = i;
                             mejora_solucion = true;
+                            log.append("\nMejora en iteracion: " + iteraciones + "\n");
+
+                            log.append("Vector permutaciones: ");
+                            for (int k = 0; k < matrizFlujo.length; k++) {
+                                log.append(resultado[k] + " ");
+                            }
+                            log.append("Coste: " + calculaCoste(resultado));
+                            log.append("\n");
                             iteraciones++;
                         }
                         contj++;
@@ -72,23 +80,13 @@ public class AlgPMDLBrandom_Clase2_Grupo1 {
                 conti++;
             }
 
-            timeIni = System.currentTimeMillis() - timeIni;
-            log.append("\nIteración: " + iteraciones + "\n");
 
-            log.append("Vector permutaciones: ");
-            for (int i = 0; i < matrizFlujo.length; i++) {
-                log.append(resultado[i] + " ");
-            }
-            log.append("\n");
 
-            log.append("DLBRandom: ");
-            for (int i = 0; i < matrizFlujo.length; i++) {
-                log.append(dlb[i] + " ");
-            }
-            log.append("\n");
 
 
         }
+        timeIni = System.currentTimeMillis() - timeIni;
+        log.append("\n");
         log.append("Tiempo total de ejecucion algoritmo Busqueda Local aleatoria: " + (timeIni) + " milisegundos");
         return resultado;
     }
@@ -160,6 +158,23 @@ public class AlgPMDLBrandom_Clase2_Grupo1 {
 
         return false;
 
+    }
+
+    public long calculaCoste(int[] vectorSolucion) {
+
+        long coste = 0;
+        long timeIni = System.currentTimeMillis();
+
+        for (int i = 0; i < vectorSolucion.length; i++) {
+            for (int j = 0; j < vectorSolucion.length; j++) {
+                if (i != j) {
+                    coste = coste + (matrizFlujo[i][j] * matrizDistancia[vectorSolucion[i]][vectorSolucion[j]]);
+                }
+            }
+        }
+
+
+        return coste;
     }
 
     /**
