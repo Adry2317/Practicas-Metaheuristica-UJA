@@ -115,4 +115,4 @@ Mejora en iteracion: 37
 Vector permutaciones: 10 17 23 19 3 18 21 26 6 2 8 29 20 11 16 4 9 28 24 1 22 15 0 14 12 5 7 25 27 13 Coste: 13474
 
 
-Tiempo total de ejecucion algoritmo Busqueda Local iterativa: 4 milisegundos
+Tiempo total de ejecucion algoritmo Busqueda Local iterativa: 2 milisegundosEl coste es: 13474

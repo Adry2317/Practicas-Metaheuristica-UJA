@@ -105,6 +105,7 @@ public class AlgPMDLBit_Clase2_Grupo1 {
         timeIni = System.currentTimeMillis() - timeIni;
         log.append("\n");
         log.append("\nTiempo total de ejecucion algoritmo Busqueda Local iterativa: " + (timeIni) + " milisegundos");
+        log.append("El coste es: ").append(calculaCoste(resultado));
         return resultado;
     }
 

@@ -148,7 +148,7 @@ public class AlgGRE_Clase2_Grupo1 {
     public long calculaCoste(int[] vectorSolucion) {
         log.append("Calculo del coste de la solución para el archivo de datos " + nombreArchivo + ".\n");
         long coste = 0;
-        long timeIni = System.currentTimeMillis();
+
 
         for (int i = 0; i < vectorSolucion.length; i++) {
             for (int j = 0; j < vectorSolucion.length; j++) {
@@ -161,7 +161,7 @@ public class AlgGRE_Clase2_Grupo1 {
         log.append("El coste de la solución: " + coste + "\n");
 
 
-        log.append("El tiempo necesario para calcular el coste ha sidos: " + (System.currentTimeMillis() - timeIni) + " milisegundos.\n");
+
         return coste;
     }
 

@@ -2,4 +2,3 @@ Ejecuión algoritmo Greedy, para el fichero de datos ford02.
 El tiempo total de ejecución algoritmo greedy:  0 milisegundos.
 Calculo del coste de la solución para el archivo de datos ford02.
 El coste de la solución: 34587
-El tiempo necesario para calcular el coste ha sidos: 0 milisegundos.

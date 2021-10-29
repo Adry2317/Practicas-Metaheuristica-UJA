@@ -183,8 +183,7 @@ public class AlgMA_Clase2_Grupo1 {
                                     mejorPeores = vectPrueba.clone();
                                 }
                                 if (contOscilacion >= limIteraciones*porcentajeIniOscilacion) {
-                                    log.append("*******************************************************************\n");
-                                    log.append("Realizamos Oscilacion estratégica, Candidato LRC: " + (contLRC+1) + " Iteración: " + iteraciones + "\n");
+
                                     oscilacionEstrategica();
                                     contOscilacion = 0;
                                 }
@@ -233,8 +232,8 @@ public class AlgMA_Clase2_Grupo1 {
             contLRC++;
         } while (contLRC < candidatosLRC);
 
-        log.append("Tiempo de ejecucion: " + (System.currentTimeMillis() - tiempoIni) + " milisegundos");
-
+        log.append("Tiempo de ejecucion: " + (System.currentTimeMillis() - tiempoIni) + " milisegundos\n");
+        log.append("El coste es: ").append(calculaCoste(mejorSolGlobal));
         return mejorSolGlobal;
     }
 
@@ -246,8 +245,7 @@ public class AlgMA_Clase2_Grupo1 {
         double valor = Math.random() * 1;
         //Diversificacion
         if (valor < coeficienteOcilacion) {
-            log.append("Realizacion de Diversificacion\n");
-            log.append("*******************************************************************\n");
+
 
             int pos1 = 0;
             int pos2 = 0;
@@ -270,8 +268,7 @@ public class AlgMA_Clase2_Grupo1 {
 
         } else {
             //Intensificacion
-            log.append("Realizacion de Intensificacion\n");
-            log.append("*******************************************************************\n");
+
 
             int mayor = memoriaLargoPlazo[0][0];
             int pos1 = 0;

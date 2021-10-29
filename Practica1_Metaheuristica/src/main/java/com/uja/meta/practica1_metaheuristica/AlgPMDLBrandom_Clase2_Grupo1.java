@@ -88,6 +88,7 @@ public class AlgPMDLBrandom_Clase2_Grupo1 {
         timeIni = System.currentTimeMillis() - timeIni;
         log.append("\n");
         log.append("Tiempo total de ejecucion algoritmo Busqueda Local aleatoria: " + (timeIni) + " milisegundos");
+        log.append("El coste es: ").append(calculaCoste(resultado));
         return resultado;
     }
 
