@@ -1,0 +1,10 @@
+Archivos=nissan01.dat nissan02.dat nissan03.dat nissan04.dat
+Semillas=76593264 75932664 93267654 76325964 76326594
+Algoritmos=EstacionarioOX EstacionarioPMX GeneracionalOX2 GeneracioanlPMX
+TamPoblacion=50
+MaxEvaluaciones=50000
+probEstacionario=1
+probGeneracional=0.7
+probMutacion=0.001
+TamLRC=5
+
