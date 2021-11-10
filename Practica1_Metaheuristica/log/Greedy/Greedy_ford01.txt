@@ -1,4 +1,4 @@
 Ejecuión algoritmo Greedy, para el fichero de datos ford01.
-El tiempo total de ejecución algoritmo greedy:  60 milisegundos.
+El tiempo total de ejecución algoritmo greedy:  69 milisegundos.
 Calculo del coste de la solución para el archivo de datos ford01.
 El coste de la solución: 3978

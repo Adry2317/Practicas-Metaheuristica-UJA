@@ -1,0 +1,118 @@
+Ejecución Algortimo primero el mejor iterativo, para el fichero de datos ford03.
+
+Mejora en iteracion: 0
+Vector permutaciones: 15 19 13 28 1 21 18 10 16 2 23 25 8 11 24 4 9 29 6 22 17 7 20 14 12 5 0 26 27 3 Coste: 13757
+
+Mejora en iteracion: 1
+Vector permutaciones: 1 19 13 28 15 21 18 10 16 2 23 25 8 11 24 4 9 29 6 22 17 7 20 14 12 5 0 26 27 3 Coste: 13745
+
+Mejora en iteracion: 2
+Vector permutaciones: 18 19 13 28 15 21 1 10 16 2 23 25 8 11 24 4 9 29 6 22 17 7 20 14 12 5 0 26 27 3 Coste: 13735
+
+Mejora en iteracion: 3
+Vector permutaciones: 21 19 13 28 15 18 1 10 16 2 23 25 8 11 24 4 9 29 6 22 17 7 20 14 12 5 0 26 27 3 Coste: 13733
+
+Mejora en iteracion: 4
+Vector permutaciones: 19 21 13 28 15 18 1 10 16 2 23 25 8 11 24 4 9 29 6 22 17 7 20 14 12 5 0 26 27 3 Coste: 13729
+
+Mejora en iteracion: 5
+Vector permutaciones: 13 21 19 28 15 18 1 10 16 2 23 25 8 11 24 4 9 29 6 22 17 7 20 14 12 5 0 26 27 3 Coste: 13728
+
+Mejora en iteracion: 6
+Vector permutaciones: 1 21 19 28 15 18 13 10 16 2 23 25 8 11 24 4 9 29 6 22 17 7 20 14 12 5 0 26 27 3 Coste: 13707
+
+Mejora en iteracion: 7
+Vector permutaciones: 10 21 19 28 15 18 13 1 16 2 23 25 8 11 24 4 9 29 6 22 17 7 20 14 12 5 0 26 27 3 Coste: 13699
+
+Mejora en iteracion: 8
+Vector permutaciones: 28 21 19 10 15 18 13 1 16 2 23 25 8 11 24 4 9 29 6 22 17 7 20 14 12 5 0 26 27 3 Coste: 13692
+
+Mejora en iteracion: 9
+Vector permutaciones: 21 28 19 10 15 18 13 1 16 2 23 25 8 11 24 4 9 29 6 22 17 7 20 14 12 5 0 26 27 3 Coste: 13690
+
+Mejora en iteracion: 10
+Vector permutaciones: 15 28 19 10 21 18 13 1 16 2 23 25 8 11 24 4 9 29 6 22 17 7 20 14 12 5 0 26 27 3 Coste: 13675
+
+Mejora en iteracion: 11
+Vector permutaciones: 29 28 19 10 21 18 13 1 16 2 23 25 8 11 24 4 9 15 6 22 17 7 20 14 12 5 0 26 27 3 Coste: 13671
+
+Mejora en iteracion: 12
+Vector permutaciones: 24 28 19 10 21 18 13 1 16 2 23 25 8 11 29 4 9 15 6 22 17 7 20 14 12 5 0 26 27 3 Coste: 13661
+
+Mejora en iteracion: 13
+Vector permutaciones: 16 28 19 10 21 18 13 1 24 2 23 25 8 11 29 4 9 15 6 22 17 7 20 14 12 5 0 26 27 3 Coste: 13660
+
+Mejora en iteracion: 14
+Vector permutaciones: 1 28 19 10 21 18 13 16 24 2 23 25 8 11 29 4 9 15 6 22 17 7 20 14 12 5 0 26 27 3 Coste: 13651
+
+Mejora en iteracion: 15
+Vector permutaciones: 22 28 19 10 21 18 13 16 24 2 23 25 8 11 29 4 9 15 6 1 17 7 20 14 12 5 0 26 27 3 Coste: 13647
+
+Mejora en iteracion: 16
+Vector permutaciones: 26 28 19 10 21 18 13 16 24 2 23 25 8 11 29 4 9 15 6 1 17 7 20 14 12 5 0 22 27 3 Coste: 13645
+
+Mejora en iteracion: 17
+Vector permutaciones: 16 28 19 10 21 18 13 26 24 2 23 25 8 11 29 4 9 15 6 1 17 7 20 14 12 5 0 22 27 3 Coste: 13628
+
+Mejora en iteracion: 18
+Vector permutaciones: 8 28 19 10 21 18 13 26 24 2 23 25 16 11 29 4 9 15 6 1 17 7 20 14 12 5 0 22 27 3 Coste: 13613
+
+Mejora en iteracion: 19
+Vector permutaciones: 23 28 19 10 21 18 13 26 24 2 8 25 16 11 29 4 9 15 6 1 17 7 20 14 12 5 0 22 27 3 Coste: 13606
+
+Mejora en iteracion: 20
+Vector permutaciones: 15 28 19 10 21 18 13 26 24 2 8 25 16 11 29 4 9 23 6 1 17 7 20 14 12 5 0 22 27 3 Coste: 13602
+
+Mejora en iteracion: 21
+Vector permutaciones: 15 19 28 10 21 18 13 26 24 2 8 25 16 11 29 4 9 23 6 1 17 7 20 14 12 5 0 22 27 3 Coste: 13590
+
+Mejora en iteracion: 22
+Vector permutaciones: 15 10 28 19 21 18 13 26 24 2 8 25 16 11 29 4 9 23 6 1 17 7 20 14 12 5 0 22 27 3 Coste: 13587
+
+Mejora en iteracion: 23
+Vector permutaciones: 15 25 28 19 21 18 13 26 24 2 8 10 16 11 29 4 9 23 6 1 17 7 20 14 12 5 0 22 27 3 Coste: 13566
+
+Mejora en iteracion: 24
+Vector permutaciones: 15 17 28 19 21 18 13 26 24 2 8 10 16 11 29 4 9 23 6 1 25 7 20 14 12 5 0 22 27 3 Coste: 13562
+
+Mejora en iteracion: 25
+Vector permutaciones: 15 17 23 19 21 18 13 26 24 2 8 10 16 11 29 4 9 28 6 1 25 7 20 14 12 5 0 22 27 3 Coste: 13560
+
+Mejora en iteracion: 26
+Vector permutaciones: 15 17 23 19 13 18 21 26 24 2 8 10 16 11 29 4 9 28 6 1 25 7 20 14 12 5 0 22 27 3 Coste: 13551
+
+Mejora en iteracion: 27
+Vector permutaciones: 15 17 23 19 24 18 21 26 13 2 8 10 16 11 29 4 9 28 6 1 25 7 20 14 12 5 0 22 27 3 Coste: 13550
+
+Mejora en iteracion: 28
+Vector permutaciones: 15 17 23 19 6 18 21 26 13 2 8 10 16 11 29 4 9 28 24 1 25 7 20 14 12 5 0 22 27 3 Coste: 13535
+
+Mejora en iteracion: 29
+Vector permutaciones: 15 17 23 19 13 18 21 26 6 2 8 10 16 11 29 4 9 28 24 1 25 7 20 14 12 5 0 22 27 3 Coste: 13533
+
+Mejora en iteracion: 30
+Vector permutaciones: 15 17 23 19 3 18 21 26 6 2 8 10 16 11 29 4 9 28 24 1 25 7 20 14 12 5 0 22 27 13 Coste: 13527
+
+Mejora en iteracion: 31
+Vector permutaciones: 15 17 23 19 3 18 21 26 6 2 8 7 16 11 29 4 9 28 24 1 25 10 20 14 12 5 0 22 27 13 Coste: 13522
+
+Mejora en iteracion: 32
+Vector permutaciones: 15 17 23 19 3 18 21 26 6 2 8 29 16 11 7 4 9 28 24 1 25 10 20 14 12 5 0 22 27 13 Coste: 13512
+
+Mejora en iteracion: 33
+Vector permutaciones: 15 17 23 19 3 18 21 26 6 2 8 29 0 11 7 4 9 28 24 1 25 10 20 14 12 5 16 22 27 13 Coste: 13492
+
+Mejora en iteracion: 34
+Vector permutaciones: 15 17 23 19 3 18 21 26 6 2 8 29 0 11 16 4 9 28 24 1 25 10 20 14 12 5 7 22 27 13 Coste: 13487
+
+Mejora en iteracion: 35
+Vector permutaciones: 15 17 23 19 3 18 21 26 6 2 8 29 0 11 16 4 9 28 24 1 22 10 20 14 12 5 7 25 27 13 Coste: 13485
+
+Mejora en iteracion: 36
+Vector permutaciones: 10 17 23 19 3 18 21 26 6 2 8 29 0 11 16 4 9 28 24 1 22 15 20 14 12 5 7 25 27 13 Coste: 13483
+
+Mejora en iteracion: 37
+Vector permutaciones: 10 17 23 19 3 18 21 26 6 2 8 29 20 11 16 4 9 28 24 1 22 15 0 14 12 5 7 25 27 13 Coste: 13474
+
+
+Tiempo total de ejecucion algoritmo Busqueda Local iterativa: 2 milisegundosEl coste es: 13474

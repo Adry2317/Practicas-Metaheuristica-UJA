@@ -1,0 +1,72 @@
+Ejecución Algortimo primero el mejor aleatorio, para el fichero de datos ford01.
+
+Mejora en iteracion: 0
+Vector permutaciones: 2 16 14 15 18 4 19 8 17 13 3 5 0 12 11 10 6 9 7 1 Coste: 3968
+
+Mejora en iteracion: 1
+Vector permutaciones: 2 16 14 15 18 4 19 8 17 13 3 12 0 5 11 10 6 9 7 1 Coste: 3936
+
+Mejora en iteracion: 2
+Vector permutaciones: 2 16 14 15 18 4 19 8 17 13 3 10 0 5 11 12 6 9 7 1 Coste: 3930
+
+Mejora en iteracion: 3
+Vector permutaciones: 2 16 14 15 18 4 19 8 17 13 3 6 0 5 11 12 10 9 7 1 Coste: 3919
+
+Mejora en iteracion: 4
+Vector permutaciones: 2 16 14 15 18 4 6 8 17 13 3 19 0 5 11 12 10 9 7 1 Coste: 3914
+
+Mejora en iteracion: 5
+Vector permutaciones: 2 16 14 15 18 4 6 8 17 13 3 5 0 19 11 12 10 9 7 1 Coste: 3913
+
+Mejora en iteracion: 6
+Vector permutaciones: 2 16 14 15 18 4 6 8 17 13 3 12 0 19 11 5 10 9 7 1 Coste: 3910
+
+Mejora en iteracion: 7
+Vector permutaciones: 12 16 14 15 18 4 6 8 17 13 3 2 0 19 11 5 10 9 7 1 Coste: 3905
+
+Mejora en iteracion: 8
+Vector permutaciones: 12 16 14 2 18 4 6 8 17 13 3 15 0 19 11 5 10 9 7 1 Coste: 3896
+
+Mejora en iteracion: 9
+Vector permutaciones: 12 16 14 2 18 4 6 8 17 13 3 10 0 19 11 5 15 9 7 1 Coste: 3893
+
+Mejora en iteracion: 10
+Vector permutaciones: 12 16 14 2 18 4 6 8 17 13 3 7 0 19 11 5 15 9 10 1 Coste: 3890
+
+Mejora en iteracion: 11
+Vector permutaciones: 12 16 14 2 18 4 6 8 17 13 3 15 0 19 11 5 7 9 10 1 Coste: 3881
+
+Mejora en iteracion: 12
+Vector permutaciones: 12 16 15 2 18 4 6 8 17 13 3 14 0 19 11 5 7 9 10 1 Coste: 3872
+
+Mejora en iteracion: 13
+Vector permutaciones: 12 16 15 2 18 4 6 8 17 13 3 10 0 19 11 5 7 9 14 1 Coste: 3871
+
+Mejora en iteracion: 14
+Vector permutaciones: 12 16 15 2 18 10 6 8 17 13 3 4 0 19 11 5 7 9 14 1 Coste: 3868
+
+Mejora en iteracion: 15
+Vector permutaciones: 12 16 15 2 18 10 6 19 17 13 3 4 0 8 11 5 7 9 14 1 Coste: 3832
+
+Mejora en iteracion: 16
+Vector permutaciones: 12 16 15 2 18 10 6 19 17 13 3 4 0 8 7 5 11 9 14 1 Coste: 3829
+
+Mejora en iteracion: 17
+Vector permutaciones: 12 16 15 2 18 10 6 19 17 13 3 4 0 8 7 11 5 9 14 1 Coste: 3817
+
+Mejora en iteracion: 18
+Vector permutaciones: 12 16 11 2 18 10 6 19 17 13 3 4 0 8 7 15 5 9 14 1 Coste: 3814
+
+Mejora en iteracion: 19
+Vector permutaciones: 15 16 11 2 18 10 6 19 17 13 3 4 0 8 7 12 5 9 14 1 Coste: 3812
+
+Mejora en iteracion: 20
+Vector permutaciones: 5 16 11 2 18 10 6 19 17 13 3 4 0 8 7 12 15 9 14 1 Coste: 3806
+
+Mejora en iteracion: 21
+Vector permutaciones: 5 16 11 2 18 10 6 19 17 13 15 4 0 8 7 12 3 9 14 1 Coste: 3803
+
+Mejora en iteracion: 22
+Vector permutaciones: 5 16 11 2 18 10 6 19 13 17 15 4 0 8 7 12 3 9 14 1 Coste: 3791
+
+Tiempo total de ejecucion algoritmo Busqueda Local aleatoria: 1 milisegundosEl coste es: 3791

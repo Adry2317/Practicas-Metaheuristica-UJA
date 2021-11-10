@@ -13,9 +13,9 @@ public class Main {
                 AlgGRE_Clase2_Grupo1 greedy = new AlgGRE_Clase2_Grupo1(archivo.getMatrizFlujo(), archivo.getMatrizDistancias(),5,50,aleatorio);
                 prueba = greedy.calculoGreedyAleatorio();
 
-            System.out.println("hola");
+
         }
 
-        System.out.println("hola");
+
     }
 }

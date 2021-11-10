@@ -2,1014 +2,994 @@ Ejecución Algortimo multiarranque, para el fichero de datos ford02.
 Mejores soluciones
 
 *******************************************************************
-Candidato LRC nº 1, Coste: 34426
- Vector Permutacion [5 1 2 19 3 10 9 6 17 7 11 12 0 13 4 18 16 8 15 14 ]
+Candidato LRC nº 1, Coste: 35073
+ Vector Permutacion [5 6 2 19 3 10 9 7 17 1 11 12 0 13 4 18 16 8 15 14 ]
 
 *******************************************************************
 Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 1
-Vector permutacion [5 1 2 19 3 10 9 6 17 7 11 0 12 13 4 18 16 8 15 14 ], Coste: 34350
+Vector permutacion [5 6 2 19 3 10 9 7 17 1 11 0 12 13 4 18 16 8 15 14 ], Coste: 34947
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 2
-Vector permutacion [5 1 2 19 3 10 9 6 17 7 11 4 12 13 0 18 16 8 15 14 ], Coste: 33712
+Vector permutacion [5 6 2 19 3 10 9 7 17 1 11 4 12 13 0 18 16 8 15 14 ], Coste: 34348
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 3
-Vector permutacion [5 1 2 19 3 10 9 6 17 7 11 15 12 13 0 18 16 8 4 14 ], Coste: 33571
+Vector permutacion [5 6 2 19 3 10 9 7 17 1 11 15 12 13 0 18 16 8 4 14 ], Coste: 34071
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 4
-Vector permutacion [5 1 2 19 3 10 9 6 17 7 11 14 12 13 0 18 16 8 4 15 ], Coste: 33395
+Vector permutacion [5 6 2 19 3 10 9 7 17 1 11 14 12 13 0 18 16 8 4 15 ], Coste: 34036
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 5
-Vector permutacion [5 1 2 14 3 10 9 6 17 7 11 19 12 13 0 18 16 8 4 15 ], Coste: 33229
+Vector permutacion [5 6 2 14 3 10 9 7 17 1 11 19 12 13 0 18 16 8 4 15 ], Coste: 33873
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 6
-Vector permutacion [5 1 2 14 3 10 9 6 17 7 11 8 12 13 0 18 16 19 4 15 ], Coste: 33124
+Vector permutacion [5 6 2 14 3 10 9 7 17 1 11 8 12 13 0 18 16 19 4 15 ], Coste: 33792
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 7
-Vector permutacion [5 1 2 14 3 8 9 6 17 7 11 10 12 13 0 18 16 19 4 15 ], Coste: 32805
+Vector permutacion [5 6 2 14 3 8 9 7 17 1 11 10 12 13 0 18 16 19 4 15 ], Coste: 33593
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 8
-Vector permutacion [5 1 2 14 3 8 9 6 17 10 11 7 12 13 0 18 16 19 4 15 ], Coste: 32490
+Vector permutacion [5 6 2 14 3 8 9 10 17 1 11 7 12 13 0 18 16 19 4 15 ], Coste: 33336
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 9
-Vector permutacion [5 1 2 14 3 8 9 6 17 10 11 7 18 13 0 12 16 19 4 15 ], Coste: 32444
+Vector permutacion [5 7 2 14 3 8 9 10 17 1 11 6 12 13 0 18 16 19 4 15 ], Coste: 33229
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 10
-Vector permutacion [5 1 2 14 3 8 9 6 17 10 11 7 18 13 12 0 16 19 4 15 ], Coste: 32363
+Vector permutacion [5 7 2 14 3 8 9 10 17 6 11 1 12 13 0 18 16 19 4 15 ], Coste: 32942
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 11
-Vector permutacion [5 1 2 14 3 8 9 6 17 10 11 7 18 13 12 15 16 19 4 0 ], Coste: 32297
+Vector permutacion [5 7 2 14 3 8 9 10 17 6 11 18 12 13 0 1 16 19 4 15 ], Coste: 32896
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 12
-Vector permutacion [5 1 2 14 3 8 9 6 17 10 11 7 18 13 12 15 16 0 4 19 ], Coste: 32169
+Vector permutacion [5 7 2 14 3 8 9 10 17 6 18 11 12 13 0 1 16 19 4 15 ], Coste: 32810
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 13
-Vector permutacion [0 1 2 14 3 8 9 6 17 10 11 7 18 13 12 15 16 5 4 19 ], Coste: 31930
+Vector permutacion [5 7 2 14 3 8 9 10 17 6 12 11 18 13 0 1 16 19 4 15 ], Coste: 32763
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 14
-Vector permutacion [0 1 2 14 3 5 9 6 17 10 11 7 18 13 12 15 16 8 4 19 ], Coste: 31491
+Vector permutacion [5 7 2 14 3 8 9 18 17 6 12 11 10 13 0 1 16 19 4 15 ], Coste: 32609
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 15
-Vector permutacion [0 1 2 14 3 5 9 6 8 10 11 7 18 13 12 15 16 17 4 19 ], Coste: 31415
+Vector permutacion [5 7 2 14 3 8 9 18 17 6 12 11 4 13 0 1 16 19 10 15 ], Coste: 32607
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 16
-Vector permutacion [0 1 2 14 4 5 9 6 8 10 11 7 18 13 12 15 16 17 3 19 ], Coste: 31216
+Vector permutacion [5 7 2 14 3 8 9 18 17 6 12 11 1 13 0 4 16 19 10 15 ], Coste: 32592
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 17
-Vector permutacion [0 1 2 14 4 5 9 6 8 3 11 7 18 13 12 15 16 17 10 19 ], Coste: 30934
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 18
-Vector permutacion [0 1 2 14 4 5 10 6 8 3 11 7 18 13 12 15 16 17 9 19 ], Coste: 30715
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 19
-Vector permutacion [0 1 2 9 4 5 10 6 8 3 11 7 18 13 12 15 16 17 14 19 ], Coste: 30450
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 20
-Vector permutacion [0 1 2 9 4 5 10 6 8 3 11 7 18 13 14 15 16 17 12 19 ], Coste: 29970
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 21
-Vector permutacion [0 1 2 3 4 5 10 6 8 9 11 7 18 13 14 15 16 17 12 19 ], Coste: 29800
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 22
-Vector permutacion [0 1 2 3 4 5 7 6 8 9 11 10 18 13 14 15 16 17 12 19 ], Coste: 29646
+Vector permutacion [5 1 2 14 3 8 9 18 17 6 12 11 7 13 0 4 16 19 10 15 ], Coste: 32490
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 23
-Vector permutacion [0 1 2 3 4 5 6 7 8 9 11 10 18 13 14 15 16 17 12 19 ], Coste: 29636
+Vector permutacion [5 1 2 6 3 8 9 14 17 15 12 11 7 13 0 18 16 4 10 19 ], Coste: 32401
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 24
-Vector permutacion [0 1 2 3 4 5 18 7 8 9 11 10 6 13 14 15 16 17 12 19 ], Coste: 29438
+Vector permutacion [5 1 2 6 3 8 9 14 17 15 12 11 7 13 0 10 16 4 18 19 ], Coste: 32383
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 25
-Vector permutacion [0 1 2 3 4 5 12 7 8 9 11 10 6 13 14 15 16 17 18 19 ], Coste: 28932
+Vector permutacion [5 1 2 6 3 8 9 14 17 15 10 11 7 13 0 12 16 4 18 19 ], Coste: 32235
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 26
+Vector permutacion [5 1 2 6 3 8 9 14 17 15 10 11 7 13 12 0 16 4 18 19 ], Coste: 32205
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 27
-Vector permutacion [0 1 2 3 4 5 12 7 8 9 10 11 6 13 14 15 16 17 18 19 ], Coste: 28485
+Vector permutacion [4 1 2 6 3 8 9 14 17 15 10 11 7 13 12 0 16 5 18 19 ], Coste: 32106
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 28
-Vector permutacion [0 1 2 3 4 5 6 9 8 7 10 11 12 13 14 15 16 17 18 19 ], Coste: 28268
+Vector permutacion [4 1 2 6 3 5 9 14 17 15 10 11 7 13 12 0 16 8 18 19 ], Coste: 31792
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 29
+Vector permutacion [4 1 2 6 3 5 9 14 8 15 10 11 7 13 12 0 16 17 18 19 ], Coste: 31753
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 30
+Vector permutacion [4 1 2 6 3 5 9 14 8 15 10 11 7 13 17 0 16 12 18 19 ], Coste: 31726
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 31
+Vector permutacion [4 1 2 6 3 5 9 14 8 15 12 11 7 13 17 0 16 10 18 19 ], Coste: 31724
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 32
-Vector permutacion [0 15 2 3 4 5 6 7 8 9 10 11 12 13 14 1 16 17 18 19 ], Coste: 28048
+Vector permutacion [4 1 2 6 3 5 9 10 8 15 12 11 7 13 17 0 16 14 18 19 ], Coste: 31636
 
 
-Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 33
+Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 35
+Vector permutacion [4 1 2 6 5 14 9 10 8 15 12 11 7 13 3 0 16 17 18 19 ], Coste: 31584
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 36
+Vector permutacion [4 1 2 6 5 15 9 10 8 14 12 11 7 13 3 0 16 17 18 19 ], Coste: 31385
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 37
+Vector permutacion [4 1 2 6 5 0 9 10 8 14 12 11 7 13 3 15 16 17 18 19 ], Coste: 31062
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 38
+Vector permutacion [4 1 2 6 0 5 9 10 8 14 12 11 7 13 3 15 16 17 18 19 ], Coste: 30838
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 39
+Vector permutacion [4 1 2 6 0 5 9 7 8 14 12 11 10 13 3 15 16 17 18 19 ], Coste: 30429
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 48
+Vector permutacion [0 1 3 6 4 5 2 7 8 9 10 11 12 13 14 15 16 17 18 19 ], Coste: 29911
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 49
+Vector permutacion [0 1 3 2 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 ], Coste: 28977
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 55
+Vector permutacion [0 1 2 14 4 5 6 7 8 9 10 11 12 13 3 15 16 17 18 19 ], Coste: 28027
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 1, en la Iteración: 56
 Vector permutacion [0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 ], Coste: 27076
 
 *******************************************************************
 Nueva solucion global: [0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 ], Coste: 27076
 
 *******************************************************************
-Candidato LRC nº 2, Coste: 34022
- Vector Permutacion [5 1 2 19 3 11 9 7 17 6 10 12 0 13 4 18 16 8 15 14 ]
-
-*******************************************************************
-Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 1
-Vector permutacion [5 1 2 19 3 11 9 17 7 6 10 12 0 13 4 18 16 8 15 14 ], Coste: 33985
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 2
-Vector permutacion [5 1 2 19 3 11 9 8 7 6 10 12 0 13 4 18 16 17 15 14 ], Coste: 33745
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 3
-Vector permutacion [5 1 2 19 3 11 9 12 7 6 10 8 0 13 4 18 16 17 15 14 ], Coste: 33671
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 4
-Vector permutacion [5 1 2 19 3 11 9 10 7 6 12 8 0 13 4 18 16 17 15 14 ], Coste: 33423
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 5
-Vector permutacion [5 1 2 19 3 11 9 14 7 6 12 8 0 13 4 18 16 17 15 10 ], Coste: 33394
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 6
-Vector permutacion [5 1 2 19 3 11 9 4 7 6 12 8 0 13 14 18 16 17 15 10 ], Coste: 32865
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 7
-Vector permutacion [5 1 2 19 3 11 9 18 7 6 12 8 0 13 14 4 16 17 15 10 ], Coste: 32783
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 8
-Vector permutacion [5 1 2 19 3 11 9 0 7 6 12 8 18 13 14 4 16 17 15 10 ], Coste: 32437
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 9
-Vector permutacion [5 1 2 19 3 11 9 0 8 6 12 7 18 13 14 4 16 17 15 10 ], Coste: 32158
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 10
-Vector permutacion [5 1 2 19 3 11 9 0 17 6 12 7 18 13 14 4 16 8 15 10 ], Coste: 32156
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 11
-Vector permutacion [5 1 2 19 3 11 9 17 0 6 12 7 18 13 14 4 16 8 15 10 ], Coste: 31919
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 12
-Vector permutacion [5 1 2 19 3 11 14 17 0 6 12 7 18 13 9 4 16 8 15 10 ], Coste: 31916
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 13
-Vector permutacion [5 1 2 19 3 11 14 6 0 17 12 7 18 13 9 4 16 8 15 10 ], Coste: 31860
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 14
-Vector permutacion [5 1 2 10 3 11 14 6 0 17 12 7 18 13 9 4 16 8 15 19 ], Coste: 31787
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 15
-Vector permutacion [5 1 2 10 3 11 14 6 0 17 12 7 18 13 9 4 19 8 15 16 ], Coste: 31458
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 139
-Vector permutacion [0 1 2 17 3 5 6 7 8 9 10 11 4 13 14 15 18 12 16 19 ], Coste: 31074
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 140
-Vector permutacion [0 1 2 17 4 5 6 7 8 9 10 11 3 13 14 15 18 12 16 19 ], Coste: 30917
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 141
-Vector permutacion [0 1 2 17 4 5 6 7 8 9 10 11 15 13 14 3 18 12 16 19 ], Coste: 30744
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 142
-Vector permutacion [0 1 2 17 4 5 6 7 8 9 10 11 18 13 14 3 15 12 16 19 ], Coste: 30428
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 143
-Vector permutacion [0 1 2 17 4 5 6 7 8 9 10 11 16 13 14 3 15 12 18 19 ], Coste: 30207
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 144
-Vector permutacion [0 1 2 17 4 5 6 7 8 9 10 11 13 16 14 3 15 12 18 19 ], Coste: 30129
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 145
-Vector permutacion [0 1 2 17 4 5 6 7 8 9 10 11 13 15 14 3 16 12 18 19 ], Coste: 29948
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 146
-Vector permutacion [0 1 2 17 4 5 6 7 8 9 10 11 13 12 14 3 16 15 18 19 ], Coste: 29547
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 147
-Vector permutacion [0 1 2 17 4 5 6 7 8 9 10 11 12 13 14 3 16 15 18 19 ], Coste: 28785
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 148
-Vector permutacion [0 1 2 17 4 5 6 7 8 9 10 11 12 13 14 15 16 3 18 19 ], Coste: 28639
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 149
-Vector permutacion [0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 ], Coste: 27076
-
-*******************************************************************
-Candidato LRC nº 3, Coste: 34587
- Vector Permutacion [5 1 2 19 3 10 9 7 17 6 11 12 0 13 4 18 16 8 15 14 ]
-
-*******************************************************************
-Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 1
-Vector permutacion [5 1 2 19 3 7 9 10 17 6 11 12 0 13 4 18 16 8 15 14 ], Coste: 34249
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 2
-Vector permutacion [5 1 2 19 3 11 9 10 17 6 7 12 0 13 4 18 16 8 15 14 ], Coste: 33435
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 3
-Vector permutacion [5 1 2 19 3 0 9 10 17 6 7 12 11 13 4 18 16 8 15 14 ], Coste: 33348
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 4
-Vector permutacion [5 1 2 19 3 4 9 10 17 6 7 12 11 13 0 18 16 8 15 14 ], Coste: 32933
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 5
-Vector permutacion [5 1 2 19 3 18 9 10 17 6 7 12 11 13 0 4 16 8 15 14 ], Coste: 32829
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 6
-Vector permutacion [5 1 2 19 3 18 11 10 17 6 7 12 9 13 0 4 16 8 15 14 ], Coste: 32440
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 7
-Vector permutacion [5 1 2 19 3 18 10 11 17 6 7 12 9 13 0 4 16 8 15 14 ], Coste: 32369
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 8
-Vector permutacion [5 1 2 19 3 18 10 12 17 6 7 11 9 13 0 4 16 8 15 14 ], Coste: 32357
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 9
-Vector permutacion [5 1 2 19 3 18 10 12 17 0 7 11 9 13 6 4 16 8 15 14 ], Coste: 32352
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 10
-Vector permutacion [0 1 2 19 3 18 10 12 17 5 7 11 9 13 6 4 16 8 15 14 ], Coste: 32277
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 17
-Vector permutacion [5 1 2 19 3 0 4 12 17 6 7 11 18 13 14 15 10 8 9 16 ], Coste: 31992
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 18
-Vector permutacion [5 1 2 14 3 0 4 12 17 6 7 11 18 13 19 15 10 8 9 16 ], Coste: 31955
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 19
-Vector permutacion [5 1 2 14 3 0 4 12 17 6 7 19 18 13 11 15 10 8 9 16 ], Coste: 31913
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 20
-Vector permutacion [5 1 2 14 3 0 11 12 17 6 7 19 18 13 4 15 10 8 9 16 ], Coste: 31902
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 21
-Vector permutacion [5 1 2 14 4 0 11 12 17 6 7 19 18 13 3 15 10 8 9 16 ], Coste: 31671
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 22
-Vector permutacion [5 1 2 14 4 0 11 12 17 6 7 19 18 13 15 3 10 8 9 16 ], Coste: 31521
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 29
-Vector permutacion [10 1 2 3 4 5 11 12 17 9 7 6 18 13 15 19 16 8 14 0 ], Coste: 31456
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 30
-Vector permutacion [17 1 2 3 4 5 11 12 10 9 7 6 18 13 15 19 16 8 14 0 ], Coste: 31361
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 31
-Vector permutacion [19 1 2 3 4 5 11 12 10 9 7 6 18 13 15 17 16 8 14 0 ], Coste: 31352
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 32
-Vector permutacion [6 1 2 3 4 5 11 12 10 9 7 19 18 13 15 17 16 8 14 0 ], Coste: 31315
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 40
-Vector permutacion [6 1 2 14 4 5 11 12 17 13 10 7 18 16 9 15 19 8 3 0 ], Coste: 31250
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 41
-Vector permutacion [6 1 2 14 4 5 11 12 17 13 16 7 18 10 9 15 19 8 3 0 ], Coste: 31177
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 42
-Vector permutacion [6 1 2 14 4 5 11 12 17 9 16 7 18 10 13 15 19 8 3 0 ], Coste: 31123
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 43
-Vector permutacion [6 1 2 14 4 5 11 13 17 9 16 7 18 10 12 15 19 8 3 0 ], Coste: 31027
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 50
-Vector permutacion [6 1 2 14 4 5 11 12 17 9 7 19 13 10 18 15 16 8 3 0 ], Coste: 30971
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 51
-Vector permutacion [6 1 2 14 4 5 11 12 17 9 7 3 13 10 18 15 16 8 19 0 ], Coste: 30968
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 64
-Vector permutacion [0 1 2 11 4 5 18 9 13 10 7 3 12 8 17 14 16 15 6 19 ], Coste: 30898
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 65
-Vector permutacion [0 1 2 11 4 5 18 7 13 10 9 3 12 8 17 14 16 15 6 19 ], Coste: 30705
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 66
-Vector permutacion [0 1 2 11 4 5 18 7 13 9 10 3 12 8 17 14 16 15 6 19 ], Coste: 29738
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 67
-Vector permutacion [0 1 2 3 4 18 6 9 8 7 10 11 12 13 14 15 16 17 5 19 ], Coste: 29737
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 70
-Vector permutacion [0 1 2 3 4 5 6 18 8 9 7 11 12 13 14 15 16 17 10 19 ], Coste: 29060
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 71
-Vector permutacion [0 1 2 3 4 5 6 7 8 9 18 11 12 13 14 15 16 17 10 19 ], Coste: 28130
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 73
-Vector permutacion [0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 ], Coste: 27076
-
-*******************************************************************
-Candidato LRC nº 4, Coste: 34297
- Vector Permutacion [5 1 2 19 3 10 6 7 17 9 11 12 0 13 4 18 16 8 15 14 ]
-
-*******************************************************************
-Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 1
-Vector permutacion [5 1 2 19 3 10 13 7 17 9 11 12 0 6 4 18 16 8 15 14 ], Coste: 34098
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 2
-Vector permutacion [5 1 2 19 3 10 13 7 17 9 11 12 0 8 4 18 16 6 15 14 ], Coste: 33966
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 3
-Vector permutacion [5 1 2 19 3 8 13 7 17 9 11 12 0 10 4 18 16 6 15 14 ], Coste: 33594
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 4
-Vector permutacion [5 1 2 19 3 8 13 7 10 9 11 12 0 17 4 18 16 6 15 14 ], Coste: 33467
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 5
-Vector permutacion [5 1 2 17 3 8 13 7 10 9 11 12 0 19 4 18 16 6 15 14 ], Coste: 33456
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 6
-Vector permutacion [5 1 2 17 3 8 13 7 10 9 11 12 0 19 14 18 16 6 15 4 ], Coste: 33200
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 7
-Vector permutacion [5 1 14 17 3 8 13 7 10 9 11 12 0 19 2 18 16 6 15 4 ], Coste: 33018
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 8
-Vector permutacion [5 1 14 17 2 8 13 7 10 9 11 12 0 19 3 18 16 6 15 4 ], Coste: 32856
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 9
-Vector permutacion [5 1 14 17 2 8 13 7 10 9 11 12 0 19 18 3 16 6 15 4 ], Coste: 32675
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 10
-Vector permutacion [5 1 14 17 2 8 13 7 10 9 11 12 0 19 15 3 16 6 18 4 ], Coste: 32529
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 11
-Vector permutacion [5 6 14 17 2 8 13 9 10 7 11 12 0 19 15 3 16 1 18 4 ], Coste: 32485
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 12
-Vector permutacion [5 6 14 17 2 8 13 9 10 7 18 12 0 19 15 3 16 1 11 4 ], Coste: 32405
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 13
-Vector permutacion [5 6 14 17 2 8 13 9 10 7 4 12 0 19 15 3 16 1 11 18 ], Coste: 32333
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 33
-Vector permutacion [12 9 15 6 2 0 5 17 3 14 1 11 7 19 10 8 4 16 18 13 ], Coste: 32318
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 34
-Vector permutacion [12 9 15 6 2 0 5 17 16 14 1 11 7 19 10 8 4 3 18 13 ], Coste: 32249
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 37
-Vector permutacion [2 9 15 6 14 0 5 12 16 17 1 11 7 19 10 13 4 3 18 8 ], Coste: 32243
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 38
-Vector permutacion [2 9 17 6 14 0 5 12 16 15 1 11 7 19 10 13 4 3 18 8 ], Coste: 32030
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 39
-Vector permutacion [2 9 8 6 14 0 5 12 16 15 1 11 7 19 10 13 4 3 18 17 ], Coste: 31814
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 42
-Vector permutacion [2 9 8 6 14 0 5 12 16 7 1 11 15 19 10 13 4 3 18 17 ], Coste: 31668
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 43
-Vector permutacion [2 1 8 6 14 0 5 12 16 7 9 11 15 19 10 13 4 3 18 17 ], Coste: 31517
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 44
-Vector permutacion [2 1 8 6 14 9 5 12 16 7 0 11 15 19 10 13 4 3 18 17 ], Coste: 31352
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 45
-Vector permutacion [2 1 8 6 13 9 5 12 16 7 0 11 15 19 10 14 4 3 18 17 ], Coste: 31349
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 49
-Vector permutacion [2 1 8 6 9 13 5 12 16 7 0 11 15 19 10 14 4 3 18 17 ], Coste: 31308
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 51
-Vector permutacion [0 15 2 3 4 5 6 9 1 7 10 11 12 13 8 14 16 17 18 19 ], Coste: 30881
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 52
-Vector permutacion [0 15 2 3 4 5 6 9 1 7 10 11 12 13 14 8 16 17 18 19 ], Coste: 30244
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 53
-Vector permutacion [0 15 2 3 4 5 6 9 8 7 10 11 12 13 14 1 16 17 18 19 ], Coste: 29156
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 54
-Vector permutacion [0 1 2 3 4 5 6 9 8 7 10 11 12 13 14 15 16 17 18 19 ], Coste: 28268
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 59
-Vector permutacion [0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 ], Coste: 27076
-
-*******************************************************************
-Candidato LRC nº 5, Coste: 35039
- Vector Permutacion [5 11 2 19 3 10 9 7 17 6 1 12 0 13 4 18 16 8 15 14 ]
-
-*******************************************************************
-Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 1
-Vector permutacion [5 11 2 19 3 10 9 7 17 6 12 1 0 13 4 18 16 8 15 14 ], Coste: 34811
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 2
-Vector permutacion [5 11 2 19 3 10 9 7 17 6 13 1 0 12 4 18 16 8 15 14 ], Coste: 34660
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 3
-Vector permutacion [5 11 2 19 3 10 9 7 17 13 6 1 0 12 4 18 16 8 15 14 ], Coste: 34655
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 4
-Vector permutacion [5 11 2 19 3 10 9 7 17 13 0 1 6 12 4 18 16 8 15 14 ], Coste: 34388
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 5
-Vector permutacion [5 11 2 19 3 10 9 7 17 13 8 1 6 12 4 18 16 0 15 14 ], Coste: 34292
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 6
-Vector permutacion [5 11 2 19 3 8 9 7 17 13 10 1 6 12 4 18 16 0 15 14 ], Coste: 33962
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 7
-Vector permutacion [5 11 2 19 3 8 10 7 17 13 9 1 6 12 4 18 16 0 15 14 ], Coste: 33757
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 8
-Vector permutacion [5 1 2 19 3 8 10 7 17 13 9 11 6 12 4 18 16 0 15 14 ], Coste: 33420
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 9
-Vector permutacion [5 1 2 11 3 8 10 7 17 13 9 19 6 12 4 18 16 0 15 14 ], Coste: 33006
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 10
-Vector permutacion [5 1 2 11 3 8 10 7 17 13 9 19 4 12 6 18 16 0 15 14 ], Coste: 32599
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 11
-Vector permutacion [5 1 2 11 3 8 4 7 17 13 9 19 10 12 6 18 16 0 15 14 ], Coste: 32526
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 12
-Vector permutacion [5 1 2 11 3 8 4 7 17 13 9 19 12 10 6 18 16 0 15 14 ], Coste: 32509
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 13
-Vector permutacion [5 1 2 11 3 8 4 7 17 13 12 19 9 10 6 18 16 0 15 14 ], Coste: 32483
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 14
-Vector permutacion [5 1 2 11 3 8 4 9 17 13 12 19 7 10 6 18 16 0 15 14 ], Coste: 32361
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 15
-Vector permutacion [5 1 2 11 3 8 4 9 17 10 12 19 7 13 6 18 16 0 15 14 ], Coste: 32326
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 16
-Vector permutacion [5 1 2 11 3 8 4 9 17 10 13 19 7 12 6 18 16 0 15 14 ], Coste: 31993
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 17
-Vector permutacion [5 1 2 11 3 8 4 9 17 10 13 19 7 12 18 6 16 0 15 14 ], Coste: 31991
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 18
-Vector permutacion [5 1 2 11 3 8 4 9 17 10 13 19 7 12 15 6 16 0 18 14 ], Coste: 31802
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 19
-Vector permutacion [5 1 2 11 3 8 4 9 17 10 13 19 7 12 14 6 16 0 18 15 ], Coste: 31611
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 27
-Vector permutacion [9 1 14 11 5 3 4 10 17 18 6 19 7 12 15 8 13 0 2 16 ], Coste: 31503
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 37
-Vector permutacion [0 1 2 3 4 5 6 7 17 9 10 11 12 13 14 15 16 8 18 19 ], Coste: 28183
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 38
-Vector permutacion [0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 ], Coste: 27076
-
-*******************************************************************
-Candidato LRC nº 6, Coste: 34022
- Vector Permutacion [5 1 2 19 3 10 7 9 17 6 11 12 0 13 4 18 16 8 15 14 ]
-
-*******************************************************************
-Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 1
-Vector permutacion [5 1 2 19 9 10 7 3 17 6 11 12 0 13 4 18 16 8 15 14 ], Coste: 33878
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 2
-Vector permutacion [5 1 2 19 12 10 7 3 17 6 11 9 0 13 4 18 16 8 15 14 ], Coste: 33875
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 3
-Vector permutacion [5 1 2 19 7 10 12 3 17 6 11 9 0 13 4 18 16 8 15 14 ], Coste: 33843
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 4
-Vector permutacion [5 1 2 19 0 10 12 3 17 6 11 9 7 13 4 18 16 8 15 14 ], Coste: 33483
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 5
-Vector permutacion [5 1 2 19 0 12 10 3 17 6 11 9 7 13 4 18 16 8 15 14 ], Coste: 33364
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 6
-Vector permutacion [5 1 2 19 0 4 10 3 17 6 11 9 7 13 12 18 16 8 15 14 ], Coste: 33246
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 7
-Vector permutacion [5 1 2 19 4 0 10 3 17 6 11 9 7 13 12 18 16 8 15 14 ], Coste: 33225
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 8
-Vector permutacion [5 1 2 19 4 0 9 3 17 6 11 10 7 13 12 18 16 8 15 14 ], Coste: 33013
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 9
-Vector permutacion [5 1 2 19 4 0 7 3 17 6 11 10 9 13 12 18 16 8 15 14 ], Coste: 32567
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 10
-Vector permutacion [5 1 2 19 4 0 18 3 17 6 11 10 9 13 12 7 16 8 15 14 ], Coste: 32451
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 11
-Vector permutacion [5 1 2 19 4 0 3 18 17 6 11 10 9 13 12 7 16 8 15 14 ], Coste: 32230
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 12
-Vector permutacion [5 1 2 19 4 0 3 6 17 18 11 10 9 13 12 7 16 8 15 14 ], Coste: 32138
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 13
-Vector permutacion [5 1 2 19 4 0 3 6 8 18 11 10 9 13 12 7 16 17 15 14 ], Coste: 31889
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 14
-Vector permutacion [5 1 2 19 4 0 3 6 8 18 13 10 9 11 12 7 16 17 15 14 ], Coste: 31564
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 15
-Vector permutacion [5 1 2 19 4 0 3 6 8 18 13 15 9 11 12 7 16 17 10 14 ], Coste: 31428
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 16
-Vector permutacion [5 1 2 19 4 0 3 6 8 18 13 15 14 11 12 7 16 17 10 9 ], Coste: 31309
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 21
-Vector permutacion [0 1 2 10 4 9 3 18 8 6 13 15 14 11 12 7 16 17 5 19 ], Coste: 31175
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 22
-Vector permutacion [0 1 2 10 4 5 3 18 8 6 13 15 14 11 12 7 16 17 9 19 ], Coste: 31048
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 23
-Vector permutacion [0 1 2 9 4 5 3 18 8 6 13 15 14 11 12 7 16 17 10 19 ], Coste: 30906
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 24
-Vector permutacion [0 1 2 9 4 5 3 18 8 6 13 10 14 11 12 7 16 17 15 19 ], Coste: 30808
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 25
-Vector permutacion [0 1 2 9 4 5 3 18 8 6 13 10 15 11 12 7 16 17 14 19 ], Coste: 30671
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 30
-Vector permutacion [0 1 2 7 4 5 15 18 8 3 13 9 6 11 12 10 16 17 14 19 ], Coste: 30615
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 31
-Vector permutacion [0 1 2 7 4 5 14 18 8 3 13 9 6 11 12 10 16 17 15 19 ], Coste: 30501
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 32
-Vector permutacion [0 1 2 7 4 5 14 18 8 3 13 15 6 11 12 10 16 17 9 19 ], Coste: 30446
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 33
-Vector permutacion [0 1 2 7 4 5 12 18 8 3 10 15 6 11 14 13 16 17 9 19 ], Coste: 30406
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 34
-Vector permutacion [0 1 2 9 4 5 12 18 8 3 10 15 6 11 14 13 16 17 7 19 ], Coste: 30368
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 35
-Vector permutacion [0 1 2 9 4 5 12 18 8 3 10 15 6 11 14 7 16 17 13 19 ], Coste: 30294
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 41
-Vector permutacion [0 1 2 9 4 5 10 18 8 3 15 7 6 11 14 12 16 17 13 19 ], Coste: 30105
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 62
-Vector permutacion [0 1 2 3 15 18 6 7 8 9 10 11 12 13 5 14 16 17 4 19 ], Coste: 29898
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 63
-Vector permutacion [0 1 2 3 15 18 6 7 8 9 10 11 12 13 14 5 16 17 4 19 ], Coste: 29722
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 64
-Vector permutacion [0 1 2 3 15 18 6 7 8 9 10 11 12 13 14 4 16 17 5 19 ], Coste: 29670
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 65
-Vector permutacion [0 1 2 3 4 18 6 7 8 9 10 11 12 13 14 15 16 17 5 19 ], Coste: 28589
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 66
-Vector permutacion [0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 ], Coste: 27076
-
-*******************************************************************
-Candidato LRC nº 7, Coste: 34426
- Vector Permutacion [5 1 2 19 3 10 9 6 17 7 11 12 0 13 4 18 16 8 15 14 ]
-
-*******************************************************************
-Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 1
-Vector permutacion [5 1 2 15 3 10 9 6 17 7 11 12 0 13 4 18 16 8 19 14 ], Coste: 34424
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 2
-Vector permutacion [5 1 2 15 3 19 9 6 17 7 11 12 0 13 4 18 16 8 10 14 ], Coste: 34002
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 3
-Vector permutacion [5 1 2 15 3 19 9 10 17 7 11 12 0 13 4 18 16 8 6 14 ], Coste: 33879
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 4
-Vector permutacion [5 1 2 15 3 19 9 10 17 6 11 12 0 13 4 18 16 8 7 14 ], Coste: 33752
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 5
-Vector permutacion [5 1 2 15 3 19 9 10 17 6 7 12 0 13 4 18 16 8 11 14 ], Coste: 33591
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 6
-Vector permutacion [5 1 2 15 3 19 9 10 17 6 7 11 0 13 4 18 16 8 12 14 ], Coste: 33023
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 7
-Vector permutacion [5 1 2 15 3 19 9 10 17 6 7 11 0 13 12 18 16 8 4 14 ], Coste: 32713
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 8
-Vector permutacion [5 1 2 15 3 14 9 10 17 6 7 11 0 13 12 18 16 8 4 19 ], Coste: 32613
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 9
-Vector permutacion [4 1 2 15 3 14 9 10 17 6 7 11 0 13 12 18 16 8 5 19 ], Coste: 32200
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 10
-Vector permutacion [4 1 2 11 3 14 9 10 17 15 7 6 0 13 12 18 16 8 5 19 ], Coste: 32151
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 11
-Vector permutacion [4 1 2 9 3 14 11 10 17 15 7 6 0 13 12 18 16 8 5 19 ], Coste: 32123
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 12
-Vector permutacion [4 1 2 0 3 14 11 10 17 15 7 6 9 13 12 18 16 8 5 19 ], Coste: 31611
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 13
-Vector permutacion [4 1 2 0 3 15 11 10 17 14 7 6 9 13 12 18 16 8 5 19 ], Coste: 31377
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 14
-Vector permutacion [4 1 2 0 3 5 11 10 17 14 7 6 9 13 12 18 16 8 15 19 ], Coste: 31307
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 27
-Vector permutacion [11 1 2 4 3 5 10 14 8 9 6 0 17 13 7 18 16 12 15 19 ], Coste: 31242
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 28
-Vector permutacion [11 1 2 4 3 5 10 14 8 9 7 0 17 13 6 18 16 12 15 19 ], Coste: 31161
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 93
-Vector permutacion [0 1 2 3 4 5 18 9 8 7 10 15 12 13 14 11 16 17 6 19 ], Coste: 29031
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 96
-Vector permutacion [0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 ], Coste: 27076
-
-*******************************************************************
-Candidato LRC nº 8, Coste: 34249
- Vector Permutacion [5 1 2 19 3 7 9 10 17 6 11 12 0 13 4 18 16 8 15 14 ]
-
-*******************************************************************
-Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 1
-Vector permutacion [5 1 2 19 3 7 9 10 17 12 11 6 0 13 4 18 16 8 15 14 ], Coste: 34221
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 2
-Vector permutacion [5 1 2 19 3 7 9 10 17 0 11 6 12 13 4 18 16 8 15 14 ], Coste: 33789
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 3
-Vector permutacion [5 1 2 19 3 7 9 10 17 4 11 6 12 13 0 18 16 8 15 14 ], Coste: 33581
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 4
-Vector permutacion [5 1 2 19 3 7 9 10 17 18 11 6 12 13 0 4 16 8 15 14 ], Coste: 33537
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 5
-Vector permutacion [5 1 2 19 3 7 9 10 17 8 11 6 12 13 0 4 16 18 15 14 ], Coste: 33322
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 6
-Vector permutacion [5 1 2 19 3 8 9 10 17 7 11 6 12 13 0 4 16 18 15 14 ], Coste: 33311
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 7
-Vector permutacion [5 1 2 19 3 8 9 10 17 15 11 6 12 13 0 4 16 18 7 14 ], Coste: 32963
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 8
-Vector permutacion [5 1 2 19 3 8 9 10 17 14 11 6 12 13 0 4 16 18 7 15 ], Coste: 32725
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 9
-Vector permutacion [5 1 2 19 3 8 9 14 17 10 11 6 12 13 0 4 16 18 7 15 ], Coste: 32618
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 10
-Vector permutacion [5 1 2 19 3 8 9 14 17 11 10 6 12 13 0 4 16 18 7 15 ], Coste: 32525
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 11
-Vector permutacion [5 1 2 19 3 8 9 14 17 11 12 6 10 13 0 4 16 18 7 15 ], Coste: 32462
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 12
-Vector permutacion [5 1 2 12 3 8 9 14 17 11 19 6 10 13 0 4 16 18 7 15 ], Coste: 32448
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 13
-Vector permutacion [5 1 2 12 3 8 9 14 17 11 15 6 10 13 0 4 16 18 7 19 ], Coste: 32333
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 14
-Vector permutacion [5 1 2 12 3 8 9 11 17 10 15 6 14 13 0 4 16 18 7 19 ], Coste: 32289
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 15
-Vector permutacion [5 1 2 12 13 8 9 11 17 10 15 6 14 3 0 4 16 18 7 19 ], Coste: 31857
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 18
-Vector permutacion [5 1 2 12 13 8 9 11 17 6 15 4 14 3 0 10 16 18 7 19 ], Coste: 31732
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 19
-Vector permutacion [5 1 2 12 13 8 9 11 17 6 15 4 14 3 0 7 16 18 10 19 ], Coste: 31699
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 20
-Vector permutacion [7 1 2 12 13 8 9 11 17 6 15 4 14 3 0 5 16 18 10 19 ], Coste: 31516
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 21
-Vector permutacion [7 1 2 12 13 8 9 11 17 6 15 4 14 3 0 18 16 5 10 19 ], Coste: 31118
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 22
-Vector permutacion [7 1 2 12 13 8 9 11 17 6 15 4 14 3 18 0 16 5 10 19 ], Coste: 31064
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 90
-Vector permutacion [10 1 2 0 13 6 5 11 15 17 14 4 8 3 12 7 16 9 18 19 ], Coste: 31025
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 91
-Vector permutacion [0 1 3 6 4 5 7 9 8 2 10 11 12 13 14 15 16 17 18 19 ], Coste: 30961
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 92
-Vector permutacion [0 1 2 6 4 5 7 9 8 3 10 11 12 13 14 15 16 17 18 19 ], Coste: 30404
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 93
-Vector permutacion [0 1 2 3 4 5 7 9 8 6 10 11 12 13 14 15 16 17 18 19 ], Coste: 29828
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 94
-Vector permutacion [0 1 2 3 4 5 7 6 8 9 10 11 12 13 14 15 16 17 18 19 ], Coste: 29004
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 109
-Vector permutacion [0 1 2 3 12 5 6 7 8 9 10 11 4 13 14 15 16 17 18 19 ], Coste: 28616
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 110
-Vector permutacion [0 1 2 3 4 5 6 7 8 9 10 11 17 13 14 15 16 12 18 19 ], Coste: 28455
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 111
-Vector permutacion [0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 ], Coste: 27076
-
-*******************************************************************
-Candidato LRC nº 9, Coste: 34337
+Candidato LRC nº 2, Coste: 34337
  Vector Permutacion [5 1 2 19 3 10 9 7 17 11 6 12 0 13 4 18 16 8 15 14 ]
 
 *******************************************************************
+Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 1
+Vector permutacion [5 1 2 19 3 10 9 7 17 11 6 12 0 13 4 18 16 8 14 15 ], Coste: 34094
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 2
+Vector permutacion [5 1 2 19 3 10 9 14 17 11 6 12 0 13 4 18 16 8 7 15 ], Coste: 33283
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 3
+Vector permutacion [5 1 2 19 3 10 9 14 17 11 6 7 0 13 4 18 16 8 12 15 ], Coste: 33163
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 4
+Vector permutacion [5 1 2 19 3 10 9 14 17 11 6 7 0 13 12 18 16 8 4 15 ], Coste: 32728
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 5
+Vector permutacion [4 1 2 19 3 10 9 14 17 11 6 7 0 13 12 18 16 8 5 15 ], Coste: 32718
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 6
+Vector permutacion [4 1 2 19 3 5 9 14 17 11 6 7 0 13 12 18 16 8 10 15 ], Coste: 32710
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 7
+Vector permutacion [4 1 2 10 3 5 9 14 17 11 6 7 0 13 12 18 16 8 19 15 ], Coste: 32632
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 8
+Vector permutacion [4 1 2 10 3 5 19 14 17 11 6 7 0 13 12 18 16 8 9 15 ], Coste: 32596
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 9
+Vector permutacion [4 1 2 10 3 5 19 14 17 11 9 7 0 13 12 18 16 8 6 15 ], Coste: 32520
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 10
+Vector permutacion [4 1 2 10 3 5 19 14 17 11 9 7 6 13 12 18 16 8 0 15 ], Coste: 32102
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 11
+Vector permutacion [4 1 2 10 3 5 19 14 17 11 9 7 6 13 12 0 16 8 18 15 ], Coste: 32069
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 12
+Vector permutacion [4 1 2 10 3 5 19 14 17 11 9 7 6 13 12 0 16 8 15 18 ], Coste: 32048
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 13
+Vector permutacion [4 1 2 10 3 5 19 14 17 11 9 7 6 13 12 18 16 8 15 0 ], Coste: 31898
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 44
+Vector permutacion [0 1 10 9 4 5 19 6 17 13 11 7 18 16 2 14 15 8 3 12 ], Coste: 31878
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 45
+Vector permutacion [0 1 3 9 4 5 19 6 17 13 11 7 18 16 2 14 15 8 10 12 ], Coste: 31843
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 46
+Vector permutacion [0 1 13 9 4 5 19 6 17 3 11 7 18 16 2 14 15 8 10 12 ], Coste: 31819
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 47
+Vector permutacion [0 1 14 9 4 5 19 6 17 3 11 7 18 16 2 13 15 8 10 12 ], Coste: 31626
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 57
+Vector permutacion [0 1 14 9 4 5 19 6 17 11 10 7 18 16 2 13 15 8 3 12 ], Coste: 31585
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 58
+Vector permutacion [0 1 14 9 4 5 19 6 17 11 10 7 15 16 2 13 18 8 3 12 ], Coste: 31584
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 59
+Vector permutacion [0 1 14 9 4 5 19 6 17 11 10 7 15 18 2 13 16 8 3 12 ], Coste: 31543
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 60
+Vector permutacion [0 1 14 9 4 5 19 6 17 11 10 7 15 13 2 18 16 8 3 12 ], Coste: 31157
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 61
+Vector permutacion [0 1 14 9 4 5 19 6 17 11 13 7 15 10 2 18 16 8 3 12 ], Coste: 31129
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 66
+Vector permutacion [0 1 14 9 4 5 19 6 8 11 10 7 15 13 2 18 16 17 3 12 ], Coste: 31108
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 68
+Vector permutacion [0 1 2 3 4 5 6 7 8 9 10 11 12 18 14 15 16 17 13 19 ], Coste: 28807
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 90
+Vector permutacion [0 15 2 3 4 5 6 7 8 9 10 11 12 13 14 1 16 17 18 19 ], Coste: 28048
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 2, en la Iteración: 97
+Vector permutacion [0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 ], Coste: 27076
+
+*******************************************************************
+Candidato LRC nº 3, Coste: 34297
+ Vector Permutacion [5 1 2 19 3 10 6 7 17 9 11 12 0 13 4 18 16 8 15 14 ]
+
+*******************************************************************
+Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 1
+Vector permutacion [5 1 2 19 3 10 6 7 17 9 11 12 0 13 15 18 16 8 4 14 ], Coste: 34177
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 2
+Vector permutacion [5 1 2 19 3 10 6 7 17 9 11 12 0 13 14 18 16 8 4 15 ], Coste: 34083
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 3
+Vector permutacion [5 1 2 19 3 10 6 14 17 9 11 12 0 13 7 18 16 8 4 15 ], Coste: 33414
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 4
+Vector permutacion [5 1 2 19 3 10 6 14 17 9 11 12 7 13 0 18 16 8 4 15 ], Coste: 33364
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 5
+Vector permutacion [5 1 2 0 3 10 6 14 17 9 11 12 7 13 19 18 16 8 4 15 ], Coste: 33326
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 6
+Vector permutacion [5 1 2 0 3 10 6 14 17 9 11 12 7 13 16 18 19 8 4 15 ], Coste: 33161
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 7
+Vector permutacion [5 1 2 0 3 10 16 14 17 9 11 12 7 13 6 18 19 8 4 15 ], Coste: 32972
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 8
+Vector permutacion [5 1 2 0 3 10 16 14 17 9 11 6 7 13 12 18 19 8 4 15 ], Coste: 32716
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 9
+Vector permutacion [5 1 2 0 3 10 16 14 17 9 11 6 7 13 18 12 19 8 4 15 ], Coste: 32662
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 10
+Vector permutacion [5 1 2 0 3 10 16 14 17 9 11 6 7 13 18 4 19 8 12 15 ], Coste: 32581
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 11
+Vector permutacion [5 1 2 0 3 10 16 14 17 9 11 6 7 13 18 15 19 8 12 4 ], Coste: 32572
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 12
+Vector permutacion [5 1 2 15 3 10 16 14 17 9 11 6 7 13 18 0 19 8 12 4 ], Coste: 32502
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 24
+Vector permutacion [3 1 15 9 0 6 16 14 17 12 11 7 19 13 2 5 10 8 18 4 ], Coste: 32373
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 25
+Vector permutacion [3 1 15 9 0 10 16 14 17 12 11 7 19 13 2 5 6 8 18 4 ], Coste: 32126
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 26
+Vector permutacion [3 1 15 9 0 4 16 14 17 12 11 7 19 13 2 5 6 8 18 10 ], Coste: 32091
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 27
+Vector permutacion [3 1 15 9 0 4 16 5 17 12 11 7 19 13 2 14 6 8 18 10 ], Coste: 32023
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 28
+Vector permutacion [3 1 5 9 0 4 16 15 17 12 11 7 19 13 2 14 6 8 18 10 ], Coste: 31963
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 29
+Vector permutacion [3 1 5 9 0 4 16 19 17 12 11 7 15 13 2 14 6 8 18 10 ], Coste: 31908
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 30
+Vector permutacion [3 1 5 9 0 4 16 6 17 12 11 7 15 13 2 14 19 8 18 10 ], Coste: 31843
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 39
+Vector permutacion [3 1 18 9 0 4 8 15 17 6 11 7 19 16 5 14 12 13 2 10 ], Coste: 31807
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 40
+Vector permutacion [3 1 18 9 0 4 8 15 17 6 11 7 19 13 5 14 12 16 2 10 ], Coste: 31690
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 80
+Vector permutacion [3 1 6 9 0 4 8 15 16 19 17 7 11 13 5 14 12 2 18 10 ], Coste: 31342
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 3, en la Iteración: 124
+Vector permutacion [0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 ], Coste: 27076
+
+*******************************************************************
+Candidato LRC nº 4, Coste: 34022
+ Vector Permutacion [5 1 2 19 3 10 7 9 17 6 11 12 0 13 4 18 16 8 15 14 ]
+
+*******************************************************************
+Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 1
+Vector permutacion [5 1 2 19 3 10 7 9 17 6 11 12 0 13 15 18 16 8 4 14 ], Coste: 33806
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 2
+Vector permutacion [5 1 2 19 3 10 7 9 17 6 11 15 0 13 12 18 16 8 4 14 ], Coste: 33603
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 3
+Vector permutacion [5 1 2 19 3 10 7 9 17 6 11 15 12 13 0 18 16 8 4 14 ], Coste: 33487
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 4
+Vector permutacion [5 1 0 19 3 10 7 9 17 6 11 15 12 13 2 18 16 8 4 14 ], Coste: 33352
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 5
+Vector permutacion [5 1 0 19 18 10 7 9 17 6 11 15 12 13 2 3 16 8 4 14 ], Coste: 33205
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 6
+Vector permutacion [5 1 0 3 18 10 7 9 17 6 11 15 12 13 2 19 16 8 4 14 ], Coste: 32911
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 7
+Vector permutacion [5 1 0 3 18 10 7 9 17 6 11 15 12 13 2 4 16 8 19 14 ], Coste: 32867
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 8
+Vector permutacion [5 1 0 3 18 10 7 9 17 6 11 15 12 13 2 14 16 8 19 4 ], Coste: 32850
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 9
+Vector permutacion [5 1 0 3 18 10 7 9 17 6 11 14 12 13 2 15 16 8 19 4 ], Coste: 32728
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 10
+Vector permutacion [5 1 0 3 18 8 7 9 17 6 11 14 12 13 2 15 16 10 19 4 ], Coste: 32577
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 11
+Vector permutacion [5 1 0 3 18 8 7 9 17 6 11 14 12 13 2 15 16 19 10 4 ], Coste: 32518
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 12
+Vector permutacion [5 1 0 3 18 8 7 9 19 6 11 14 12 13 2 15 16 17 10 4 ], Coste: 32479
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 13
+Vector permutacion [5 1 0 3 18 8 7 9 10 6 11 14 12 13 2 15 16 17 19 4 ], Coste: 32435
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 14
+Vector permutacion [4 1 0 3 18 8 7 9 10 6 11 14 12 13 2 15 16 17 19 5 ], Coste: 31599
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 15
+Vector permutacion [4 1 0 3 18 5 7 9 10 6 11 14 12 13 2 15 16 17 19 8 ], Coste: 31516
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 16
+Vector permutacion [4 1 0 3 18 5 7 9 8 6 11 14 12 13 2 15 16 17 19 10 ], Coste: 31434
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 17
+Vector permutacion [4 1 0 3 18 5 7 9 8 6 11 14 12 13 2 15 16 17 10 19 ], Coste: 31419
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 21
+Vector permutacion [4 1 2 3 0 18 7 9 8 6 11 14 12 13 5 15 16 17 10 19 ], Coste: 30847
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 24
+Vector permutacion [4 1 2 3 0 5 7 18 8 6 11 14 12 13 9 15 16 17 10 19 ], Coste: 30836
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 25
+Vector permutacion [4 1 2 3 0 5 18 7 8 6 11 14 12 13 9 15 16 17 10 19 ], Coste: 30616
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 26
+Vector permutacion [4 1 2 3 0 5 11 7 8 6 18 14 12 13 9 15 16 17 10 19 ], Coste: 30559
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 27
+Vector permutacion [4 1 2 3 0 5 14 7 8 6 18 11 12 13 9 15 16 17 10 19 ], Coste: 30494
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 28
+Vector permutacion [4 1 2 3 0 5 6 7 8 14 18 11 12 13 9 15 16 17 10 19 ], Coste: 30260
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 31
+Vector permutacion [4 1 2 3 0 5 6 7 8 10 14 11 12 13 9 15 16 17 18 19 ], Coste: 29578
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 32
+Vector permutacion [4 1 2 3 0 5 6 7 8 10 9 11 12 13 14 15 16 17 18 19 ], Coste: 28999
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 33
+Vector permutacion [4 1 2 3 0 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 ], Coste: 28638
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 4, en la Iteración: 76
+Vector permutacion [0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 ], Coste: 27076
+
+*******************************************************************
+Candidato LRC nº 5, Coste: 34426
+ Vector Permutacion [5 1 2 19 3 10 9 6 17 7 11 12 0 13 4 18 16 8 15 14 ]
+
+*******************************************************************
+Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 1
+Vector permutacion [5 1 16 19 3 10 9 6 17 7 11 12 0 13 4 18 2 8 15 14 ], Coste: 34393
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 2
+Vector permutacion [5 1 16 19 3 10 9 6 17 7 11 12 0 13 4 18 14 8 15 2 ], Coste: 34184
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 3
+Vector permutacion [5 1 16 19 3 10 9 14 17 7 11 12 0 13 4 18 6 8 15 2 ], Coste: 34094
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 4
+Vector permutacion [5 1 16 19 3 10 9 14 17 7 11 12 0 13 4 18 8 6 15 2 ], Coste: 33992
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 5
+Vector permutacion [5 1 16 8 3 10 9 14 17 7 11 12 0 13 4 18 19 6 15 2 ], Coste: 33975
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 6
+Vector permutacion [5 1 16 8 3 19 9 14 17 7 11 12 0 13 4 18 10 6 15 2 ], Coste: 33619
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 7
+Vector permutacion [5 1 16 8 3 19 9 14 17 10 11 12 0 13 4 18 7 6 15 2 ], Coste: 33540
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 8
+Vector permutacion [5 1 16 8 3 19 9 14 17 10 11 12 0 13 4 18 15 6 7 2 ], Coste: 33145
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 9
+Vector permutacion [5 1 16 8 3 19 9 14 17 10 11 15 0 13 4 18 12 6 7 2 ], Coste: 33101
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 10
+Vector permutacion [5 1 16 8 3 19 9 14 17 10 11 15 6 13 4 18 12 0 7 2 ], Coste: 33085
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 11
+Vector permutacion [5 1 16 8 3 0 9 14 17 10 11 15 6 13 4 18 12 19 7 2 ], Coste: 33028
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 12
+Vector permutacion [5 1 16 8 3 0 9 14 17 10 11 7 6 13 4 18 12 19 15 2 ], Coste: 32893
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 13
+Vector permutacion [5 1 16 8 3 0 9 14 17 10 11 7 15 13 4 18 12 19 6 2 ], Coste: 32783
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 14
+Vector permutacion [5 1 16 8 3 0 9 14 17 10 11 7 15 13 6 18 12 19 4 2 ], Coste: 32738
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 15
+Vector permutacion [3 1 16 8 5 0 9 14 17 10 11 7 15 13 6 18 12 19 4 2 ], Coste: 32705
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 16
+Vector permutacion [3 1 16 5 8 9 0 14 17 10 11 7 15 13 6 18 12 19 4 2 ], Coste: 32393
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 17
+Vector permutacion [3 1 16 6 8 9 0 14 17 10 11 7 15 13 5 18 12 19 4 2 ], Coste: 32226
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 18
+Vector permutacion [3 1 16 4 8 9 0 14 17 10 11 7 15 13 5 18 12 19 6 2 ], Coste: 31855
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 19
+Vector permutacion [3 1 16 4 5 9 0 14 17 10 11 7 15 13 8 18 12 19 6 2 ], Coste: 31740
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 20
+Vector permutacion [3 1 16 4 5 9 11 14 17 10 0 7 15 13 8 18 12 19 6 2 ], Coste: 31738
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 21
+Vector permutacion [3 1 16 4 5 9 11 14 13 10 0 7 15 17 8 18 12 19 6 2 ], Coste: 31704
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 25
+Vector permutacion [3 1 16 0 5 4 11 9 13 7 10 14 15 17 8 18 12 19 6 2 ], Coste: 31414
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 33
+Vector permutacion [3 17 16 0 5 4 11 9 8 7 10 14 1 13 15 18 12 19 6 2 ], Coste: 31298
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 34
+Vector permutacion [3 1 16 0 5 4 11 9 8 7 10 14 17 13 15 18 12 19 6 2 ], Coste: 30954
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 37
+Vector permutacion [0 9 2 3 4 5 6 7 8 1 10 11 12 13 14 15 16 17 18 19 ], Coste: 28712
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 51
+Vector permutacion [0 1 2 3 4 9 6 7 8 5 10 11 12 13 14 15 16 17 18 19 ], Coste: 28171
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 5, en la Iteración: 71
+Vector permutacion [0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 ], Coste: 27076
+
+*******************************************************************
+Candidato LRC nº 6, Coste: 34388
+ Vector Permutacion [5 7 2 19 3 10 9 1 17 6 11 12 0 13 4 18 16 8 15 14 ]
+
+*******************************************************************
+Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 1
+Vector permutacion [5 7 2 19 3 10 9 1 17 6 11 12 4 13 0 18 16 8 15 14 ], Coste: 33848
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 2
+Vector permutacion [5 7 2 19 3 10 9 1 17 6 11 12 18 13 0 4 16 8 15 14 ], Coste: 33387
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 3
+Vector permutacion [5 7 2 19 3 10 9 1 17 6 11 12 14 13 0 4 16 8 15 18 ], Coste: 33321
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 4
+Vector permutacion [5 7 2 19 3 10 9 1 17 14 11 12 6 13 0 4 16 8 15 18 ], Coste: 33309
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 5
+Vector permutacion [5 7 2 6 3 10 9 1 17 14 11 12 19 13 0 4 16 8 15 18 ], Coste: 33249
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 6
+Vector permutacion [5 7 2 6 3 10 9 1 17 14 11 12 16 13 0 4 19 8 15 18 ], Coste: 33226
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 7
+Vector permutacion [5 7 2 6 3 10 9 1 17 14 11 12 15 13 0 4 19 8 16 18 ], Coste: 33141
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 8
+Vector permutacion [5 7 2 6 3 15 9 1 17 14 11 12 10 13 0 4 19 8 16 18 ], Coste: 32858
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 9
+Vector permutacion [5 7 2 6 3 15 10 1 17 14 11 12 9 13 0 4 19 8 16 18 ], Coste: 32651
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 10
+Vector permutacion [5 7 2 6 3 15 10 1 17 14 11 12 9 13 18 4 19 8 16 0 ], Coste: 32548
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 11
+Vector permutacion [5 7 2 6 3 15 10 1 17 14 11 12 9 13 18 0 19 8 16 4 ], Coste: 32367
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 12
+Vector permutacion [5 7 2 6 3 15 10 1 17 14 11 0 9 13 18 12 19 8 16 4 ], Coste: 32039
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 13
+Vector permutacion [5 7 2 6 3 15 10 1 17 14 11 0 9 12 18 13 19 8 16 4 ], Coste: 32002
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 14
+Vector permutacion [5 7 2 6 3 15 10 1 17 14 11 0 9 12 18 16 19 8 13 4 ], Coste: 31860
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 30
+Vector permutacion [8 1 2 3 14 15 6 7 5 10 13 0 9 12 18 16 19 17 11 4 ], Coste: 31792
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 39
+Vector permutacion [5 1 2 3 14 17 6 12 0 10 7 15 9 13 18 16 19 8 11 4 ], Coste: 31753
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 40
+Vector permutacion [5 1 2 3 14 17 6 12 0 10 7 18 9 13 15 16 19 8 11 4 ], Coste: 31670
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 41
+Vector permutacion [5 1 2 3 14 17 6 12 0 10 7 16 9 13 15 18 19 8 11 4 ], Coste: 31657
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 42
+Vector permutacion [5 1 2 3 14 17 6 12 0 10 7 16 9 13 18 15 19 8 11 4 ], Coste: 31466
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 106
+Vector permutacion [0 1 2 13 7 9 6 4 17 5 11 16 14 3 12 10 15 8 18 19 ], Coste: 30908
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 107
+Vector permutacion [0 1 2 13 7 9 6 4 17 5 3 16 14 11 12 10 15 8 18 19 ], Coste: 30855
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 110
+Vector permutacion [0 1 2 13 4 9 6 3 17 5 10 16 14 11 7 12 15 8 18 19 ], Coste: 30521
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 113
+Vector permutacion [0 10 2 3 4 5 6 7 8 11 1 9 12 13 14 15 16 17 18 19 ], Coste: 30292
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 115
+Vector permutacion [0 10 2 3 4 5 6 9 8 7 11 1 12 13 14 15 16 17 18 19 ], Coste: 30194
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 116
+Vector permutacion [0 10 2 3 4 5 6 7 8 9 11 1 12 13 14 15 16 17 18 19 ], Coste: 29262
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 117
+Vector permutacion [0 10 2 3 4 5 6 7 8 9 1 11 12 13 14 15 16 17 18 19 ], Coste: 28328
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 6, en la Iteración: 118
+Vector permutacion [0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 ], Coste: 27076
+
+*******************************************************************
+Candidato LRC nº 7, Coste: 34587
+ Vector Permutacion [5 1 2 19 3 10 9 7 17 6 11 12 0 13 4 18 16 8 15 14 ]
+
+*******************************************************************
+Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 1
+Vector permutacion [5 1 2 9 3 10 19 7 17 6 11 12 0 13 4 18 16 8 15 14 ], Coste: 34560
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 2
+Vector permutacion [5 1 2 3 9 10 19 7 17 6 11 12 0 13 4 18 16 8 15 14 ], Coste: 34197
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 3
+Vector permutacion [5 1 2 7 9 10 19 3 17 6 11 12 0 13 4 18 16 8 15 14 ], Coste: 34152
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 4
+Vector permutacion [5 1 2 12 9 10 19 3 17 6 11 7 0 13 4 18 16 8 15 14 ], Coste: 33883
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 5
+Vector permutacion [5 1 2 0 9 10 19 3 17 6 11 7 12 13 4 18 16 8 15 14 ], Coste: 33628
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 6
+Vector permutacion [5 1 2 10 9 0 19 3 17 6 11 7 12 13 4 18 16 8 15 14 ], Coste: 33565
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 7
+Vector permutacion [5 1 2 6 9 0 19 3 17 10 11 7 12 13 4 18 16 8 15 14 ], Coste: 33333
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 8
+Vector permutacion [5 1 2 4 9 0 19 3 17 10 11 7 12 13 6 18 16 8 15 14 ], Coste: 33146
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 9
+Vector permutacion [5 1 2 14 9 0 19 3 17 10 11 7 12 13 6 18 16 8 15 4 ], Coste: 33116
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 10
+Vector permutacion [5 1 2 14 4 0 19 3 17 10 11 7 12 13 6 18 16 8 15 9 ], Coste: 32694
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 11
+Vector permutacion [4 1 2 14 5 0 19 3 17 10 11 7 12 13 6 18 16 8 15 9 ], Coste: 32435
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 12
+Vector permutacion [4 1 2 14 5 3 19 0 17 10 11 7 12 13 6 18 16 8 15 9 ], Coste: 32409
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 13
+Vector permutacion [4 1 2 14 5 3 9 0 17 10 11 7 12 13 6 18 16 8 15 19 ], Coste: 31977
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 14
+Vector permutacion [4 1 2 14 5 3 9 11 17 10 0 7 12 13 6 18 16 8 15 19 ], Coste: 31884
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 15
+Vector permutacion [4 1 2 14 5 3 9 7 17 10 0 11 12 13 6 18 16 8 15 19 ], Coste: 31820
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 16
+Vector permutacion [4 1 2 14 5 3 9 12 17 10 0 11 7 13 6 18 16 8 15 19 ], Coste: 31607
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 29
+Vector permutacion [4 10 2 6 5 0 9 12 17 14 1 11 7 13 3 15 16 8 18 19 ], Coste: 31453
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 30
+Vector permutacion [5 10 2 6 4 0 9 12 17 14 1 11 7 13 3 15 16 8 18 19 ], Coste: 31367
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 31
+Vector permutacion [0 10 2 6 4 5 9 12 17 14 1 11 7 13 3 15 16 8 18 19 ], Coste: 31221
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 32
+Vector permutacion [0 1 2 6 4 5 9 12 17 14 10 11 7 13 3 15 16 8 18 19 ], Coste: 30681
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 33
+Vector permutacion [0 1 2 9 4 5 6 12 17 14 10 11 7 13 3 15 16 8 18 19 ], Coste: 30068
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 34
+Vector permutacion [0 1 2 14 4 5 6 12 17 9 10 11 7 13 3 15 16 8 18 19 ], Coste: 29148
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 35
+Vector permutacion [0 1 2 3 4 5 6 12 17 9 10 11 7 13 14 15 16 8 18 19 ], Coste: 28327
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 50
+Vector permutacion [0 1 2 3 4 9 6 7 8 5 10 11 12 13 14 15 16 17 18 19 ], Coste: 28171
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 7, en la Iteración: 51
+Vector permutacion [0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 ], Coste: 27076
+
+*******************************************************************
+Candidato LRC nº 8, Coste: 34736
+ Vector Permutacion [5 9 2 19 3 10 1 7 17 6 11 12 0 13 4 18 16 8 15 14 ]
+
+*******************************************************************
+Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 1
+Vector permutacion [5 9 2 19 3 10 1 7 17 11 6 12 0 13 4 18 16 8 15 14 ], Coste: 34503
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 2
+Vector permutacion [5 9 2 19 3 10 1 7 17 12 6 11 0 13 4 18 16 8 15 14 ], Coste: 34019
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 3
+Vector permutacion [5 9 2 19 3 10 1 7 17 0 6 11 12 13 4 18 16 8 15 14 ], Coste: 33658
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 4
+Vector permutacion [0 9 2 19 3 10 1 7 17 5 6 11 12 13 4 18 16 8 15 14 ], Coste: 33437
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 5
+Vector permutacion [0 9 2 19 3 5 1 7 17 10 6 11 12 13 4 18 16 8 15 14 ], Coste: 33237
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 6
+Vector permutacion [0 9 2 19 3 5 1 7 17 14 6 11 12 13 4 18 16 8 15 10 ], Coste: 32792
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 7
+Vector permutacion [0 9 2 19 3 5 14 7 17 1 6 11 12 13 4 18 16 8 15 10 ], Coste: 32762
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 8
+Vector permutacion [0 9 2 19 3 5 14 7 17 18 6 11 12 13 4 1 16 8 15 10 ], Coste: 32735
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 9
+Vector permutacion [0 18 2 19 3 5 14 7 17 9 6 11 12 13 4 1 16 8 15 10 ], Coste: 32616
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 10
+Vector permutacion [0 18 2 19 3 5 14 7 17 9 12 11 6 13 4 1 16 8 15 10 ], Coste: 32505
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 11
+Vector permutacion [0 18 2 19 3 5 14 12 17 9 7 11 6 13 4 1 16 8 15 10 ], Coste: 32275
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 12
+Vector permutacion [0 18 2 19 3 5 14 12 17 9 7 11 10 13 4 1 16 8 15 6 ], Coste: 31946
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 13
+Vector permutacion [0 18 2 19 3 5 14 10 17 9 7 11 12 13 4 1 16 8 15 6 ], Coste: 31820
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 14
+Vector permutacion [0 18 2 19 4 5 14 10 17 9 7 11 12 13 3 1 16 8 15 6 ], Coste: 31150
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 15
+Vector permutacion [0 18 2 19 4 5 3 10 17 9 7 11 12 13 14 1 16 8 15 6 ], Coste: 31119
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 16
+Vector permutacion [0 1 2 19 4 5 3 10 17 9 7 11 12 13 14 18 16 8 15 6 ], Coste: 30828
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 17
+Vector permutacion [0 1 2 19 4 5 3 10 17 9 7 11 12 13 14 15 16 8 18 6 ], Coste: 30480
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 18
+Vector permutacion [0 1 2 15 4 5 3 10 17 9 7 11 12 13 14 19 16 8 18 6 ], Coste: 30471
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 19
+Vector permutacion [0 1 2 15 4 5 3 10 17 9 7 11 12 13 14 6 16 8 18 19 ], Coste: 30034
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 20
+Vector permutacion [0 1 2 15 4 5 6 10 17 9 7 11 12 13 14 3 16 8 18 19 ], Coste: 29245
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 21
+Vector permutacion [0 1 2 15 4 5 6 10 8 9 7 11 12 13 14 3 16 17 18 19 ], Coste: 28920
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 8, en la Iteración: 61
+Vector permutacion [0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 ], Coste: 27076
+
+*******************************************************************
+Candidato LRC nº 9, Coste: 34595
+ Vector Permutacion [5 1 2 19 3 6 9 7 17 10 11 12 0 13 4 18 16 8 15 14 ]
+
+*******************************************************************
 Actualizacion mejor solucion actual, Candidato LRC: 9, en la Iteración: 1
-Vector permutacion [5 1 2 19 3 10 9 7 17 11 12 6 0 13 4 18 16 8 15 14 ], Coste: 34242
+Vector permutacion [5 1 2 19 3 6 9 7 17 0 11 12 10 13 4 18 16 8 15 14 ], Coste: 34188
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 9, en la Iteración: 2
-Vector permutacion [5 1 2 19 3 10 9 7 17 11 0 6 12 13 4 18 16 8 15 14 ], Coste: 34142
+Vector permutacion [5 1 2 19 3 6 9 7 17 4 11 12 10 13 0 18 16 8 15 14 ], Coste: 34054
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 9, en la Iteración: 3
-Vector permutacion [5 1 2 19 3 10 9 7 17 11 4 6 12 13 0 18 16 8 15 14 ], Coste: 33764
+Vector permutacion [5 1 2 19 3 6 9 7 17 12 11 4 10 13 0 18 16 8 15 14 ], Coste: 33826
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 9, en la Iteración: 4
-Vector permutacion [5 1 2 19 3 10 9 7 17 11 8 6 12 13 0 18 16 4 15 14 ], Coste: 33587
+Vector permutacion [5 1 2 19 3 6 9 7 17 18 11 4 10 13 0 12 16 8 15 14 ], Coste: 33759
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 9, en la Iteración: 5
-Vector permutacion [5 1 2 8 3 10 9 7 17 11 19 6 12 13 0 18 16 4 15 14 ], Coste: 33206
+Vector permutacion [5 1 2 19 3 6 9 7 17 14 11 4 10 13 0 12 16 8 15 18 ], Coste: 33720
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 9, en la Iteración: 6
-Vector permutacion [5 1 2 8 3 10 19 7 17 11 9 6 12 13 0 18 16 4 15 14 ], Coste: 33189
+Vector permutacion [14 1 2 19 3 6 9 7 17 5 11 4 10 13 0 12 16 8 15 18 ], Coste: 33671
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 9, en la Iteración: 7
-Vector permutacion [5 1 2 8 3 10 19 6 17 11 9 7 12 13 0 18 16 4 15 14 ], Coste: 32705
+Vector permutacion [14 1 2 19 3 5 9 7 17 6 11 4 10 13 0 12 16 8 15 18 ], Coste: 33494
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 9, en la Iteración: 8
-Vector permutacion [5 1 2 8 3 10 19 6 17 11 9 7 4 13 0 18 16 12 15 14 ], Coste: 32526
+Vector permutacion [14 1 2 6 3 5 9 7 17 19 11 4 10 13 0 12 16 8 15 18 ], Coste: 33318
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 9, en la Iteración: 9
-Vector permutacion [4 1 2 8 3 10 19 6 17 11 9 7 5 13 0 18 16 12 15 14 ], Coste: 31983
+Vector permutacion [14 1 2 6 3 5 9 7 17 8 11 4 10 13 0 12 16 19 15 18 ], Coste: 33281
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 9, en la Iteración: 10
-Vector permutacion [4 1 2 8 3 10 19 6 13 11 9 7 5 17 0 18 16 12 15 14 ], Coste: 31975
+Vector permutacion [14 1 2 6 3 5 9 7 17 11 8 4 10 13 0 12 16 19 15 18 ], Coste: 32894
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 9, en la Iteración: 11
-Vector permutacion [4 1 2 8 3 10 19 6 13 11 9 7 5 17 0 14 16 12 15 18 ], Coste: 31939
+Vector permutacion [14 1 2 6 3 5 9 7 17 15 8 4 10 13 0 12 16 19 11 18 ], Coste: 32835
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 9, en la Iteración: 12
-Vector permutacion [4 1 2 8 3 10 19 6 13 11 9 7 5 17 0 12 16 14 15 18 ], Coste: 31584
+Vector permutacion [14 1 2 6 3 5 9 7 17 10 8 4 15 13 0 12 16 19 11 18 ], Coste: 32448
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 9, en la Iteración: 13
-Vector permutacion [4 1 2 8 3 14 19 6 13 11 9 7 5 17 0 12 16 10 15 18 ], Coste: 31502
+Vector permutacion [14 1 2 6 3 5 9 7 17 10 13 4 15 8 0 12 16 19 11 18 ], Coste: 32351
 
 
-Actualizacion mejor solucion actual, Candidato LRC: 9, en la Iteración: 14
-Vector permutacion [4 1 2 8 3 14 19 6 13 11 9 7 5 17 0 10 16 12 15 18 ], Coste: 31501
+Actualizacion mejor solucion actual, Candidato LRC: 9, en la Iteración: 25
+Vector permutacion [4 1 16 6 3 5 9 12 17 18 13 7 15 10 2 19 14 8 11 0 ], Coste: 32316
 
 
-Actualizacion mejor solucion actual, Candidato LRC: 9, en la Iteración: 15
-Vector permutacion [4 1 2 8 3 14 19 6 13 11 9 15 5 17 0 10 16 12 7 18 ], Coste: 31445
+Actualizacion mejor solucion actual, Candidato LRC: 9, en la Iteración: 26
+Vector permutacion [6 1 16 4 3 5 9 12 17 18 13 7 15 10 2 19 14 8 11 0 ], Coste: 32104
 
 
-Actualizacion mejor solucion actual, Candidato LRC: 9, en la Iteración: 16
-Vector permutacion [4 1 2 8 3 14 19 6 13 11 9 15 5 17 0 7 16 12 10 18 ], Coste: 31414
+Actualizacion mejor solucion actual, Candidato LRC: 9, en la Iteración: 32
+Vector permutacion [6 15 3 4 18 5 9 12 17 2 13 7 16 10 0 19 14 8 11 1 ], Coste: 32076
 
 
-Actualizacion mejor solucion actual, Candidato LRC: 9, en la Iteración: 86
-Vector permutacion [4 13 5 14 0 2 7 12 1 18 15 10 6 16 17 11 8 3 9 19 ], Coste: 31363
+Actualizacion mejor solucion actual, Candidato LRC: 9, en la Iteración: 35
+Vector permutacion [6 1 3 4 18 5 9 15 17 2 13 7 16 10 0 19 14 8 11 12 ], Coste: 31973
 
 
-Actualizacion mejor solucion actual, Candidato LRC: 9, en la Iteración: 87
-Vector permutacion [4 1 5 14 0 2 7 18 13 12 15 10 6 16 17 11 8 3 9 19 ], Coste: 31040
+Actualizacion mejor solucion actual, Candidato LRC: 9, en la Iteración: 36
+Vector permutacion [6 1 3 4 18 5 9 17 15 2 13 7 16 10 0 19 14 8 11 12 ], Coste: 31648
 
 
-Actualizacion mejor solucion actual, Candidato LRC: 9, en la Iteración: 89
-Vector permutacion [5 1 2 3 4 6 9 7 12 0 10 11 8 13 14 15 16 17 18 19 ], Coste: 30980
+Actualizacion mejor solucion actual, Candidato LRC: 9, en la Iteración: 37
+Vector permutacion [6 1 3 4 2 5 9 17 15 18 13 7 16 10 0 19 14 8 11 12 ], Coste: 31617
 
 
-Actualizacion mejor solucion actual, Candidato LRC: 9, en la Iteración: 93
-Vector permutacion [5 1 2 3 4 17 6 0 12 9 10 11 7 13 14 15 16 8 18 19 ], Coste: 30600
+Actualizacion mejor solucion actual, Candidato LRC: 9, en la Iteración: 38
+Vector permutacion [6 1 3 4 0 5 9 17 15 18 13 7 16 10 2 19 14 8 11 12 ], Coste: 31554
 
 
-Actualizacion mejor solucion actual, Candidato LRC: 9, en la Iteración: 94
-Vector permutacion [5 1 2 3 4 17 6 7 12 9 10 11 0 13 14 15 16 8 18 19 ], Coste: 30497
+Actualizacion mejor solucion actual, Candidato LRC: 9, en la Iteración: 39
+Vector permutacion [6 1 3 4 0 5 9 17 15 2 13 7 16 10 18 19 14 8 11 12 ], Coste: 31540
 
 
-Actualizacion mejor solucion actual, Candidato LRC: 9, en la Iteración: 95
-Vector permutacion [0 1 2 3 4 17 6 7 12 9 10 11 5 13 14 15 16 8 18 19 ], Coste: 29992
+Actualizacion mejor solucion actual, Candidato LRC: 9, en la Iteración: 40
+Vector permutacion [6 1 3 4 0 5 9 17 15 2 13 7 18 10 16 19 14 8 11 12 ], Coste: 31476
 
 
-Actualizacion mejor solucion actual, Candidato LRC: 9, en la Iteración: 96
-Vector permutacion [0 1 2 3 4 17 6 7 5 9 10 11 12 13 14 15 16 8 18 19 ], Coste: 28882
+Actualizacion mejor solucion actual, Candidato LRC: 9, en la Iteración: 41
+Vector permutacion [6 1 3 4 0 5 9 17 15 2 13 7 18 10 14 19 16 8 11 12 ], Coste: 31441
 
 
-Actualizacion mejor solucion actual, Candidato LRC: 9, en la Iteración: 97
-Vector permutacion [0 1 2 3 4 8 6 7 5 9 10 11 12 13 14 15 16 17 18 19 ], Coste: 28370
+Actualizacion mejor solucion actual, Candidato LRC: 9, en la Iteración: 52
+Vector permutacion [0 1 2 3 4 5 6 7 8 9 17 11 12 13 14 15 16 10 18 19 ], Coste: 28215
 
 
-Actualizacion mejor solucion actual, Candidato LRC: 9, en la Iteración: 112
-Vector permutacion [0 1 2 3 4 5 6 9 8 7 10 11 12 13 14 15 16 17 18 19 ], Coste: 28268
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 9, en la Iteración: 113
+Actualizacion mejor solucion actual, Candidato LRC: 9, en la Iteración: 59
 Vector permutacion [0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 ], Coste: 27076
 
 *******************************************************************
@@ -1018,131 +998,143 @@ Candidato LRC nº 10, Coste: 34736
 
 *******************************************************************
 Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 1
-Vector permutacion [5 9 2 19 3 10 1 7 17 6 11 12 0 4 13 18 16 8 15 14 ], Coste: 34734
+Vector permutacion [5 9 2 19 3 10 1 6 17 7 11 12 0 13 4 18 16 8 15 14 ], Coste: 34720
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 2
-Vector permutacion [5 9 2 19 3 10 1 7 17 6 11 12 0 18 13 4 16 8 15 14 ], Coste: 34272
+Vector permutacion [5 9 2 19 3 10 1 0 17 7 11 12 6 13 4 18 16 8 15 14 ], Coste: 34378
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 3
-Vector permutacion [5 9 2 19 3 10 1 7 17 6 11 12 0 15 13 4 16 8 18 14 ], Coste: 34254
+Vector permutacion [5 9 2 19 3 10 1 17 0 7 11 12 6 13 4 18 16 8 15 14 ], Coste: 34352
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 4
-Vector permutacion [5 9 2 19 3 10 1 7 17 6 11 12 0 14 13 4 16 8 18 15 ], Coste: 34154
+Vector permutacion [5 9 2 19 3 10 1 8 0 7 11 12 6 13 4 18 16 17 15 14 ], Coste: 34278
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 5
-Vector permutacion [5 9 2 19 3 10 1 14 17 6 11 12 0 7 13 4 16 8 18 15 ], Coste: 33874
+Vector permutacion [5 9 2 19 3 10 1 14 0 7 11 12 6 13 4 18 16 17 15 8 ], Coste: 34215
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 6
-Vector permutacion [5 9 2 19 3 10 1 14 17 6 11 12 0 8 13 4 16 7 18 15 ], Coste: 33669
+Vector permutacion [5 9 2 19 3 10 1 18 0 7 11 12 6 13 4 14 16 17 15 8 ], Coste: 34205
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 7
-Vector permutacion [5 9 2 19 3 10 1 14 17 8 11 12 0 6 13 4 16 7 18 15 ], Coste: 33543
+Vector permutacion [18 9 2 19 3 10 1 5 0 7 11 12 6 13 4 14 16 17 15 8 ], Coste: 34022
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 8
-Vector permutacion [5 9 2 19 3 10 1 14 17 8 11 12 0 6 7 4 16 13 18 15 ], Coste: 33432
+Vector permutacion [18 9 2 5 3 10 1 19 0 7 11 12 6 13 4 14 16 17 15 8 ], Coste: 33907
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 9
-Vector permutacion [5 7 2 19 3 10 1 14 17 8 11 12 0 6 9 4 16 13 18 15 ], Coste: 33109
+Vector permutacion [18 9 2 5 3 10 1 19 7 0 11 12 6 13 4 14 16 17 15 8 ], Coste: 33165
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 10
-Vector permutacion [5 7 2 19 3 10 1 14 17 8 11 12 9 6 0 4 16 13 18 15 ], Coste: 32972
+Vector permutacion [18 9 2 5 3 10 1 19 12 0 11 7 6 13 4 14 16 17 15 8 ], Coste: 32905
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 11
-Vector permutacion [5 7 2 19 3 4 1 14 17 8 11 12 9 6 0 10 16 13 18 15 ], Coste: 32880
+Vector permutacion [18 9 2 5 3 10 1 19 12 0 6 7 11 13 4 14 16 17 15 8 ], Coste: 32834
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 12
-Vector permutacion [5 7 2 19 3 4 1 14 17 10 11 12 9 6 0 8 16 13 18 15 ], Coste: 32796
+Vector permutacion [18 9 2 5 3 6 1 19 12 0 10 7 11 13 4 14 16 17 15 8 ], Coste: 32803
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 13
-Vector permutacion [5 7 2 19 3 4 1 14 17 10 11 12 9 6 0 13 16 8 18 15 ], Coste: 32735
+Vector permutacion [18 9 2 5 3 6 1 19 12 0 13 7 11 10 4 14 16 17 15 8 ], Coste: 32784
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 14
-Vector permutacion [5 7 2 19 3 4 13 14 17 10 11 12 9 6 0 1 16 8 18 15 ], Coste: 32710
+Vector permutacion [18 7 2 5 3 6 1 19 12 0 13 9 11 10 4 14 16 17 15 8 ], Coste: 32783
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 15
-Vector permutacion [5 7 2 19 3 4 13 14 17 10 11 12 9 6 0 15 16 8 18 1 ], Coste: 32612
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 16
-Vector permutacion [5 7 2 19 3 8 13 14 17 10 11 12 9 6 0 15 16 4 18 1 ], Coste: 32532
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 17
-Vector permutacion [5 7 2 19 3 8 13 14 17 18 11 12 9 6 0 15 16 4 10 1 ], Coste: 32487
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 18
-Vector permutacion [5 7 2 19 3 8 13 14 17 18 1 12 9 6 0 15 16 4 10 11 ], Coste: 32295
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 19
-Vector permutacion [9 7 2 19 3 8 13 14 17 18 1 12 5 6 0 15 16 4 10 11 ], Coste: 32261
-
-
-Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 20
-Vector permutacion [9 3 2 19 7 8 13 14 17 18 1 12 5 6 0 15 16 4 10 11 ], Coste: 32107
+Vector permutacion [18 7 2 5 3 6 1 19 12 0 13 9 15 10 4 14 16 17 11 8 ], Coste: 32757
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 21
-Vector permutacion [9 1 2 19 7 8 13 14 17 18 3 12 5 6 0 15 16 4 10 11 ], Coste: 31957
+Vector permutacion [11 7 0 5 3 18 1 19 12 6 13 9 15 10 4 2 16 17 14 8 ], Coste: 32332
 
 
 Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 22
-Vector permutacion [9 1 2 12 7 8 13 14 17 18 3 19 5 6 0 15 16 4 10 11 ], Coste: 31830
+Vector permutacion [11 7 0 5 3 18 1 19 12 6 13 2 15 10 4 9 16 17 14 8 ], Coste: 32284
 
 
-Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 23
-Vector permutacion [9 1 2 15 7 8 13 14 17 18 3 19 5 6 0 12 16 4 10 11 ], Coste: 31805
+Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 42
+Vector permutacion [2 1 14 10 15 3 12 6 19 11 13 7 18 0 4 9 16 5 17 8 ], Coste: 32063
 
 
-Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 24
-Vector permutacion [9 1 2 15 8 7 13 14 17 18 3 19 5 6 0 12 16 4 10 11 ], Coste: 31736
+Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 43
+Vector permutacion [2 1 14 10 15 3 12 6 0 11 13 7 18 19 4 9 16 5 17 8 ], Coste: 32057
 
 
-Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 26
-Vector permutacion [9 1 2 15 8 7 13 6 17 14 18 19 5 3 0 12 16 4 10 11 ], Coste: 31693
+Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 44
+Vector permutacion [2 1 14 10 15 3 12 6 11 0 13 7 18 19 4 9 16 5 17 8 ], Coste: 32047
 
 
-Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 27
-Vector permutacion [9 1 2 15 8 7 13 6 17 18 14 19 5 3 0 12 16 4 10 11 ], Coste: 31671
+Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 45
+Vector permutacion [2 1 14 10 15 3 12 6 13 0 11 7 18 19 4 9 16 5 17 8 ], Coste: 31862
 
 
-Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 28
-Vector permutacion [9 1 2 14 8 7 13 6 17 18 15 19 5 3 0 12 16 4 10 11 ], Coste: 31535
+Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 46
+Vector permutacion [2 1 14 10 15 3 12 6 13 0 18 7 11 19 4 9 16 5 17 8 ], Coste: 31848
 
 
-Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 30
-Vector permutacion [9 1 2 12 8 7 13 18 17 14 15 19 5 3 0 6 16 4 10 11 ], Coste: 31490
+Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 47
+Vector permutacion [2 1 14 10 15 3 12 6 13 0 4 7 11 19 18 9 16 5 17 8 ], Coste: 31819
 
 
-Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 31
-Vector permutacion [0 1 2 3 4 9 6 7 8 16 10 11 12 13 5 15 14 17 18 19 ], Coste: 29878
+Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 60
+Vector permutacion [2 1 17 10 15 3 12 11 13 19 4 7 18 6 14 9 16 0 5 8 ], Coste: 31632
 
 
-Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 33
-Vector permutacion [0 1 6 3 4 5 2 7 8 9 10 11 12 13 16 15 14 17 18 19 ], Coste: 29463
+Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 73
+Vector permutacion [0 8 2 11 4 5 6 10 3 9 17 7 12 13 14 15 16 1 18 19 ], Coste: 31449
 
 
-Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 35
-Vector permutacion [0 1 2 3 9 5 6 7 8 4 10 11 12 13 14 15 16 17 18 19 ], Coste: 28782
+Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 74
+Vector permutacion [0 8 2 11 4 5 6 10 3 9 17 1 12 13 14 15 16 7 18 19 ], Coste: 31230
 
 
-Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 36
+Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 75
+Vector permutacion [0 8 2 11 4 5 6 7 3 9 17 1 12 13 14 15 16 10 18 19 ], Coste: 31161
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 76
+Vector permutacion [0 8 2 11 4 5 6 7 10 9 17 1 12 13 14 15 16 3 18 19 ], Coste: 30885
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 77
+Vector permutacion [0 8 2 11 4 5 6 7 10 9 17 1 12 13 14 15 16 18 3 19 ], Coste: 30480
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 78
+Vector permutacion [0 8 2 3 4 5 6 7 10 9 17 1 12 13 14 15 16 18 11 19 ], Coste: 30398
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 79
+Vector permutacion [0 8 2 3 4 5 6 7 10 9 17 11 12 13 14 15 16 18 1 19 ], Coste: 30031
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 80
+Vector permutacion [0 1 2 3 4 5 6 7 10 9 17 11 12 13 14 15 16 18 8 19 ], Coste: 29375
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 81
+Vector permutacion [0 1 2 3 4 5 6 7 8 9 17 11 12 13 14 15 16 18 10 19 ], Coste: 28938
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 82
+Vector permutacion [0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 18 17 19 ], Coste: 28511
+
+
+Actualizacion mejor solucion actual, Candidato LRC: 10, en la Iteración: 83
 Vector permutacion [0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 ], Coste: 27076
 
-Tiempo de ejecucion: 1209 milisegundos
+Tiempo de ejecucion: 1232 milisegundos
 El coste es: 27076

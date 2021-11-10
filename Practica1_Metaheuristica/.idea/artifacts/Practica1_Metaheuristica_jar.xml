@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Practica1_Metaheuristica:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Practica1_Metaheuristica_jar</output-path>
+    <root id="archive" name="Practica1_Metaheuristica.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="Practica1_Metaheuristica" />
+    </root>
+  </artifact>
+</component>
