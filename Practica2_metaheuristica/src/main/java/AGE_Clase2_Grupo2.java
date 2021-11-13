@@ -1,7 +1,6 @@
 import javafx.util.Pair;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.Random;
 
 public class AGE_Clase2_Grupo2 {
@@ -33,20 +32,78 @@ public class AGE_Clase2_Grupo2 {
 
     }
 
-    public ArrayList<int[]> estacionario(){
-
+    public ArrayList<int[]> estacionario() {
+        int contEvaluaciones = 0;
         ArrayList<int[]> poblacionActual = (ArrayList<int[]>) poblacion.clone();
 
-        //funcion seleccion
-        ArrayList<int[]> padres = seleccionTorneo(poblacionActual);
+        while (contEvaluaciones!=50000){
 
-        //funcion cruce
-        ArrayList<int[]> cruce = operadorCruceOX(padres);
-        //funcion mutacion
+            //funcion seleccion
+            ArrayList<int[]> padres = seleccionTorneo(poblacionActual);
+
+            //funcion cruce
+            ArrayList<int[]> cruce = operadorCruceOX(padres);
+
+
+            //funcion mutacion
+           // System.out.println("iteracion "+contEvaluaciones);
+
+            for (int[] hijos: cruce) {
+                double valor = Math.random()*1;
+                //float a1 = aleatorio.nextFloat(1.0);
+                if(valor>= probMutacion*matrizFlujo.length){
+                    int a1 = aleatorio.nextInt(hijos.length);
+                    int a2 = aleatorio.nextInt(hijos.length);
+                    mutacion(a1,a2, hijos);
+                }
+
+            }
+
+            //funcion reemplazamiento
+            reemplazamiento(cruce, poblacionActual);
+
+
+            contEvaluaciones++;
+        }
 
         return poblacionActual;
     }
 
+    public void reemplazamiento(ArrayList<int[]> hijos, ArrayList<int[]> poblacion) {
+        ArrayList<int[]> copiaHijos = (ArrayList<int[]>) hijos.clone();
+        ArrayList<Pair<Integer,Long>> peores = new ArrayList<>();
+        int a1;
+        for (int i = 0; i < 2; i++) {
+
+            ArrayList<Pair<Integer,Long>> seleccionTorneo = new ArrayList<>();
+            for (int j = 0; j < tamTorneoRemplazamiento; j++){
+
+                a1 = aleatorio.nextInt(hijos.size());
+
+                long fitnes = calculoFitnes(poblacion.get(a1));
+                seleccionTorneo.add(new Pair<>(a1,fitnes));
+
+            }
+
+            seleccionTorneo.sort((Pair<Integer, Long> o1, Pair<Integer, Long> o2) -> o1.getValue().compareTo(o2.getValue()));
+            peores.add(seleccionTorneo.get(seleccionTorneo.size()-1));
+
+        }
+        int cont = 0;
+
+        if(calculoFitnes(copiaHijos.get(0)) < peores.get(0).getValue() && calculoFitnes(copiaHijos.get(1)) < peores.get(0).getValue()){
+            cont++;
+        }
+        if(calculoFitnes(copiaHijos.get(0)) < peores.get(1).getValue() && calculoFitnes(copiaHijos.get(1)) < peores.get(1).getValue()){
+            cont++;
+        }
+
+        if(cont == 2) {
+            poblacion.set(peores.get(0).getKey(), copiaHijos.get(0));
+            poblacion.set(peores.get(1).getKey(), copiaHijos.get(1));
+        }
+
+    }
 
     public ArrayList<int[]> operadorCruceOX(ArrayList<int[]> padres){
         int a1 = -1;
@@ -103,29 +160,34 @@ public class AGE_Clase2_Grupo2 {
             if(!estaH1){
 
                 if (!llenoH1) {
+                    //System.out.println("hijo1Contador"+contadorPosicionHijo1);
+                    if (contadorPosicionHijo1 == hijo1.length) {
+                        contadorPosicionHijo1 = contadorPosicionHijo1 % hijo1.length;
+                    }
                     hijo1[contadorPosicionHijo1] = padres.get(1)[i];
                     contadorPosicionHijo1++;
                     contEleHijo1++;
 
-                    if (contadorPosicionHijo1 == hijo1.length) {
-                        contadorPosicionHijo1 = contadorPosicionHijo1 % hijo1.length;
-                    }
+
 
                     if (contEleHijo1 == hijo1.length) {
                         llenoH1 = true;
                     }
+
+
                 }
             }
 
             if(!estaH2){
                 if (!llenoH2) {
+                    if (contadorPosicionHijo2 == hijo2.length) {
+                        contadorPosicionHijo2 = contadorPosicionHijo2 % hijo2.length;
+                    }
                     hijo2[contadorPosicionHijo2] = padres.get(0)[i];
                     contadorPosicionHijo2++;
                     contEleHijo2++;
 
-                    if (contadorPosicionHijo2 == hijo2.length) {
-                        contadorPosicionHijo2 = contadorPosicionHijo2 % hijo2.length;
-                    }
+
 
                     if (contEleHijo2 == hijo2.length) {
                         llenoH2 = true;
@@ -143,6 +205,12 @@ public class AGE_Clase2_Grupo2 {
         padresCruzados.add(hijo2);
 
         return padresCruzados;
+    }
+
+    public void mutacion(int a1, int a2, int[] hijo){
+        int aux = hijo[a1];
+        hijo[a1] = hijo[a2];
+        hijo[a2] = aux;
     }
 
     public ArrayList<int[]> seleccionTorneo(ArrayList<int[]> poblacionActual) {
@@ -164,7 +232,7 @@ public class AGE_Clase2_Grupo2 {
 
                 if (!existe) {
                     //Añadimos el valor fitnes y la posicion del padre en la matriz
-                    long fitnes = calculaCoste(poblacion.get(seleccionado));
+                    long fitnes = calculoFitnes(poblacion.get(seleccionado));
                     candidatos.add(new Pair<>(seleccionado, fitnes));
                 }
 
@@ -196,7 +264,7 @@ public class AGE_Clase2_Grupo2 {
      * @param padre: Vector con solucion para calculo del coste
      * @return coste calculado
      */
-    public long calculaCoste(int[] padre) {
+    public long calculoFitnes(int[] padre) {
 
         long coste = 0;
 

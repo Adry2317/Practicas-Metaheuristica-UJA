@@ -14,8 +14,17 @@ public class Main {
                 prueba = greedy.calculoGreedyAleatorio();
 
                 AGE_Clase2_Grupo2 prueba2 = new AGE_Clase2_Grupo2(prueba, 50000,1,0.001,aleatorio,3,4, archivo.getMatrizFlujo(), archivo.getMatrizDistancias());
-                prueba2.estacionario();
+                ArrayList<int[]> poblacion = prueba2.estacionario();
 
+                ArrayList<Long> fitnes = new ArrayList<>();
+
+                for (int j = 0 ; j< poblacion.size(); j++ ){
+                    fitnes.add(prueba2.calculoFitnes(poblacion.get(i)));
+                }
+
+                fitnes.sort((o1, o2) ->o1.compareTo(o2) );
+
+                System.out.println(fitnes.get(0));
         }
 
 
