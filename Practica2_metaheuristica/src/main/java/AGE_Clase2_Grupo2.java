@@ -32,7 +32,7 @@ public class AGE_Clase2_Grupo2 {
 
     }
 
-    public ArrayList<int[]> estacionario() {
+    public ArrayList<int[]> estacionarioOX() {
         int contEvaluaciones = 0;
         ArrayList<int[]> poblacionActual = (ArrayList<int[]>) poblacion.clone();
         ArrayList<Pair<Integer,Long>> evalucionPoblacion = evalPoblacion(poblacionActual);
@@ -43,7 +43,7 @@ public class AGE_Clase2_Grupo2 {
             ArrayList<int[]> padres = seleccionTorneo(poblacionActual);
 
             //funcion cruce
-            ArrayList<int[]> cruce = padres;
+            ArrayList<int[]> cruce = operadorCruceOX(padres);
 
 
             //funcion mutacion
@@ -127,6 +127,115 @@ public class AGE_Clase2_Grupo2 {
 
     }
 
+    public ArrayList<int[]> operadorCrucePMX(ArrayList<int[]> padres) {
+
+        int a1 = -1;
+        int a2 = -1;
+
+        ArrayList<Pair<Integer,Integer>> listaCorrespondencia = new ArrayList<>();
+
+        do{
+            a1 = aleatorio.nextInt(padres.get(0).length);
+            a2 = aleatorio.nextInt(padres.get(0).length);
+
+            if(a1 > a2){
+                int aux = a1;
+                a1 = a2;
+                a2 = aux;
+            }
+
+        }while (a1 == a2);
+
+        int[] hijo1 = new int[padres.get(0).length];
+        int[] hijo2 = new int[padres.get(1).length];
+
+        for(int i = a1; i < a2; i++){
+            hijo1[i] = padres.get(0)[i];
+            hijo2[i] = padres.get(1)[i];
+            listaCorrespondencia.add(new Pair<>(padres.get(0)[i],padres.get(1)[i]));
+            listaCorrespondencia.add(new Pair<>(padres.get(1)[i],padres.get(0)[i]));
+        }
+
+        boolean llenoH1 = false;
+        boolean llenoH2 = false;
+        int contadorPosicionHijo1 = a2+1;
+        int contadorPosicionHijo2 = a2+1;
+        int contEleHijo1 = a2-a1;
+        int contEleHijo2 = a2-a1;
+
+        for (int i = a2+1; !llenoH1 && !llenoH2 ; i++) {
+
+            if (i == hijo1.length) {
+                i = i % hijo1.length;
+            }
+
+            boolean estaH1 = false;
+            boolean estaH2 = false;
+            int correspondencia1;
+            int correspondencia2;
+            for(int j = a1; j < a2; j++){
+                if (padres.get(1)[i] == padres.get(0)[j]){
+                    estaH1 = true;
+                    correspondencia1 = padres.get(0)[j];
+                }
+            }
+
+            for(int j = a1; j < a2; j++){
+                if (padres.get(0)[i] == padres.get(1)[j]){
+                    estaH2 = true;
+                    correspondencia2 = padres.get(1)[j];
+
+                }
+            }
+
+            if(!estaH1){
+
+                if (!llenoH1) {
+                    //System.out.println("hijo1Contador"+contadorPosicionHijo1);
+                    if (contadorPosicionHijo1 == hijo1.length) {
+                        contadorPosicionHijo1 = contadorPosicionHijo1 % hijo1.length;
+                    }
+                    hijo1[contadorPosicionHijo1] = padres.get(1)[i];
+                    contadorPosicionHijo1++;
+                    contEleHijo1++;
+
+
+
+                    if (contEleHijo1 == hijo1.length) {
+                        llenoH1 = true;
+                    }
+
+
+                }
+            }else{
+                
+            }
+
+            if(!estaH2){
+                if (!llenoH2) {
+                    if (contadorPosicionHijo2 == hijo2.length) {
+                        contadorPosicionHijo2 = contadorPosicionHijo2 % hijo2.length;
+                    }
+                    hijo2[contadorPosicionHijo2] = padres.get(0)[i];
+                    contadorPosicionHijo2++;
+                    contEleHijo2++;
+
+
+
+                    if (contEleHijo2 == hijo2.length) {
+                        llenoH2 = true;
+                    }
+                }
+            }else{
+                
+            }
+
+
+
+
+        }
+
+    }
     public ArrayList<int[]> operadorCruceOX(ArrayList<int[]> padres){
         int a1 = -1;
         int a2 = -1;
@@ -144,7 +253,7 @@ public class AGE_Clase2_Grupo2 {
         }while (a1 == a2);
 
         int[] hijo1 = new int[padres.get(0).length];
-        int[] hijo2 = new int[padres.get(0).length];
+        int[] hijo2 = new int[padres.get(1).length];
 
         for(int i = a1; i < a2; i++){
             hijo1[i] = padres.get(0)[i];
@@ -155,8 +264,8 @@ public class AGE_Clase2_Grupo2 {
         boolean llenoH2 = false;
         int contadorPosicionHijo1 = a2+1;
         int contadorPosicionHijo2 = a2+1;
-        int contEleHijo1 = 3;
-        int contEleHijo2 = 3;
+        int contEleHijo1 = a2-a1;
+        int contEleHijo2 = a2-a1;
 
 
         for (int i = a2+1; !llenoH1 && !llenoH2 ; i++){
@@ -176,6 +285,7 @@ public class AGE_Clase2_Grupo2 {
             for(int j = a1; j < a2; j++){
                 if (padres.get(0)[i] == padres.get(1)[j]){
                     estaH2 = true;
+                    
                 }
             }
 
