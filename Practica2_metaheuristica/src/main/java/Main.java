@@ -25,6 +25,8 @@ public class Main {
                 fitnes.sort((o1, o2) ->o1.compareTo(o2) );
 
                 System.out.println(fitnes.get(0));
+
+
         }
 
 

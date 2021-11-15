@@ -35,19 +35,18 @@ public class AGE_Clase2_Grupo2 {
     public ArrayList<int[]> estacionario() {
         int contEvaluaciones = 0;
         ArrayList<int[]> poblacionActual = (ArrayList<int[]>) poblacion.clone();
+        ArrayList<Pair<Integer,Long>> evalucionPoblacion = evalPoblacion(poblacionActual);
 
-        while (contEvaluaciones!=50000){
+        while (contEvaluaciones!=maxEvaluaciones){
 
             //funcion seleccion
             ArrayList<int[]> padres = seleccionTorneo(poblacionActual);
 
             //funcion cruce
-            ArrayList<int[]> cruce = operadorCruceOX(padres);
+            ArrayList<int[]> cruce = padres;
 
 
             //funcion mutacion
-           // System.out.println("iteracion "+contEvaluaciones);
-
             for (int[] hijos: cruce) {
                 double valor = Math.random()*1;
                 //float a1 = aleatorio.nextFloat(1.0);
@@ -59,8 +58,9 @@ public class AGE_Clase2_Grupo2 {
 
             }
 
+            evalucionPoblacion = evalPoblacion(poblacionActual);
             //funcion reemplazamiento
-            reemplazamiento(cruce, poblacionActual);
+            reemplazamiento(cruce, poblacionActual, evalucionPoblacion);
 
 
             contEvaluaciones++;
@@ -69,39 +69,61 @@ public class AGE_Clase2_Grupo2 {
         return poblacionActual;
     }
 
-    public void reemplazamiento(ArrayList<int[]> hijos, ArrayList<int[]> poblacion) {
+
+    public ArrayList<Pair<Integer,Long>> evalPoblacion(ArrayList<int[]> poblacionActual){
+        ArrayList<Pair<Integer,Long>> fitnessIndividuos = new ArrayList<>();
+        for(int i = 0; i < poblacionActual.size(); i++){
+            Long fitnes = calculoFitnes(poblacionActual.get(i));
+            fitnessIndividuos.add(new Pair<>(i,fitnes));
+        }
+
+        //ordena de menor a mayor
+        fitnessIndividuos.sort((o1, o2) -> o1.getValue().compareTo(o2.getValue()));
+
+        return fitnessIndividuos;
+    }
+
+
+
+    public void reemplazamiento(ArrayList<int[]> hijos, ArrayList<int[]> poblacion,ArrayList<Pair<Integer,Long>> fitnessPoblacion) {
         ArrayList<int[]> copiaHijos = (ArrayList<int[]>) hijos.clone();
         ArrayList<Pair<Integer,Long>> peores = new ArrayList<>();
         int a1;
         for (int i = 0; i < 2; i++) {
 
-            ArrayList<Pair<Integer,Long>> seleccionTorneo = new ArrayList<>();
+            ArrayList<Integer> seleccionTorneo = new ArrayList<>();
             for (int j = 0; j < tamTorneoRemplazamiento; j++){
 
                 a1 = aleatorio.nextInt(hijos.size());
 
                 long fitnes = calculoFitnes(poblacion.get(a1));
-                seleccionTorneo.add(new Pair<>(a1,fitnes));
+                seleccionTorneo.add(a1);
 
             }
 
-            seleccionTorneo.sort((Pair<Integer, Long> o1, Pair<Integer, Long> o2) -> o1.getValue().compareTo(o2.getValue()));
-            peores.add(seleccionTorneo.get(seleccionTorneo.size()-1));
+            ArrayList<Pair<Integer,Long>> auxiliar = new ArrayList<>();
+            for(int j = 0; j < seleccionTorneo.size(); j++){
+                for (int k = 0; k < fitnessPoblacion.size(); k++){
+                    if(seleccionTorneo.get(i) == fitnessPoblacion.get(k).getKey()){
+                        auxiliar.add(new Pair<Integer,Long>(seleccionTorneo.get(i), fitnessPoblacion.get(k).getValue()));
+                    }
+                }
+            }
+
+            auxiliar.sort((o1, o2) ->(o1.getValue().compareTo(o2.getValue())));
+            peores.add(auxiliar.get(auxiliar.size()-1-i));
 
         }
-        int cont = 0;
+
 
         if(calculoFitnes(copiaHijos.get(0)) < peores.get(0).getValue() && calculoFitnes(copiaHijos.get(1)) < peores.get(0).getValue()){
-            cont++;
+            poblacion.set(peores.get(0).getKey(), copiaHijos.get(0));
         }
         if(calculoFitnes(copiaHijos.get(0)) < peores.get(1).getValue() && calculoFitnes(copiaHijos.get(1)) < peores.get(1).getValue()){
-            cont++;
-        }
-
-        if(cont == 2) {
-            poblacion.set(peores.get(0).getKey(), copiaHijos.get(0));
             poblacion.set(peores.get(1).getKey(), copiaHijos.get(1));
         }
+
+
 
     }
 
@@ -219,7 +241,7 @@ public class AGE_Clase2_Grupo2 {
         ArrayList<Pair<Integer, Long>> padresSeleccionados = new ArrayList<>();
 
         int rondas = 0;
-        while (rondas < 2) {
+        while (rondas < 2) {//CAMBIAR
             for (int i = 0; i < tamTorneoSeleccion; i++) {
                 int seleccionado = aleatorio.nextInt(tamPoblacion);
 
