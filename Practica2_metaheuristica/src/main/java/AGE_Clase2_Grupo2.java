@@ -35,17 +35,23 @@ public class AGE_Clase2_Grupo2 {
     public ArrayList<int[]> estacionarioOX() {
         int contEvaluaciones = 0;
         ArrayList<int[]> poblacionActual = (ArrayList<int[]>) poblacion.clone();
-        ArrayList<Pair<Integer,Long>> evalucionPoblacion = evalPoblacion(poblacionActual);
+        ArrayList<Pair<Integer,Long>> evalucionPoblacion;
 
+        long aux = 0;
+        long aux2 = 0;
+        long aux3 = 0;
         while (contEvaluaciones!=maxEvaluaciones){
+
 
             //funcion seleccion
             ArrayList<int[]> padres = seleccionTorneo(poblacionActual);
 
+            long tiempo = System.currentTimeMillis();
             //funcion cruce
             ArrayList<int[]> cruce = operadorCruceOX(padres);
+            aux += (System.currentTimeMillis()-tiempo);
 
-
+            long tiempo2 = System.currentTimeMillis();
             //funcion mutacion
             for (int[] hijos: cruce) {
                 double valor = Math.random()*1;
@@ -57,15 +63,19 @@ public class AGE_Clase2_Grupo2 {
                 }
 
             }
+            aux2 += (System.currentTimeMillis()-tiempo2);
 
+            long tiempo3 = System.currentTimeMillis();
             evalucionPoblacion = evalPoblacion(poblacionActual);
             //funcion reemplazamiento
             reemplazamiento(cruce, poblacionActual, evalucionPoblacion);
 
-
+            aux3 += (System.currentTimeMillis()-tiempo3);
             contEvaluaciones++;
         }
-
+        System.out.println(aux);
+        System.out.println(aux2);
+        System.out.println(aux3);
         return poblacionActual;
     }
 
@@ -87,7 +97,7 @@ public class AGE_Clase2_Grupo2 {
 
     public void reemplazamiento(ArrayList<int[]> hijos, ArrayList<int[]> poblacion,ArrayList<Pair<Integer,Long>> fitnessPoblacion) {
         ArrayList<int[]> copiaHijos = (ArrayList<int[]>) hijos.clone();
-        ArrayList<Pair<Integer,Long>> peores = new ArrayList<>();
+        ArrayList<Integer> peores = new ArrayList<>();
         int a1;
         for (int i = 0; i < 2; i++) {
 
@@ -96,37 +106,40 @@ public class AGE_Clase2_Grupo2 {
 
                 a1 = aleatorio.nextInt(hijos.size());
 
-                long fitnes = calculoFitnes(poblacion.get(a1));
+                long fitnes = fitnessPoblacion.get(a1).getValue();
                 seleccionTorneo.add(a1);
 
             }
 
-            ArrayList<Pair<Integer,Long>> auxiliar = new ArrayList<>();
+            ArrayList<Integer> auxiliar = new ArrayList<>();
             for(int j = 0; j < seleccionTorneo.size(); j++){
                 for (int k = 0; k < fitnessPoblacion.size(); k++){
                     if(seleccionTorneo.get(i) == fitnessPoblacion.get(k).getKey()){
-                        auxiliar.add(new Pair<Integer,Long>(seleccionTorneo.get(i), fitnessPoblacion.get(k).getValue()));
+                        auxiliar.add(seleccionTorneo.get(i));
                     }
                 }
             }
 
-            auxiliar.sort((o1, o2) ->(o1.getValue().compareTo(o2.getValue())));
+            auxiliar.sort((o1, o2) ->(o1.compareTo(o2)));
             peores.add(auxiliar.get(auxiliar.size()-1-i));
 
         }
 
+        long fitnesCopiahijo0 = calculoFitnes(copiaHijos.get(0));
+        long fitnesCopiahijo1 = calculoFitnes(copiaHijos.get(1));
 
-        if(calculoFitnes(copiaHijos.get(0)) < peores.get(0).getValue() && calculoFitnes(copiaHijos.get(1)) < peores.get(0).getValue()){
-            poblacion.set(peores.get(0).getKey(), copiaHijos.get(0));
+        if(fitnesCopiahijo0 < fitnessPoblacion.get(peores.get(0)).getValue()){
+            poblacion.set(peores.get(0), copiaHijos.get(0));
         }
-        if(calculoFitnes(copiaHijos.get(0)) < peores.get(1).getValue() && calculoFitnes(copiaHijos.get(1)) < peores.get(1).getValue()){
-            poblacion.set(peores.get(1).getKey(), copiaHijos.get(1));
+        if(fitnesCopiahijo1 < fitnessPoblacion.get(peores.get(1)).getValue() ){
+            poblacion.set(peores.get(1), copiaHijos.get(1));
         }
 
 
 
     }
 
+    /*
     public ArrayList<int[]> operadorCrucePMX(ArrayList<int[]> padres) {
 
         int a1 = -1;
@@ -236,6 +249,8 @@ public class AGE_Clase2_Grupo2 {
         }
 
     }
+    ***/
+
     public ArrayList<int[]> operadorCruceOX(ArrayList<int[]> padres){
         int a1 = -1;
         int a2 = -1;
