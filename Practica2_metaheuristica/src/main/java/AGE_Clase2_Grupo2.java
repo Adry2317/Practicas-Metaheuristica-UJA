@@ -35,11 +35,10 @@ public class AGE_Clase2_Grupo2 {
     public ArrayList<int[]> estacionarioOX() {
         int contEvaluaciones = 0;
         ArrayList<int[]> poblacionActual = (ArrayList<int[]>) poblacion.clone();
-        ArrayList<Pair<Integer,Long>> evalucionPoblacion;
+        ArrayList<Pair<Integer,Long>> evalucionPoblacion = evalPoblacion(poblacionActual);
 
-        long aux = 0;
-        long aux2 = 0;
-        long aux3 = 0;
+
+
         while (contEvaluaciones!=maxEvaluaciones){
 
 
@@ -49,13 +48,13 @@ public class AGE_Clase2_Grupo2 {
             long tiempo = System.currentTimeMillis();
             //funcion cruce
             ArrayList<int[]> cruce = operadorCruceOX(padres);
-            aux += (System.currentTimeMillis()-tiempo);
+
 
             long tiempo2 = System.currentTimeMillis();
             //funcion mutacion
             for (int[] hijos: cruce) {
                 double valor = Math.random()*1;
-                //float a1 = aleatorio.nextFloat(1.0);
+
                 if(valor>= probMutacion*matrizFlujo.length){
                     int a1 = aleatorio.nextInt(hijos.length);
                     int a2 = aleatorio.nextInt(hijos.length);
@@ -63,19 +62,18 @@ public class AGE_Clase2_Grupo2 {
                 }
 
             }
-            aux2 += (System.currentTimeMillis()-tiempo2);
+
 
             long tiempo3 = System.currentTimeMillis();
-            evalucionPoblacion = evalPoblacion(poblacionActual);
+           // evalucionPoblacion = evalPoblacion(poblacionActual);
             //funcion reemplazamiento
             reemplazamiento(cruce, poblacionActual, evalucionPoblacion);
 
-            aux3 += (System.currentTimeMillis()-tiempo3);
+
             contEvaluaciones++;
         }
-        System.out.println(aux);
-        System.out.println(aux2);
-        System.out.println(aux3);
+
+
         return poblacionActual;
     }
 
@@ -130,8 +128,13 @@ public class AGE_Clase2_Grupo2 {
 
         if(fitnesCopiahijo0 < fitnessPoblacion.get(peores.get(0)).getValue()){
             poblacion.set(peores.get(0), copiaHijos.get(0));
+            Pair<Integer,Long> hijo = new Pair(peores.get(0),fitnesCopiahijo0);
+            fitnessPoblacion.set(peores.get(0),hijo);
+
         }
         if(fitnesCopiahijo1 < fitnessPoblacion.get(peores.get(1)).getValue() ){
+            Pair<Integer,Long> hijo1 = new Pair(peores.get(1),fitnesCopiahijo1);
+            fitnessPoblacion.set(peores.get(1),hijo1);
             poblacion.set(peores.get(1), copiaHijos.get(1));
         }
 
@@ -139,7 +142,7 @@ public class AGE_Clase2_Grupo2 {
 
     }
 
-    /*
+
     public ArrayList<int[]> operadorCrucePMX(ArrayList<int[]> padres) {
 
         int a1 = -1;
@@ -204,7 +207,7 @@ public class AGE_Clase2_Grupo2 {
             if(!estaH1){
 
                 if (!llenoH1) {
-                    //System.out.println("hijo1Contador"+contadorPosicionHijo1);
+
                     if (contadorPosicionHijo1 == hijo1.length) {
                         contadorPosicionHijo1 = contadorPosicionHijo1 % hijo1.length;
                     }
@@ -221,11 +224,35 @@ public class AGE_Clase2_Grupo2 {
 
                 }
             }else{
-                
+                    if(!llenoH1) {
+                        boolean sinCambio = false;
+                        int posCorrespondencia = 0;
+                        int almacencorrespondencia = 0;
+                        
+                        while(!sinCambio){
+                            for(int j = posCorrespondencia; j < listaCorrespondencia.size() && !sinCambio; j++){
+                                if(listaCorrespondencia.get(j).getKey() == padres.get(1)[i]){
+                                    posCorrespondencia = j;
+                                    almacencorrespondencia = listaCorrespondencia.get(j).getValue();
+                                }else{
+                                    sinCambio = true;
+                                }
+                            }
+                            contadorPosicionHijo1++;
+                            contEleHijo1++;
+
+
+
+                            if (contEleHijo1 == hijo1.length) {
+                                llenoH1 = true;
+                            }
+                        }
+                        
+                    }
             }
 
             if(!estaH2){
-                if (!llenoH2) {
+                    if (!llenoH2) {
                     if (contadorPosicionHijo2 == hijo2.length) {
                         contadorPosicionHijo2 = contadorPosicionHijo2 % hijo2.length;
                     }
@@ -249,7 +276,7 @@ public class AGE_Clase2_Grupo2 {
         }
 
     }
-    ***/
+
 
     public ArrayList<int[]> operadorCruceOX(ArrayList<int[]> padres){
         int a1 = -1;
