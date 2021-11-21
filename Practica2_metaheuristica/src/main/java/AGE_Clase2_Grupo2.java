@@ -44,28 +44,63 @@ public class AGE_Clase2_Grupo2 {
 
             //funcion seleccion
             ArrayList<int[]> padres = seleccionTorneo(poblacionActual);
+            
 
-            long tiempo = System.currentTimeMillis();
+
             //funcion cruce
             ArrayList<int[]> cruce = operadorCruceOX(padres);
 
 
-            long tiempo2 = System.currentTimeMillis();
+            
             //funcion mutacion
             for (int[] hijos: cruce) {
-                double valor = Math.random()*1;
+                mutacion(hijos);
+            }
 
-                if(valor>= probMutacion*matrizFlujo.length){
-                    int a1 = aleatorio.nextInt(hijos.length);
-                    int a2 = aleatorio.nextInt(hijos.length);
-                    mutacion(a1,a2, hijos);
-                }
+
+
+            //funcion reemplazamiento
+            reemplazamiento(cruce, poblacionActual, evalucionPoblacion);
+
+
+            contEvaluaciones++;
+        }
+
+
+        return poblacionActual;
+    }
+
+    public ArrayList<int[]> estacionarioPMX() {
+        int contEvaluaciones = 0;
+        ArrayList<int[]> poblacionActual = (ArrayList<int[]>) poblacion.clone();
+        ArrayList<Pair<Integer,Long>> evalucionPoblacion = evalPoblacion(poblacionActual);
+
+
+
+        while (contEvaluaciones!=maxEvaluaciones){
+
+
+            //funcion seleccion
+            ArrayList<int[]> padres = seleccionTorneo(poblacionActual);
+
+
+
+            //funcion cruce
+            ArrayList<int[]> cruce = operadorCrucePMX(padres);
+
+
+
+            //funcion mutacion
+
+            for (int[] hijos: cruce) {
+                //funcion mutacion
+                mutacion(hijos);
 
             }
 
 
-            long tiempo3 = System.currentTimeMillis();
-           // evalucionPoblacion = evalPoblacion(poblacionActual);
+
+
             //funcion reemplazamiento
             reemplazamiento(cruce, poblacionActual, evalucionPoblacion);
 
@@ -93,7 +128,7 @@ public class AGE_Clase2_Grupo2 {
 
 
 
-    public void reemplazamiento(ArrayList<int[]> hijos, ArrayList<int[]> poblacion,ArrayList<Pair<Integer,Long>> fitnessPoblacion) {
+    public void reemplazamiento(ArrayList<int[]> hijos, ArrayList<int[]> poblacionActual,ArrayList<Pair<Integer,Long>> fitnessPoblacion) {
         ArrayList<int[]> copiaHijos = (ArrayList<int[]>) hijos.clone();
         ArrayList<Integer> peores = new ArrayList<>();
         int a1;
@@ -127,7 +162,7 @@ public class AGE_Clase2_Grupo2 {
         long fitnesCopiahijo1 = calculoFitnes(copiaHijos.get(1));
 
         if(fitnesCopiahijo0 < fitnessPoblacion.get(peores.get(0)).getValue()){
-            poblacion.set(peores.get(0), copiaHijos.get(0));
+            poblacionActual.set(peores.get(0), copiaHijos.get(0));
             Pair<Integer,Long> hijo = new Pair(peores.get(0),fitnesCopiahijo0);
             fitnessPoblacion.set(peores.get(0),hijo);
 
@@ -135,7 +170,7 @@ public class AGE_Clase2_Grupo2 {
         if(fitnesCopiahijo1 < fitnessPoblacion.get(peores.get(1)).getValue() ){
             Pair<Integer,Long> hijo1 = new Pair(peores.get(1),fitnesCopiahijo1);
             fitnessPoblacion.set(peores.get(1),hijo1);
-            poblacion.set(peores.get(1), copiaHijos.get(1));
+            poblacionActual.set(peores.get(1), copiaHijos.get(1));
         }
 
 
@@ -174,12 +209,14 @@ public class AGE_Clase2_Grupo2 {
 
         boolean llenoH1 = false;
         boolean llenoH2 = false;
-        int contadorPosicionHijo1 = a2+1;
-        int contadorPosicionHijo2 = a2+1;
+        int contadorPosicionHijo1 = a2;
+        int contadorPosicionHijo2 = a2;
         int contEleHijo1 = a2-a1;
         int contEleHijo2 = a2-a1;
 
-        for (int i = a2+1; !llenoH1 && !llenoH2 ; i++) {
+        int cont=0;
+        for (int i = a2; !llenoH1 && !llenoH2 ; i++) {
+
 
             if (i == hijo1.length) {
                 i = i % hijo1.length;
@@ -187,19 +224,18 @@ public class AGE_Clase2_Grupo2 {
 
             boolean estaH1 = false;
             boolean estaH2 = false;
-            int correspondencia1;
-            int correspondencia2;
+
             for(int j = a1; j < a2; j++){
                 if (padres.get(1)[i] == padres.get(0)[j]){
                     estaH1 = true;
-                    correspondencia1 = padres.get(0)[j];
+
                 }
             }
 
             for(int j = a1; j < a2; j++){
                 if (padres.get(0)[i] == padres.get(1)[j]){
                     estaH2 = true;
-                    correspondencia2 = padres.get(1)[j];
+
 
                 }
             }
@@ -224,28 +260,41 @@ public class AGE_Clase2_Grupo2 {
 
                 }
             }else{
+
                     if(!llenoH1) {
                         boolean sinCambio = false;
-                        int posCorrespondencia = 0;
-                        int almacencorrespondencia = 0;
-                        
+                        boolean esta = false;
+                        int almacencorrespondencia = padres.get(1)[i]; //es el numero repetido
+                        int cont55 = 0;
+                        ArrayList<Pair<Integer,Integer>>copiaCorrespondencias = (ArrayList<Pair<Integer, Integer>>) listaCorrespondencia.clone();
                         while(!sinCambio){
-                            for(int j = posCorrespondencia; j < listaCorrespondencia.size() && !sinCambio; j++){
-                                if(listaCorrespondencia.get(j).getKey() == padres.get(1)[i]){
-                                    posCorrespondencia = j;
-                                    almacencorrespondencia = listaCorrespondencia.get(j).getValue();
+                            //System.out.println(cont55++);
+                            int cont2 = 0;
+                            for(int j = 0; j<copiaCorrespondencias.size();j++) {
+                                if(almacencorrespondencia == copiaCorrespondencias.get(j).getKey()){
+                                    almacencorrespondencia = copiaCorrespondencias.get(j).getValue();
+                                    copiaCorrespondencias.remove(j);
                                 }else{
-                                    sinCambio = true;
+                                    cont2++;
                                 }
                             }
-                            contadorPosicionHijo1++;
-                            contEleHijo1++;
-
-
-
-                            if (contEleHijo1 == hijo1.length) {
-                                llenoH1 = true;
+                            if(cont2 == copiaCorrespondencias.size()){
+                                sinCambio = true;
                             }
+
+                        }
+                        if (contadorPosicionHijo1 == hijo1.length) {
+                            contadorPosicionHijo1 = contadorPosicionHijo1 % hijo1.length;
+                        }
+
+                        hijo1[contadorPosicionHijo1] = almacencorrespondencia;
+                        contadorPosicionHijo1++;
+                        contEleHijo1++;
+
+
+
+                        if (contEleHijo1 == hijo1.length) {
+                            llenoH1 = true;
                         }
                         
                     }
@@ -267,14 +316,52 @@ public class AGE_Clase2_Grupo2 {
                     }
                 }
             }else{
-                
+                if(!llenoH2) {
+                    boolean sinCambio = false;
+
+                    int almacencorrespondencia = padres.get(1)[i]; //es el numero repetido
+                    ArrayList<Pair<Integer,Integer>>copiaCorrespondencias = (ArrayList<Pair<Integer, Integer>>) listaCorrespondencia.clone();
+                    while(!sinCambio){
+                        int cont2 = 0;
+                        for(int j = 0; j<copiaCorrespondencias.size();j++) {
+                            if(almacencorrespondencia == copiaCorrespondencias.get(j).getKey()){
+                                almacencorrespondencia = copiaCorrespondencias.get(j).getValue();
+                                copiaCorrespondencias.remove(j);
+                            }else{
+                                cont2++;
+                            }
+                        }
+                        if(cont2 == copiaCorrespondencias.size()){
+                            sinCambio = true;
+                        }
+
+                    }
+                    if (contadorPosicionHijo2 == hijo2.length) {
+                        contadorPosicionHijo2 = contadorPosicionHijo2 % hijo2.length;
+                    }
+
+                    hijo2[contadorPosicionHijo2] = almacencorrespondencia;
+                    contadorPosicionHijo2++;
+                    contEleHijo2++;
+
+
+
+                    if (contEleHijo2 == hijo2.length) {
+                        llenoH2 = true;
+                    }
+
+                }
             }
 
 
 
 
         }
+        ArrayList<int[]> padresCruzados = new ArrayList<>();
+        padresCruzados.add(hijo1);
+        padresCruzados.add(hijo2);
 
+        return padresCruzados;
     }
 
 
@@ -304,13 +391,13 @@ public class AGE_Clase2_Grupo2 {
 
         boolean llenoH1 = false;
         boolean llenoH2 = false;
-        int contadorPosicionHijo1 = a2+1;
-        int contadorPosicionHijo2 = a2+1;
+        int contadorPosicionHijo1 = a2;
+        int contadorPosicionHijo2 = a2;
         int contEleHijo1 = a2-a1;
         int contEleHijo2 = a2-a1;
 
 
-        for (int i = a2+1; !llenoH1 && !llenoH2 ; i++){
+        for (int i = a2; !llenoH1 && !llenoH2 ; i++){
 
             if(i == hijo1.length){
                 i = i % hijo1.length;
@@ -381,10 +468,19 @@ public class AGE_Clase2_Grupo2 {
         return padresCruzados;
     }
 
-    public void mutacion(int a1, int a2, int[] hijo){
-        int aux = hijo[a1];
-        hijo[a1] = hijo[a2];
-        hijo[a2] = aux;
+    public void mutacion(int[] hijo){
+
+            for(int i = 0; i < hijo.length; i++ ) {
+                double valor = aleatorio.nextDouble();
+                if(valor>= probMutacion*matrizFlujo.length) {
+                    int a1 = aleatorio.nextInt(hijo.length);
+                    int aux = hijo[i];
+                    hijo[i] = hijo[a1];
+                    hijo[a1] = aux;
+                }
+            }
+
+
     }
 
     public ArrayList<int[]> seleccionTorneo(ArrayList<int[]> poblacionActual) {
@@ -406,7 +502,7 @@ public class AGE_Clase2_Grupo2 {
 
                 if (!existe) {
                     //Añadimos el valor fitnes y la posicion del padre en la matriz
-                    long fitnes = calculoFitnes(poblacion.get(seleccionado));
+                    long fitnes = calculoFitnes(poblacionActual.get(seleccionado));
                     candidatos.add(new Pair<>(seleccionado, fitnes));
                 }
 
