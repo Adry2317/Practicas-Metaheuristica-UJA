@@ -86,7 +86,7 @@ public class AGE_Clase2_Grupo2 {
 
 
             //funcion cruce
-            ArrayList<int[]> cruce = operadorCrucePMX(padres);
+            ArrayList<int[]> cruce = operadorPMX(padres);
 
 
 
@@ -177,193 +177,93 @@ public class AGE_Clase2_Grupo2 {
 
     }
 
+    public ArrayList<int[]> operadorPMX(ArrayList<int[]> padres){
 
-    public ArrayList<int[]> operadorCrucePMX(ArrayList<int[]> padres) {
-
-        int a1 = -1;
-        int a2 = -1;
-
-        ArrayList<Pair<Integer,Integer>> listaCorrespondencia = new ArrayList<>();
-
-        do{
-            a1 = aleatorio.nextInt(padres.get(0).length);
-            a2 = aleatorio.nextInt(padres.get(0).length);
-
-            if(a1 > a2){
-                int aux = a1;
-                a1 = a2;
-                a2 = aux;
+        ArrayList<int[]> hijos = new ArrayList<>();
+        //Listas de conmutaciones
+        ArrayList<Pair<Integer,Integer>> listaP1 = new ArrayList<>();
+        ArrayList<Pair<Integer,Integer>> listaP2 = new ArrayList<>();
+        //Para cada padre
+        for(int i = 0; i < padres.size(); i=i+2) {
+            int a1 = -1;
+            int a2 = -1;
+            //Mientras loa aleatorios sean distinto
+            while(a2 <= a1) {
+                a1 = aleatorio.nextInt(padres.get(i).length);
+                a2 = aleatorio.nextInt(padres.get(i+1).length);
             }
 
-        }while (a1 == a2);
-
-        int[] hijo1 = new int[padres.get(0).length];
-        int[] hijo2 = new int[padres.get(1).length];
-
-        for(int i = a1; i < a2; i++){
-            hijo1[i] = padres.get(0)[i];
-            hijo2[i] = padres.get(1)[i];
-            listaCorrespondencia.add(new Pair<>(padres.get(0)[i],padres.get(1)[i]));
-            listaCorrespondencia.add(new Pair<>(padres.get(1)[i],padres.get(0)[i]));
-        }
-
-        boolean llenoH1 = false;
-        boolean llenoH2 = false;
-        int contadorPosicionHijo1 = a2;
-        int contadorPosicionHijo2 = a2;
-        int contEleHijo1 = a2-a1;
-        int contEleHijo2 = a2-a1;
-
-        int cont=0;
-        for (int i = a2; !llenoH1 && !llenoH2 ; i++) {
 
 
-            if (i == hijo1.length) {
-                i = i % hijo1.length;
+
+            int[] hijo1 = new int[padres.get(i).length];
+            int[] hijo2 = new int[padres.get(i+1).length];
+            //Se llenan los hijos y listas
+            for (int j = a1; j < a2; j++) {
+                hijo1[j] = padres.get(i+1)[j];
+                hijo2[j] = padres.get(i)[j];
+
+                listaP1.add(new Pair<Integer,Integer>(padres.get(i)[j],padres.get(i+1)[j]));
+                listaP2.add(new Pair<Integer,Integer>(padres.get(i+1)[j],padres.get(i)[j]));
             }
-
-            boolean estaH1 = false;
-            boolean estaH2 = false;
-
-            for(int j = a1; j < a2; j++){
-                if (padres.get(1)[i] == padres.get(0)[j]){
-                    estaH1 = true;
-
+            //Mientras que no este lleno
+            for(int j = 0; j < hijo1.length; j++){
+                //Si llegamos al primer corte empezamos en el segundo
+                if(j == a1){
+                    j = a2;
                 }
-            }
 
-            for(int j = a1; j < a2; j++){
-                if (padres.get(0)[i] == padres.get(1)[j]){
-                    estaH2 = true;
-
-
-                }
-            }
-
-            if(!estaH1){
-
-                if (!llenoH1) {
-
-                    if (contadorPosicionHijo1 == hijo1.length) {
-                        contadorPosicionHijo1 = contadorPosicionHijo1 % hijo1.length;
+                //Primer hijo
+                int valor1 = padres.get(i)[j];//Valor inicial a meter
+                boolean encontrado = true;//Suponemos que el valor esta en la lista de intercambios
+                int cont = 0;//Contador moverse lista
+                while(encontrado){//Mientras que esta
+                    //Si lo encuentra la correspondencia es el nuevo valor
+                    if (valor1 == listaP2.get(cont).getKey()){
+                        valor1 = listaP2.get(cont).getValue();
+                        cont = 0;//Empezamos a buscar de nuevo esa correspondencia
+                    }else{
+                        cont++;//Si no examinamos la siguiente
                     }
-                    hijo1[contadorPosicionHijo1] = padres.get(1)[i];
-                    contadorPosicionHijo1++;
-                    contEleHijo1++;
-
-
-
-                    if (contEleHijo1 == hijo1.length) {
-                        llenoH1 = true;
+                    //Si lo recorremos todo es que no esta
+                    if(cont == listaP2.size()){
+                        encontrado = false;
                     }
 
 
                 }
-            }else{
+                hijo1[j] = valor1;//Se asigna el actual
 
-                    if(!llenoH1) {
-                        boolean sinCambio = false;
-                        boolean esta = false;
-                        int almacencorrespondencia = padres.get(1)[i]; //es el numero repetido
-                        int cont55 = 0;
-                        ArrayList<Pair<Integer,Integer>>copiaCorrespondencias = (ArrayList<Pair<Integer, Integer>>) listaCorrespondencia.clone();
-                        while(!sinCambio){
-                            //System.out.println(cont55++);
-                            int cont2 = 0;
-                            for(int j = 0; j<copiaCorrespondencias.size();j++) {
-                                if(almacencorrespondencia == copiaCorrespondencias.get(j).getKey()){
-                                    almacencorrespondencia = copiaCorrespondencias.get(j).getValue();
-                                    copiaCorrespondencias.remove(j);
-                                }else{
-                                    cont2++;
-                                }
-                            }
-                            if(cont2 == copiaCorrespondencias.size()){
-                                sinCambio = true;
-                            }
+                //Para hijo 2
+                int valor2 = padres.get(i+1)[j];
+                boolean encontrado2 = true;
+                int cont2 = 0;
+                while(encontrado2){
 
-                        }
-                        if (contadorPosicionHijo1 == hijo1.length) {
-                            contadorPosicionHijo1 = contadorPosicionHijo1 % hijo1.length;
-                        }
-
-                        hijo1[contadorPosicionHijo1] = almacencorrespondencia;
-                        contadorPosicionHijo1++;
-                        contEleHijo1++;
-
-
-
-                        if (contEleHijo1 == hijo1.length) {
-                            llenoH1 = true;
-                        }
-                        
-                    }
-            }
-
-            if(!estaH2){
-                    if (!llenoH2) {
-                    if (contadorPosicionHijo2 == hijo2.length) {
-                        contadorPosicionHijo2 = contadorPosicionHijo2 % hijo2.length;
-                    }
-                    hijo2[contadorPosicionHijo2] = padres.get(0)[i];
-                    contadorPosicionHijo2++;
-                    contEleHijo2++;
-
-
-
-                    if (contEleHijo2 == hijo2.length) {
-                        llenoH2 = true;
-                    }
-                }
-            }else{
-                if(!llenoH2) {
-                    boolean sinCambio = false;
-
-                    int almacencorrespondencia = padres.get(1)[i]; //es el numero repetido
-                    ArrayList<Pair<Integer,Integer>>copiaCorrespondencias = (ArrayList<Pair<Integer, Integer>>) listaCorrespondencia.clone();
-                    while(!sinCambio){
-                        int cont2 = 0;
-                        for(int j = 0; j<copiaCorrespondencias.size();j++) {
-                            if(almacencorrespondencia == copiaCorrespondencias.get(j).getKey()){
-                                almacencorrespondencia = copiaCorrespondencias.get(j).getValue();
-                                copiaCorrespondencias.remove(j);
-                            }else{
-                                cont2++;
-                            }
-                        }
-                        if(cont2 == copiaCorrespondencias.size()){
-                            sinCambio = true;
-                        }
-
-                    }
-                    if (contadorPosicionHijo2 == hijo2.length) {
-                        contadorPosicionHijo2 = contadorPosicionHijo2 % hijo2.length;
+                    if (valor2 == listaP1.get(cont2).getKey()){
+                        valor2 = listaP1.get(cont2).getValue();
+                        cont2 = 0;
+                    }else{
+                        cont2++;
                     }
 
-                    hijo2[contadorPosicionHijo2] = almacencorrespondencia;
-                    contadorPosicionHijo2++;
-                    contEleHijo2++;
-
-
-
-                    if (contEleHijo2 == hijo2.length) {
-                        llenoH2 = true;
+                    if(cont2 == listaP1.size()){
+                        encontrado2 = false;
                     }
+
 
                 }
+                hijo2[j] = valor2;
             }
-
-
+            //Se añaden a la lista con todos lops hijos∫
+            hijos.add(hijo1);
+            hijos.add(hijo2);
 
 
         }
-        ArrayList<int[]> padresCruzados = new ArrayList<>();
-        padresCruzados.add(hijo1);
-        padresCruzados.add(hijo2);
 
-        return padresCruzados;
+        return hijos;
     }
-
 
     public ArrayList<int[]> operadorCruceOX(ArrayList<int[]> padres){
         int a1 = -1;
@@ -397,7 +297,7 @@ public class AGE_Clase2_Grupo2 {
         int contEleHijo2 = a2-a1;
 
 
-        for (int i = a2; !llenoH1 && !llenoH2 ; i++){
+        for (int i = 0; !llenoH1 && !llenoH2 ; i++){
 
             if(i == hijo1.length){
                 i = i % hijo1.length;
@@ -421,7 +321,7 @@ public class AGE_Clase2_Grupo2 {
             if(!estaH1){
 
                 if (!llenoH1) {
-                    //System.out.println("hijo1Contador"+contadorPosicionHijo1);
+
                     if (contadorPosicionHijo1 == hijo1.length) {
                         contadorPosicionHijo1 = contadorPosicionHijo1 % hijo1.length;
                     }

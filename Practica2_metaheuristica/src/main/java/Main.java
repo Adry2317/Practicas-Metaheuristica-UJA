@@ -22,7 +22,7 @@ public class Main {
 
 
 
-            /*
+
                 AGE_Clase2_Grupo2 prueba2 = new AGE_Clase2_Grupo2(prueba, 50000, 1, 0.001, aleatorio, 3, 4, archivo.getMatrizFlujo(), archivo.getMatrizDistancias());
                 System.out.println("algortimoOX");
                 ArrayList<int[]> poblacion = prueba2.estacionarioOX();
@@ -54,10 +54,10 @@ public class Main {
                 System.out.println(fitnes2.get(0));
 
                 System.out.println("-------------------------------------");
-                */
 
 
 
+                /*
                 AGG_Clase2_Grupo2 generacional = new AGG_Clase2_Grupo2(prueba, 50000, 1, 0.001, aleatorio, 3, 4, archivo.getMatrizFlujo(), archivo.getMatrizDistancias(),0.7);
 
                 ArrayList<int[]> prueba7 = generacional.operadorPMX();
@@ -72,6 +72,8 @@ public class Main {
                 System.out.println(fitnes2.get(0));
 
                 System.out.println("-------------------------------------");
+                */
+
 
 
 
