@@ -91,18 +91,35 @@ public class AlgGRE_Clase2_Grupo1 {
 
         }
 
+
+
         //hacemos las 45 soluciones aleatorias.
-
-
         while(listaLRC.size() < tamPoblacion){
-            int n1 = aleatorio.nextInt(matrizFlujo.length);
-            int n2 = aleatorio.nextInt(matrizFlujo.length);
-            Pair<Integer, Integer> nuevo = new Pair<>(sumaFlujoAleatorio.get(n1).getKey(), sumaDistanciaAleatorio.get(n2).getKey());
 
+            int[] nuevo = new int[matrizFlujo.length];
 
-                listaCandidatos.add(nuevo);
-                aplicarMovimiento(listaCandidatos.get(listaCandidatos.size()-1).getKey(),listaCandidatos.get(listaCandidatos.size()-1).getValue(),vectSolucion);
+            for (int i = 0; i < matrizFlujo.length; i++) { //lo inicializamos a -1, para poder meter el valaor 0
+                nuevo[i] = -1;
+            }
+            int contTam = 0;
 
+            while(contTam != nuevo.length){//Mientras que no este lleno el hijo
+                int n1 = aleatorio.nextInt(matrizFlujo.length);
+                boolean esta = false;
+
+                for (int i = 0; i <matrizFlujo.length && !esta; i++) { //comprobamos que no este en el array
+                    if(nuevo[i] == n1){
+                        esta = true;
+                    }
+                }
+                if(!esta){ //si no está en el array
+                   nuevo[contTam] = n1;
+                   contTam++;
+
+                }
+            }
+
+            listaLRC.add(nuevo);
 
         }
 

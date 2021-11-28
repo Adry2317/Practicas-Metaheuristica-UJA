@@ -22,6 +22,12 @@ public class Configurador {
     private double probGeneracional;
     private double probMutacion;
     private int tamLRC;
+    private int _tamTorneoSeleccionAGG;
+    private int _tamTorneoRemplazamientoAGE;
+    private int  _tamTorneoSeleccionAGE;
+    private int _posicionesOX2;
+    private int numeroIndividuosEstacionario;
+    private int rondasTorneoEstacionario;
 
 
     public Configurador(String ruta){
@@ -79,8 +85,31 @@ public class Configurador {
                         probMutacion = Double.parseDouble(split[1]);
                         break;
 
+                    case "tamTorneoSeleccionAGE":
+                        _tamTorneoSeleccionAGE = Integer.parseInt(split[1]);
+                        break;
+
+                    case "tamTorneoRemplazamientoAGE":
+                        _tamTorneoRemplazamientoAGE = Integer.parseInt(split[1]);
+                        break;
+
+                    case "tamTorneoSeleccionAGG":
+                        _tamTorneoSeleccionAGG = Integer.parseInt(split[1]);
+                        break;
+
                     case "TamLRC":
                         tamLRC = Integer.parseInt(split[1]);
+                        break;
+
+                    case "posicionesOX2":
+                        _posicionesOX2 = Integer.parseInt(split[1]);
+                        break;
+
+                    case "numIndividuosEstacionario":
+                        numeroIndividuosEstacionario = Integer.parseInt(split[1]);
+                        break;
+                    case "rondasTorneoEstacionario":
+                        rondasTorneoEstacionario = Integer.parseInt(split[1]);
                         break;
                 }
 
@@ -124,5 +153,29 @@ public class Configurador {
 
     public int getTamLRC() {
         return tamLRC;
+    }
+
+    public int get_tamTorneoSeleccionAGG() {
+        return _tamTorneoSeleccionAGG;
+    }
+
+    public int get_tamTorneoRemplazamientoAGE() {
+        return _tamTorneoRemplazamientoAGE;
+    }
+
+    public int get_tamTorneoSeleccionAGE() {
+        return _tamTorneoSeleccionAGE;
+    }
+
+    public int get_posicionesOX2() {
+        return _posicionesOX2;
+    }
+
+    public int getNumeroIndividuosEstacionario(){
+        return numeroIndividuosEstacionario;
+    }
+
+    public int getRondasTorneoEstacionario(){
+        return rondasTorneoEstacionario;
     }
 }

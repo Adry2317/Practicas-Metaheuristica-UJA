@@ -6,5 +6,11 @@ MaxEvaluaciones=50000
 probEstacionario=1
 probGeneracional=0.7
 probMutacion=0.001
+tamTorneoSeleccionAGE=3
+tamTorneoRemplazamientoAGE=4
+tamTorneoSeleccionAGG=2
 TamLRC=5
+posicionesOX2=3
+numIndividuosEstacionario=2
+rondasTorneoEstacionario=2
 
