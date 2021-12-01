@@ -41,6 +41,7 @@ public class AGG_Clase2_Grupo2 {
      * @return: devuelve poblacion final
      */
     public ArrayList<int[]> operadorPMX(){
+        long aux1=0,aux2=0,aux3=0,aux4=0,aux5=0, aux6=0;
         long timeIni = System.currentTimeMillis();
         log.append("Población inicial cruce PMX\n");
         int contEvaluaciones = 0;
@@ -53,30 +54,38 @@ public class AGG_Clase2_Grupo2 {
         while (contEvaluaciones != maxEvaluaciones){
 
             //guardamos el elite de la población.
+            long timeIni1 = System.currentTimeMillis();
             Pair<Integer,Long> elite = evaluacionPoblacion.get(0);
             int [] _elite = poblacionActual.get(elite.getKey());
+            aux1 += System.currentTimeMillis()-timeIni1;
 
             guardaElite(elite, poblacionActual,"PMX", log);
 
 
             //funcion Seleccion
+            long timeIni2 = System.currentTimeMillis() ;
+
             ArrayList<int[]> padres = torneoSeleccion(poblacionActual,evaluacionPoblacion);
-
+            aux2 += System.currentTimeMillis()-timeIni2;
+            long timeIni3 = System.currentTimeMillis();
             //funcion de cruce
-            ArrayList<int[]> cruce = CrucePMX(padres);
+            ArrayList<int[]> cruce = CrucePMXGeneracionl(padres);
+            aux3 += System.currentTimeMillis()-timeIni3;
 
 
-
-
+            long timeIni4 = System.currentTimeMillis();
             //funcion mutacion
             mutacion(cruce);
-
+            aux4 += System.currentTimeMillis()-timeIni4;
 
             //volvemos a evaluar la población antes de reemplazar
+            long timeIni5 = System.currentTimeMillis();
             evaluacionPoblacion = evalPoblacion(cruce);
-
+            aux5 += System.currentTimeMillis()-timeIni5;
             //remplazamiento
+            long timeIni6 = System.currentTimeMillis();
             reemplazamiento(cruce,poblacionActual,evaluacionPoblacion,elite, _elite);
+            aux6 += System.currentTimeMillis()-timeIni6;
             poblacionActual.clear();
             poblacionActual = (ArrayList<int[]>) cruce.clone();
 
@@ -86,6 +95,12 @@ public class AGG_Clase2_Grupo2 {
         }
         long tFinal = System.currentTimeMillis()-timeIni;
         log.append("\n Tiempo Generacional PMX: "+tFinal);
+       // System.out.println("Primera evaluaacion" + aux1);
+        //System.out.println("Seleccion: "+aux2);
+        //System.out.println("Cruce" + aux3);
+        //System.out.println("Mutacion" + aux4);
+        //System.out.println("Segunda evaluaacion" + aux5);
+        //System.out.println("Remplazamiento" + aux6);
         return poblacionActual;
     }
 
@@ -113,7 +128,7 @@ public class AGG_Clase2_Grupo2 {
             ArrayList<int[]> padres = torneoSeleccion(poblacionActual,evaluacionPoblacion);
 
             //funcion de cruce
-            ArrayList<int[]> cruce = CruceOX2(padres);
+            ArrayList<int[]> cruce = CruceOX2Generacional(padres);
 
 
 
@@ -145,84 +160,80 @@ public class AGG_Clase2_Grupo2 {
      * @param padres: poblacion a curzar
      * @return: devuelve la poblacion cruzada
      */
-    public  ArrayList<int[]> CruceOX2(ArrayList<int[]> padres){
+    public ArrayList<int[]> CruceOX2Generacional(ArrayList<int[]> padres){
 
         ArrayList<int[]> hijos = new ArrayList<>();
 
-        //Realizamos el cruce para cada padre i e i+1
         for (int i = 0; i < padres.size(); i= i+2) {
 
-            ArrayList<Integer> posiciones = new ArrayList<Integer>();
+            boolean posicionesPadre1[] = new boolean[padres.get(i).length];
+            boolean posicionesPadre2[] = new boolean[padres.get(i).length];
+            ArrayList<Integer> valores = new ArrayList<>();
+            ArrayList<Integer> valores2 = new ArrayList<>();
 
-            //Generamos las 3 posiciones con indice distinto antes de aplicar el cruce
-            while(posiciones.size() != posicionesOX2){
-                int n1 = aleatorio.nextInt(padres.get(0).length);
-                boolean esta = false;
-                for (int j = 0; j < posiciones.size(); j++) {
-                    if(n1 == posiciones.get(j)){
-                        esta = true;
-                    }
+            for (int j = 0; j < posicionesPadre1.length; j++) {
+
+                posicionesPadre1[j] = aleatorio.nextBoolean();
+                if(posicionesPadre1[j]){
+                    valores.add(padres.get(i)[j]); //almacenamos el valor de las posiiones verdaderas
                 }
-                if(!esta){
-                    posiciones.add(n1);
+                posicionesPadre2[j] = aleatorio.nextBoolean();
+                if(posicionesPadre2[j]){
+                    valores2.add(padres.get(i+1)[j]); //almacenamos el valor de las posiiones verdaderas
                 }
             }
-            posiciones.sort(Comparator.naturalOrder());
-            ArrayList<Integer> huecos = new ArrayList<>();
 
-            int[] hijos1 = new int[padres.get(i).length];
-            int[] hijos2 = new int[padres.get(i+1).length];
+            int hijo1[] = new int [padres.get(i).length];
+            int hijo2[] = new int [padres.get(i).length];
+            for (int j = 0; j < padres.get(i).length; j++) {
+                hijo1[j] = -1;
+                hijo2[j] = -1;
+            }
 
-
-            //creacion hijo 1
-            for(int j = 0; j < padres.get(i+1).length; j++){
+            for (int j = 0; j < padres.get(i+1).length; j++) {
                 boolean coincide = false;
-                for(int k = 0; k < posiciones.size(); k++){
-                    //comprobamos si los valores coinciden, para usarlos o guardar los huecos
-                    if(padres.get(i+1)[j] == padres.get(i)[posiciones.get(k)]){
+                for (int k = 0; k < valores.size() && !coincide; k++) {
+                    if(padres.get(i+1)[j] == valores.get(k)){
                         coincide = true;
-
                     }
                 }
-
-                if(!coincide){ //si no coincide se va rellenando con los elementos del padre
-                    hijos1[j] = padres.get(i+1)[j];
-                }else{
-                    huecos.add(j);//almacenamos los huecos
+                if(!coincide){
+                    hijo1[j] = padres.get(i+1)[j];
                 }
+                coincide = false;
             }
-            for (int j = 0; j < huecos.size(); j++) {
-                hijos1[huecos.get(j)] = padres.get(i)[posiciones.get(j)];
-            }
-            huecos.clear();//limpiamos los huecos
 
-            //creacion hijo 2
 
-            for(int j = 0; j < padres.get(i).length; j++){
+            for (int j = 0; j < padres.get(i).length; j++) {
                 boolean coincide = false;
-                for(int k = 0; k < posiciones.size(); k++){
-                    if(padres.get(i)[j] == padres.get(i+1)[posiciones.get(k)]){
+                for (int k = 0; k < valores2.size() && !coincide; k++) {
+                    if(padres.get(i)[j] == valores2.get(k)){
                         coincide = true;
-
                     }
                 }
-                //
-                if(!coincide){ //si no coincide se va rellenando con los elementos del padre
-                    hijos2[j] = padres.get(i)[j];
-                }else{
-                    huecos.add(j);//almacenamos los huecos
+                if(!coincide){
+                    hijo2[j] = padres.get(i)[j];
+                }
+                coincide = false;
+            }
+
+            for (int j = 0; j < padres.get(i).length; j++) {
+
+                if(hijo1[j] == -1){
+                    hijo1[j] = valores.remove(0);
+                }
+
+                if(hijo2[j] == -1){
+                    hijo2[j] = valores2.remove(0);
                 }
             }
-            for (int j = 0; j < huecos.size(); j++) {
-                hijos2[huecos.get(j)] = padres.get(i+1)[posiciones.get(j)];
-            }
-            huecos.clear();//limpiamos los huecos
 
-            hijos.add(hijos1);
-            hijos.add(hijos2);
+
+
+            hijos.add(hijo1);
+            hijos.add(hijo2);
         }
 
-        //devolvemoos la población cruzada
         return  hijos;
     }
 
@@ -271,7 +282,7 @@ public class AGG_Clase2_Grupo2 {
      * @param padres población a la cual se les realizara el cruce
      * @return devuelve la población cruzada.
      */
-    public ArrayList<int[]> CrucePMX(ArrayList<int[]> padres){
+    public ArrayList<int[]> CrucePMXGeneracionl(ArrayList<int[]> padres){
 
         ArrayList<int[]> hijos = new ArrayList<>();
         //Listas de conmutaciones
@@ -284,10 +295,10 @@ public class AGG_Clase2_Grupo2 {
             int a1 = -1;
             int a2 = -1;
             //Mientras loa aleatorios sean distinto
-            while(a2 <= a1) {
+            do{
                 a1 = aleatorio.nextInt(padres.get(i).length);
                 a2 = aleatorio.nextInt(padres.get(i+1).length);
-            }
+            }while(a2<=a1 );
 
 
 

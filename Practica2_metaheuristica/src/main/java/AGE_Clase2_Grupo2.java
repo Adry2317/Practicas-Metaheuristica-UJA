@@ -54,38 +54,34 @@ public class AGE_Clase2_Grupo2 {
         ArrayList<Pair<Integer,Long>> evalucionPoblacion = evalPoblacion(poblacionActual);
         log.append("Poblacion inicial: \n");
         añadirPoblacionOX(poblacionActual);
-
+        long aux1=0,aux2=0,aux3=0,aux4=0;
         contEvaluaciones += tamPoblacion;
 
         while (contEvaluaciones!=maxEvaluaciones){
 
 
             //funcion seleccion
-            ArrayList<int[]> padres = seleccionTorneo(poblacionActual);
 
-
+            ArrayList<int[]> padres = seleccionTorneo(poblacionActual, evalucionPoblacion);
 
             //funcion cruce
-            ArrayList<int[]> cruce = operadorCruceOX(padres);
 
+            ArrayList<int[]> cruce = operadorCruceOXEstacionario(padres);
 
-            
             //funcion mutacion
             for (int[] hijos: cruce) {
                 mutacion(hijos);
             }
 
-            //log.append("Hijos evaluacion " + contEvaluaciones +":");
-            //añadirPoblacionOX(cruce);
-
             //funcion reemplazamiento
+            long tInicial4 = System.currentTimeMillis();
             reemplazamiento(cruce, poblacionActual, evalucionPoblacion);
-
 
             contEvaluaciones+=numindividuosEstacionario;
         }
 
-
+        evalucionPoblacion.sort(((o1, o2) -> o1.getValue().compareTo(o2.getValue())));
+        log.append("\nMejor solucion: " + evalucionPoblacion.get(0).getValue());
         log.append("\n + Tiempo de ejecuccion: " + (System.currentTimeMillis() - tInicial));
 
         return poblacionActual;
@@ -112,12 +108,12 @@ public class AGE_Clase2_Grupo2 {
 
 
             //funcion seleccion
-            ArrayList<int[]> padres = seleccionTorneo(poblacionActual);
+            ArrayList<int[]> padres = seleccionTorneo(poblacionActual,evalucionPoblacion);
 
 
 
             //funcion cruce
-            ArrayList<int[]> cruce = operadorPMX(padres);
+            ArrayList<int[]> cruce = operadorPMXEstacionario(padres);
 
 
 
@@ -139,7 +135,8 @@ public class AGE_Clase2_Grupo2 {
 
             contEvaluaciones+=numindividuosEstacionario;
         }
-
+        evalucionPoblacion.sort(((o1, o2) -> o1.getValue().compareTo(o2.getValue())));
+        log2.append("\nMejor solucion: " + evalucionPoblacion.get(0).getValue());
         log2.append("\n + Tiempo de ejecuccion: " + (System.currentTimeMillis() - tInicial));
 
         return poblacionActual;
@@ -264,7 +261,7 @@ public class AGE_Clase2_Grupo2 {
      * @param padres Padres
      * @return Lista de hijos cruzados
      */
-    public ArrayList<int[]> operadorPMX(ArrayList<int[]> padres){
+    public ArrayList<int[]> operadorPMXEstacionario(ArrayList<int[]> padres){
 
         ArrayList<int[]> hijos = new ArrayList<>();
         //Listas de conmutaciones
@@ -359,7 +356,7 @@ public class AGE_Clase2_Grupo2 {
      * @param padres padres
      * @return lista de hijos
      */
-    public ArrayList<int[]> operadorCruceOX(ArrayList<int[]> padres){
+    public ArrayList<int[]> operadorCruceOXEstacionario(ArrayList<int[]> padres){
         int a1 = -1;
         int a2 = -1;
         //Se calculan los cortes
@@ -367,13 +364,8 @@ public class AGE_Clase2_Grupo2 {
              a1 = aleatorio.nextInt(padres.get(0).length);
              a2 = aleatorio.nextInt(padres.get(0).length);
 
-            if(a1 > a2){
-                int aux = a1;
-                a1 = a2;
-                a2 = aux;
-            }
 
-        }while (a1 == a2);
+        }while (a2 <= a1);
 
         int[] hijo1 = new int[padres.get(0).length];
         int[] hijo2 = new int[padres.get(1).length];
@@ -410,7 +402,7 @@ public class AGE_Clase2_Grupo2 {
             for(int j = a1; j < a2; j++){
                 if (padres.get(0)[i] == padres.get(1)[j]){
                     estaH2 = true;
-                    
+
                 }
             }
 
@@ -437,6 +429,7 @@ public class AGE_Clase2_Grupo2 {
             }
 
             if(!estaH2){
+
                 if (!llenoH2) {
                     if (contadorPosicionHijo2 == hijo2.length) {
                         contadorPosicionHijo2 = contadorPosicionHijo2 % hijo2.length;
@@ -489,16 +482,18 @@ public class AGE_Clase2_Grupo2 {
      * @param poblacionActual poblacion
      * @return
      */
-    public ArrayList<int[]> seleccionTorneo(ArrayList<int[]> poblacionActual) {
+    public ArrayList<int[]> seleccionTorneo(ArrayList<int[]> poblacionActual, ArrayList<Pair<Integer,Long>> _fitnes ) {
         //clave->posicion, valor -> fitnes
         ArrayList<Pair<Integer, Long>> candidatos = new ArrayList<>();
         ArrayList<Pair<Integer, Long>> padresSeleccionados = new ArrayList<>();
 
         int rondas = 0;
-        while (rondas < numRondasTorneo) {//CAMBIAR
-            for (int i = 0; i < tamTorneoSeleccion; i++) {
-                int seleccionado = aleatorio.nextInt(tamPoblacion);
+        while (rondas < numRondasTorneo) {
 
+            int cont = 0;
+
+            while (cont < tamTorneoSeleccion) {
+                int seleccionado = aleatorio.nextInt(tamPoblacion);
                 boolean existe = false;
                 for (int j = 0; j < candidatos.size() && !existe; j++) {
                     if (candidatos.get(j).getKey() == seleccionado) {
@@ -508,11 +503,13 @@ public class AGE_Clase2_Grupo2 {
 
                 if (!existe) {
                     //Añadimos el valor fitnes y la posicion del padre en la matriz
-                    long fitnes = calculoFitnes(poblacionActual.get(seleccionado));
+                    long fitnes = _fitnes.get(seleccionado).getValue();
                     candidatos.add(new Pair<>(seleccionado, fitnes));
+                    cont++;
                 }
-
             }
+
+
 
             //seleccionamos al mejor de entre los 3
             rondas++;

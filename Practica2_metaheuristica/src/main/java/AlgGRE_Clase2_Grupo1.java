@@ -84,10 +84,20 @@ public class AlgGRE_Clase2_Grupo1 {
             int n1 = aleatorio.nextInt(tamListaRestringidaCandidatos);
             int n2 = aleatorio.nextInt(tamListaRestringidaCandidatos);
             Pair<Integer, Integer> nuevo = new Pair<>(cincoMejoresFlujos.get(n1), cincoMEjoresDist.get(n2));
+            boolean repetido = false;
 
+            //comprobacion de que no estan en la lista
+            for (int i = 0; i < listaCandidatos.size() && !repetido; i++) {
+                if (listaCandidatos.get(i).getKey() == nuevo.getKey() && listaCandidatos.get(i).getValue() == nuevo.getValue()) {
+                    repetido = true;
+                }
+            }
 
+            if (!repetido) {
                 listaCandidatos.add(nuevo);
                 aplicarMovimiento(listaCandidatos.get(listaCandidatos.size()-1).getKey(),listaCandidatos.get(listaCandidatos.size()-1).getValue(),vectSolucion);
+            }
+
 
         }
 

@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) {
 
         Configurador config = new Configurador(args[0]);
-        ArrayList<int[]> poblacion;
+        ArrayList<int[]> poblacion, poblacion2, poblacion3, poblacion4;
         for (int i = 0; i < config.getArchivos().size(); i++) {
             for(int j = 0; j < config.getSemillas().size(); j++) {
                 System.out.println("------------------------------");
@@ -21,6 +21,9 @@ public class Main {
                 Random aleatorio = new Random(config.getSemillas().get(j));
                 AlgGRE_Clase2_Grupo1 greedy = new AlgGRE_Clase2_Grupo1(archivo.getMatrizFlujo(), archivo.getMatrizDistancias(), 5, 50, aleatorio);
                 poblacion = greedy.calculoGreedyAleatorio();
+                poblacion2 = (ArrayList<int[]>) poblacion.clone();
+                poblacion3 = (ArrayList<int[]>) poblacion.clone();
+                poblacion4 = (ArrayList<int[]>) poblacion.clone();
 
 
 
@@ -52,7 +55,7 @@ public class Main {
                         case "EstacionarioPMX":
 
                             System.out.println("EstacionarioPMX");
-                            AGE_Clase2_Grupo2 estacionarioPMX = new AGE_Clase2_Grupo2(poblacion, config.getMaxEvaluaciones(), config.getProbEstacionario(), config.getProbMutacion(), aleatorio, config.get_tamTorneoSeleccionAGE(), config.get_tamTorneoRemplazamientoAGE(), archivo.getMatrizFlujo(), archivo.getMatrizDistancias(),config.getNumeroIndividuosEstacionario(),config.getRondasTorneoEstacionario());
+                            AGE_Clase2_Grupo2 estacionarioPMX = new AGE_Clase2_Grupo2(poblacion2, config.getMaxEvaluaciones(), config.getProbEstacionario(), config.getProbMutacion(), aleatorio, config.get_tamTorneoSeleccionAGE(), config.get_tamTorneoRemplazamientoAGE(), archivo.getMatrizFlujo(), archivo.getMatrizDistancias(),config.getNumeroIndividuosEstacionario(),config.getRondasTorneoEstacionario());
 
                             ArrayList<int[]> poblacionPMX = estacionarioPMX.estacionarioPMX();
 
@@ -76,7 +79,7 @@ public class Main {
                         case "GeneracionalOX2":
 
                             System.out.println("GeneracionalOX2");
-                            AGG_Clase2_Grupo2 generacionalOX2 = new AGG_Clase2_Grupo2(poblacion,config.getMaxEvaluaciones(),config.getProbMutacion(),aleatorio,config.get_tamTorneoSeleccionAGG(),archivo.getMatrizFlujo(),archivo.getMatrizDistancias(),config.getProbGeneracional(), config.get_posicionesOX2());
+                            AGG_Clase2_Grupo2 generacionalOX2 = new AGG_Clase2_Grupo2(poblacion3,config.getMaxEvaluaciones(),config.getProbMutacion(),aleatorio,config.get_tamTorneoSeleccionAGG(),archivo.getMatrizFlujo(),archivo.getMatrizDistancias(),config.getProbGeneracional(), config.get_posicionesOX2());
                             ArrayList<int[]> poblacionOX2 = generacionalOX2.operadorOX2();
                             ArrayList<Long> fitnesOX2GG = new ArrayList<>();
 
@@ -92,7 +95,7 @@ public class Main {
                         case "GeneracioanlPMX":
 
                             System.out.println("GeneracionalPMX");
-                            AGG_Clase2_Grupo2 generacionalPMX = new AGG_Clase2_Grupo2(poblacion,config.getMaxEvaluaciones(),config.getProbMutacion(),aleatorio,config.get_tamTorneoSeleccionAGG(),archivo.getMatrizFlujo(),archivo.getMatrizDistancias(),config.getProbGeneracional(), config.get_posicionesOX2());
+                            AGG_Clase2_Grupo2 generacionalPMX = new AGG_Clase2_Grupo2(poblacion4,config.getMaxEvaluaciones(),config.getProbMutacion(),aleatorio,config.get_tamTorneoSeleccionAGG(),archivo.getMatrizFlujo(),archivo.getMatrizDistancias(),config.getProbGeneracional(), config.get_posicionesOX2());
                             ArrayList<int[]> poblacionPMXGG = generacionalPMX.operadorPMX();
                             ArrayList<Long> fitnesPMXGG = new ArrayList<>();
 
